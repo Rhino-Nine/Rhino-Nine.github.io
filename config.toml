@@ -1,5 +1,5 @@
 title = "犀潭"
-baseURL = 'https://aristoclesnine.github.io/'
+baseURL = 'https://Rhino-Nine.github.io/'
 languageCode = 'en-us'
 theme = "hugo-blog-awesome"
 
@@ -51,7 +51,7 @@ enableEmoji = true
 
 [[params.socialIcons]]
 name = "github"
-url = "https://github.com/AristoclesNine"
+url = "https://github.com/Rhino-Nine"
 
 #[[params.socialIcons]]
 #name = "twitter"

@@ -1,6 +1,6 @@
 ---
 title: About
-description: 'Hugo, the world''s fastest framework for building websites'
+description: ''
 date: '2023-03-20'
 author: Aries 
 ---
