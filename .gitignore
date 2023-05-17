@@ -1,1 +1,4 @@
 resources
+.hugo_build.lock
+themes/hugo-blog-awesome/exampleSite/resources/
+themes/hugo-blog-awesome/exampleSite/.hugo_build.lock
