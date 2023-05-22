@@ -102,6 +102,29 @@ setbg
 
 ## 4. picom
 --- 
+picom 是 [compton](https://github.com/chjj/compton) 的分支，compton 又是 [xcompmgr-dana](https://web.archive.org/web/20150429182855/http://oliwer.net/xcompmgr-dana/) 的分支，它是一个独立的 Xorg 合成管理器，能为不带合成功能的窗口管理器带来淡入淡出、半透明、阴影等视觉效果。
+
+### 4.1. 安装
+安装 [picom]() 包或者 [picom-git]()
+
+### 4.2. 配置
+默认配置文件位于`/etc/xdg/picom.conf`，将其复制到用户配置文件基本目录`$XDG_CONFIG_HOME/picom/picom.conf`，详细配置可以参考 [picom(1)§ CONFIGURATION FILES](https://man.archlinux.org/man/picom.1#CONFIGURATION_FILES)。
+
+#### 4.2-1 获取窗口信息
+举例，`shadow-exclude`选项可以为指定窗口关闭阴影效果：
+```conf
+...
+shadow-exclude = [
+    "name = 'name one'",
+    "class_g = 'class_g one'"
+];
+...
+```
+获取指定窗口的`class_g`信息，可以通过以下方法：
+
+- 终端输入 xprop，光标会变成十字
+- 单击指定窗口，终端就会打印出该窗口的信息
+- WM_CLASS(STRING) 一项即为所需信息 class_g
 
 ## 5. [GTK]()
 ---
