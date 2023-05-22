@@ -126,6 +126,14 @@ shadow-exclude = [
 - 单击指定窗口，终端就会打印出该窗口的信息
 - WM_CLASS(STRING) 一项即为所需信息 class_g
 
+#### 4.2-2 随开机启动
+加入启动脚本`$XDG_CONFIG_HOME/suckless/dwm/scripts/run.sh`即可：
+```bash
+...
+picom & #也可以根据需要加入参数，但过度美化影响系统稳定性
+...
+```
+
 ## 5. [GTK]()
 ---
 
