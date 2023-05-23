@@ -11,6 +11,10 @@ theme = "hugo-blog-awesome"
 # Enable emojis globally
 enableEmoji = true
 
+# To enable Disqus comments, provide Disqus Shortname below.
+# To disable Disqus comments, simply leave the field empty or remove the next line
+disqusShortname = 'ariesnine.disqus.com'
+
 # set markup.highlight.noClasses=false to enable code highlight
 [markup]
   [markup.highlight]
