@@ -1,7 +1,7 @@
 ---
 No: 008
 title: Archlinux 小记-007 实用软件—— lf
-date: 2023-05-23
+date: 2023-05-24
 ---
 <!-- more -->
 > [LF]()，即"list files"，是一款深受 [ranger]() 启发，用`Go`语言编写的终端文件管理器，对比用`python`编写的`ranger`，其速度在处理大容量文件时更快。
