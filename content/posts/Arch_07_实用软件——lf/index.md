@@ -20,7 +20,7 @@ date: 2023-05-24
 进阶配置，可以参考[小技巧](https://github.com/gokcehan/lf/wiki/Tips)<br>
 与其他软件的搭配使用，可以参考[指南](https://github.com/gokcehan/lf/wiki/Integrations)<br>
 
-我的`lf`[配置文件](https://github.com/Rhino-Nine/dotfiles/tree/main/.config/lf)需要拓展的功能：
+我的`lf`[配置文件](https://github.com/Rhino-Nine/dotfiles/tree/main/.config/lf)拓展的功能：
 - [x] 文件预览
 - [x] 图片预览
 - [x] 音视频预览
