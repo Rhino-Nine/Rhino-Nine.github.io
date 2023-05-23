@@ -31,11 +31,11 @@ enableEmoji = true
     name = 'Posts'
     url = '/posts/'
     weight = 20
-  [[menu.main]]
-    pageRef="about"
-    name = 'About'
-    url = '/about/'
-    weight = 30
+  # [[menu.main]]
+  #   pageRef="about"
+  #   name = 'About'
+  #   url = '/about/'
+  #   weight = 30
 
 [params]
   sitename = "犀谭"
