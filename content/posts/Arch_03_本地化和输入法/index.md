@@ -1,6 +1,6 @@
 ---
 No.: 004
-title: Archlinux 小记（三）本地化和输入法
+title: Archlinux 小记-003 本地化和输入法
 date: 2023-05-20
 ---
 

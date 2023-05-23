@@ -1,6 +1,6 @@
 ---
 No: 002
-title: 恢复误删的 git commit
+title: 恢复本地误删 commits
 date: 2023-05-18
 ---
 

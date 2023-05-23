@@ -1,6 +1,6 @@
 ---
 No: 007
-title: "Archlinux 小记（六）系统美化——终端篇"
+title: "Archlinux 小记-006 系统美化——终端篇"
 date: 2023-05-23
 ---
 # 一、[zsh](https://www.zsh.org/) 美化

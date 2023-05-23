@@ -1,6 +1,6 @@
 ---
 No: 005
-title: Archlinux 小记（四）系统美化——全局篇
+title: Archlinux 小记-004 系统美化——全局篇
 date:  2023-05-21
 ---
 

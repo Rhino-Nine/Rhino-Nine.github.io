@@ -1,6 +1,6 @@
 ---
 No: 001
-title: Archlinux 小记（一）基础安装
+title: Archlinux 小记-001 基础安装
 date: 2023-05-17
 description: archlinux基础安装，参考github和archwiki 
 ---
