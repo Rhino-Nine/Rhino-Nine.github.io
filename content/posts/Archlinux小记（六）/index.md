@@ -10,7 +10,7 @@ date: 2023-05-23
 ---
 
 ### 1.1. 什么是 zsh
-> `Z shell`，即`zsh`是一个 [UNIX]() [shell]()。
+> `Z shell`，即`zsh`是一个 [UNIX](https://en.wikipedia.org/wiki/Unix) [shell](https://en.wikipedia.org/wiki/Shell_%28computing%29)。
 
 ### 1.2. 常见 shell 比较
 详见[ ZSH 有什么优势](https://zsh.sourceforge.io/FAQ/zshfaq01.html#l4)
@@ -89,7 +89,7 @@ eval "$(zoxide init zsh)"
 
 ## 3. 优化 .zshrc
 ---
-随着配置不断深入，.zshrc 文件会越来越复杂，为了方便维护，我将不同功能类型的代码分别至于不同的文件内，再以 .zshrc 为纽带，通过 source 链接起来。
+随着配置不断深入，.zshrc 文件会愈发复杂冗长，为了提高维护效率，可以把不同功能的代码至于不同的文件内，再以 .zshrc 为纽带，通过 source 链接起来，。
 
 ### 3.1 分化
 创建`$XDG_CONFIG_HOME/shell`，并根据以下分类分别创建配置文件：
