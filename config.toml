@@ -5,7 +5,7 @@ theme = "hugo-blog-awesome"
 
 # To enable Google Analytics 4 (gtag.js) provide G-MEASUREMENT_ID below.
 # To disable  Google Analytics, simply leave the field empty or remove the next line
-# googleAnalytics = '' # G-MEASUREMENT_ID
+googleAnalytics = 'G-J0PQS7E9QS' # G-MEASUREMENT_ID
 
 
 # Enable emojis globally
