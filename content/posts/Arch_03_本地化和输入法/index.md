@@ -1,7 +1,14 @@
 ---
 No.: 004
+keywords:
+- Archlinux 本地化
+- Archlinux 中文设置
+- Archlinux 输入法
+- Fcitx5 配置
+- 四叶草输入法配置
 title: Archlinux 小记-003 本地化和输入法
 date: 2023-05-20
+description: 介绍如何本地化 Archlinux 系统，并安装Fcitx5+rime+四叶草输入法，以及添加自定义词库
 ---
 
 # 一、本地化

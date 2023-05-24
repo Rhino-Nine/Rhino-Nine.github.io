@@ -1,7 +1,14 @@
 ---
 No.: 003
+keywords:
+- Archlinux 桌面配置
+- Archlinux 桌面环境
+- Archlinux 桌面环境安装
+- Archlinux dwm 配置
+- Archlinux dwm 安装
 title: Archlinux 小记-002 桌面环境
 date: 2023-05-19
+description: 介绍安装 Archlinux 基本系统后，如何围绕 dwm 为核心配置桌面
 ---
 
 # 零、准备工作

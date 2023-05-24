@@ -1,7 +1,11 @@
 ---
 No: 002
+keywords:
+- git commit 误删
+- git commit 恢复
 title: 恢复本地误删 commits
 date: 2023-05-18
+description: 本地 git commits 误删之后的恢复方法
 ---
 
 ### 起因

@@ -2,8 +2,9 @@
 No: 001
 keywords: 
 - Archlinux
-- Archlinux安装
-- Archlinux配置
+- Archlinux 安装
+- Archlinux 配置
+- Archlinux 基础安装
 title: Archlinux 小记-001 基础安装
 date: 2023-05-17
 description: 总结archlinux基础安装的方法和技巧，包括物理机和虚拟机 
