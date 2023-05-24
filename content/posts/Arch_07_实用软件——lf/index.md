@@ -8,18 +8,21 @@ keywords:
 title: Archlinux 小记-007 实用软件—— lf
 date: 2023-05-24
 description: 介绍终端文件管理器 lf，以及其可以实现的强大功能
+tags:
+- Archlinux
+- Applications
 ---
 <!-- more -->
 > [LF](https://pkg.go.dev/github.com/gokcehan/lf)，即"list files"，是一款深受 [ranger](https://ranger.github.io/) 启发，用`Go`语言编写（重写饶过谁？）的终端文件管理器，对比用`python`编写的`ranger`，其速度在处理大容量文件时更快。
 
-# 安装
+## 安装
 ---
 
 - Archlinux 可以使用包管理器直接安装，其他发行版请参考[LF 各发行版安装指南](https://github.com/gokcehan/lf/wiki/Packages)<br>
 - 下载已编译好的[二进制文件](https://github.com/gokcehan/lf/releases)<br>
 - 从源代码自行编译，需要`Go`支持库
 
-# 配置
+## 配置
 ---
 
 > 基础配置，可以参考[范例](https://github.com/gokcehan/lf/tree/master/etc)<br>

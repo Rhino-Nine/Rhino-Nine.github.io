@@ -9,20 +9,24 @@ keywords:
 title: Archlinux 小记-003 本地化和输入法
 date: 2023-05-20
 description: 介绍如何本地化 Archlinux 系统，并安装Fcitx5+rime+四叶草输入法，以及添加自定义词库
+tags: 
+- Archlinux
 ---
 
-# 一、本地化
+## 一、本地化
 ---
 
-## 1. 中文字体
----
 ### 1.1. 安装 noto 字体家族
-Archlinux 在没有安装任何中文字体的情况下，中文会显示为一个个空白方框，神似豆腐块，建议安装 Google 开发的开源字体家族 [Noto](https://en.wikipedia.org/wiki/Noto_fonts)，其全称为“No Toufu”，旨在消除所有无法显示的字符。
+---
 
+Archlinux 在没有安装任何中文字体的情况下，中文会显示为一个个空白方框，神似豆腐块，建议安装 Google 开发的开源字体家族 [Noto](https://en.wikipedia.org/wiki/Noto_fonts)，其全称为“No Toufu”，旨在消除所有无法显示的字符。
 ```bash
 sudo pacman -S noto-fonts noto-fonts-cjk noto-fonts-extra noto-fonts-emoji
 ```
+
 ### 1.2. 安装 windows 常用字体
+---
+
 - 建立存放字体的文件夹
 ```bash
 sudo mkdir ~/.local/share/fonts/WindowsFonts
@@ -37,17 +41,19 @@ sudo chmod 755 /usr/share/fonts/WindowsFonts/*
 > 系统字体目录: `/usr/share/fonts`
 
 ### 1.3. 刷新字体缓存
+---
+
 ```bash
 fc-cache -vf
 ```
 
-## 2. 输入法
-___
+## 二. 输入法
+---
+
 推荐使用 [Fcitx5](https://fcitx-im.org/wiki/Fcitx_5)。
 > fcitx5，读作 [ˈfaɪtɪks]，中文名“小企鹅输入法5”，是一个支持扩展的输入法框架，通过输入法引擎支持全世界大量语言。
 
 ### 2.1. 安装
-
 ```bash
 sudo pacman -S fcitx5-im #输入法基础包组
 sudo pacman -S fcitx5-rime rime-cloverpinyin #四叶草输入法
@@ -55,10 +61,10 @@ sudo pacman -S fcitx5-pinyin-moegirl-rime #萌娘百科词库
 sudo pacman -S fcitx5-zhwiki #中文维基 
 sudo pacman -S fcitx5-material-color # 输入法主题
 ```
+
 ### 2.2. 配置
 
 #### 2.2-1 配置环境变量
-
 ```bash
 # 编辑：
 sudo nvim /etc/environment
@@ -69,8 +75,8 @@ XMODIFIERS="@im=fcitx5"
 SDL_IM_MODULE=fcitx5
 GLFW_IM_MODULE=ibus
 ```
-#### 2.2-2 配置[四叶草输入法](https://github.com/fkxxyz/rime-cloverpinyin)
 
+#### 2.2-2 配置[四叶草输入法](https://github.com/fkxxyz/rime-cloverpinyin)
 - **安装必要包**
 ```bash
 sudo pacman -S fcitx5-qt fcitx5-gtk #安装 qt 和 gtk 支持
@@ -115,6 +121,7 @@ import_tables:
 ```
 3. 重启输入法，测试词库。
 
-##### 参考链接
+__参考链接__ 
+---
 1. [四叶草输入法 Wiki ](https://github.com/fkxxyz/rime-cloverpinyin/wiki)
 2. [Archwiki](https://wiki.archlinuxcn.org/wiki/Fcitx5)

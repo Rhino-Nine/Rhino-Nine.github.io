@@ -10,17 +10,19 @@ keywords:
 title: "Archlinux 小记-006 系统美化——终端篇"
 date: 2023-05-23
 description: 介绍 Z shell，以及如何用 zim 框架配置一套兼顾速度和功能的 zsh
+tags:
+- Archlinux
 ---
-# 一、[zsh](https://www.zsh.org/) 美化
+## 一、[zsh](https://www.zsh.org/) 美化
 ---
 
-## 1. 简介
+### 1. 简介
 ---
 
-### 1.1. 什么是 zsh
+#### 1.1. 什么是 zsh
 > `Z shell`，即`zsh`是一个 [UNIX](https://en.wikipedia.org/wiki/Unix) [shell](https://en.wikipedia.org/wiki/Shell_%28computing%29)。
 
-### 1.2. 常见 shell 比较
+#### 1.2. 常见 shell 比较
 详见[ ZSH 有什么优势](https://zsh.sourceforge.io/FAQ/zshfaq01.html#l4)
 
 值得一提，就我个人体验而言，`zsh`对比 [`fish`](https://fishshell.com/)：
@@ -38,25 +40,25 @@ description: 介绍 Z shell，以及如何用 zim 框架配置一套兼顾速度
 
 总之，对于有条件深度定制`shell`的用户而言，`zsh`暂时有着相当优势；而对`shell`，特别是对于`bash`既了解不多，也依赖不深的用户，不妨大胆尝试一下`fish`。
 
-## 1. 安装并启用 [zim](https://zimfw.sh/)
+### 2. 安装并启用 [zim](https://zimfw.sh/)
 ---
 > zim 是一个 zsh 配置框架，既速度惊人，还支持诸多扩展模块。
 
-### 1.1. 安装`zsh`，并设置`zsh`为默认`shell`
+#### 2.1. 安装`zsh`，并设置`zsh`为默认`shell`
 运行以下命令以更改默认`shell`：
 ```bash
 chsh -l 
 chsh -s /usr/bin/zsh 
 ```
 
-### 1.2. 安装`zim`
+#### 2.2. 安装`zim`
 从`wget`和`curl`中选择一种安装方式，将对应命令输入终端并运行：
 ```bash
 curl -fsSL https://raw.githubusercontent.com/zimfw/install/master/install.zsh | zsh<br> 
 wget -nv -O - https://raw.githubusercontent.com/zimfw/install/master/install.zsh | zsh 
 ```
 
-### 1.3. 配置主题
+#### 2.3. 配置主题
 1.3-1 编辑`$ZDOTDIR/.zimrc`：
 ```bash
 nvim $ZDOTDIR/.zimrc
@@ -72,9 +74,9 @@ zimfw install
 ```
 安装之后，`powerlevel10k`会要求用户进行配置，请确保安装了 [Nerd Font](https://www.nerdfonts.com/) 字体，若要再次配置，在终端输入`p10k configure`即可。
 
-### 1.4. 配置模块
+#### 2.4. 配置模块
 
-1.4-1 安装`zsh`模块包：
+##### 2.4-1 安装`zsh`模块包：
 ```bash
 sudo pacman -S zsh-autosuggestions zsh-syntax-highlighting zsh-completions
 ```
@@ -83,26 +85,26 @@ sudo pacman -S zsh-autosuggestions zsh-syntax-highlighting zsh-completions
 > [`zsh-syntax-highlighting`](https://github.com/zsh-users/zsh-syntax-highlighting) —— 语法高亮<br>
 > [`zsh-completions`](https://github.com/zsh-users/zsh-completions) —— 定义补全
 
-1.4-2 安装 [zoxide](https://github.com/ajeetdsouza/zoxide) 插件：
+##### 2.4-2 安装 [zoxide](https://github.com/ajeetdsouza/zoxide) 插件：
 ```bash
 sudo pacman -S zoxide
 ```
 
-1.4-3 在`$ZDOTDIR/.zshrc`中写入以下内容，使以上模块和插件生效：
+##### 2.4-3 在`$ZDOTDIR/.zshrc`中写入以下内容，使以上模块和插件生效：
 ```bash
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 eval "$(zoxide init zsh)"
 ```
 
-## 3. 优化 .zshrc
+### 3. 优化 .zshrc
 ---
 随着配置不断深入，.zshrc 文件会愈发复杂冗长，为了提高维护效率，可以把不同功能的代码至于不同的文件内，再以 .zshrc 为纽带，通过 source 链接起来，。
 
-### 3.1. 分化
+#### 3.1. 分化
 创建`$XDG_CONFIG_HOME/shell`，并根据以下分类分别创建配置文件：
 
-3.1-1 环境变量类
+##### 3.1-1 环境变量类
 将设定环境变量的代码部分移植到`$XDG_CONFIG_HOME/shell/profile`内，形如：
 ```bash
 #!/usr/bin/zsh
@@ -157,7 +159,7 @@ export W3M_DIR="$XDG_STATE_HOME/w3m"
 ...
 ```
 
-3.1-2 扩展功能类
+##### 3.1-2 扩展功能类
 将增加扩展功能的代码部分移植到`$XDG_CONFIG_HOME/shell/functionsrc`内，形如：
 ```bash
 #!/usr/bin/zsh
@@ -177,7 +179,7 @@ export FZF_COMPLETION_OPTS='\'
 ...
 ```
 
-3.1-3 快捷键位类
+##### 3.1-3 快捷键位类
 将配置快捷按键的代码部分移植到`$XDG_CONFIG_HOME/shell/aliasrc`内，形如：
 ```bash
 #!/usr/bin/sh
@@ -195,7 +197,7 @@ alias \
   mkd="mkdir -pv" \
 ```
 
-### 3.2. 联合
+#### 3.2. 联合
 
 在`.zshrc`的**合适位置**链接上以上三个文件：
 ```bash
@@ -211,8 +213,9 @@ eval "$(zoxide init zsh)"
 ```
 关于“合适位置”，可以参考`.zshrc`里的注释，比如，任何涉及使终端输出字符的代码需要置顶（screnfetch类的banner装饰代码），其次应为`powerlevel10k`的配置代码等等。
 
-# 三、多彩终端小工具
+## 三、多彩终端小工具
 ---
+
 可以通过`alias`来实现许多终端工具彩色输出，编辑`$XDG_CONFIG_HOME/shell/aliasrc`：
 ```bash
 ...
@@ -228,7 +231,8 @@ alias \
 ...
 ```
 
-##### 参考链接
+__参考链接__ 
+---
 1. [zsh](https://www.zsh.org/)
 2. [github](https://github.com/)
 3. [Nerd Font](https://www.nerdfonts.com/)

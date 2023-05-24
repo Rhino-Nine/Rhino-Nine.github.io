@@ -6,9 +6,13 @@ keywords:
 title: 恢复本地误删 commits
 date: 2023-05-18
 description: 本地 git commits 误删之后的恢复方法
+tags:
+- Git
 ---
 
-### 起因
+## 起因
+---
+
 当我需要 push 到远程时，报错：
 ```
 fatal: You are not currently on a branch.
@@ -18,7 +22,9 @@ state now, use
     git push master HEAD:<name-of-remote-branch>
 ```
 
-### 经过 
+## 经过 
+---
+
 接着我尝试了：
 ```
 git branch temp
@@ -41,7 +47,9 @@ any of your branches:
 
 此时，出现问题：以上五条commit关联的文件从目录消失
 
-### 解决
+## 解决
+---
+
 1. 查找丢失的文件关联的 commits'SHA
 ```
 git reflog

@@ -7,15 +7,19 @@ keywords:
 title: Archlinux 小记-008 实用软件—— sxiv
 date: 2023-05-25
 description: 介绍图像查看器 sxiv，以及其能实现的强大功能
+tags: 
+- Archlinux
+- Applications
 ---
 
 > [sxiv](https://github.com/muennich/sxiv)，即 "Simple [X](https://wiki.archlinux.org/title/X) Image Viewer"，是一款由 C 语言编写的、轻量级的、可编写扩展脚本的图像查看器。
 
-# 安装
+## 安装
 ---
+
 Archlinux 通过包管理器直接安装 [sxiv](https://archlinux.org/packages/?name=sxiv) 包或 [sxiv-git](https://aur.archlinux.org/packages/sxiv-git/) 包。
 
-# 使用
+## 配置
 ---
 
 - `sxiv`通过一个可执行文件`$XDG_CONFIG_HOME/sxiv/exec/key-handler`来处理快捷键。在使用中，按下快捷键`ctrl`+`x`，之后再按下一个快捷键，这一组按键将作为参数传递，交给`key-handler`处理，实现特定功能。<br>
