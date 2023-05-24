@@ -31,15 +31,15 @@ enableEmoji = true
     url = '/'
     weight = 10
   [[menu.main]]
-    pageRef="posts"
+    pageRef="Posts"
     name = 'Posts'
     url = '/posts/'
     weight = 20
   # [[menu.main]]
-  #   pageRef="about"
-  #   name = 'About'
-  #   url = '/about/'
-  #   weight = 30
+    # pageRef="ArchLinux"
+    # name = 'Arch linux'
+    # url = '/archlinux/'
+    # weight = 30
 
 [params]
   sitename = "犀谭"
