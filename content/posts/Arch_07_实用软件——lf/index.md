@@ -7,7 +7,11 @@ keywords:
 - Archlinux lf 文件管理器
 title: Archlinux 小记-007 实用软件—— lf
 date: 2023-05-24
-description: 介绍终端文件管理器 lf，以及其可以实现的强大功能
+description: 终端文件管理器
+image: []
+resources:
+- name: "featured-image"
+  src: "featured-image.png"
 tags:
 - Archlinux
 - Applications

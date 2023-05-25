@@ -6,7 +6,11 @@ keywords:
 - Archlinux sxiv 图片查看器
 title: Archlinux 小记-008 实用软件—— sxiv
 date: 2023-05-25
-description: 介绍图像查看器 sxiv，以及其能实现的强大功能
+description: 极简但强大的图像查看器
+image: []
+resources:
+- name: "featured-image"
+  src: "featured-image.png"
 tags: 
 - Archlinux
 - Applications

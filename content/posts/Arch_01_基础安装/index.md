@@ -7,7 +7,11 @@ keywords:
 - Archlinux 基础安装
 title: Archlinux 小记-001 基础安装
 date: 2023-05-17
-description: 总结archlinux基础安装的方法和技巧，包括物理机和虚拟机 
+description: 总结archlinux基础安装技巧 
+image: []
+resources:
+- name: "featured-image"
+  src: "featured-image.png"
 tags: 
 - Archlinux
 ---

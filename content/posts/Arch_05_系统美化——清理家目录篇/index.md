@@ -8,11 +8,16 @@ keywords:
 - Archlinux 目录规范
 title: "Archlinux 小记-005 系统美化——清理家目录篇"
 date: 2023-05-22
-description: 介绍何为 XDG Base Directory Specifications，并如何基于此规范打造一个干净整洁的家目录 
+description: 基于 XDG Base Directory Specifications 维护干净整洁的家目录
+image: []
+resources:
+- name: "featured-image"
+  src: "featured-image.png"
 tags:
 - Archlinux
 ---
 
+<!---->
 ## 一、[XDG Base Directory Specifications](https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html)
 ---
 

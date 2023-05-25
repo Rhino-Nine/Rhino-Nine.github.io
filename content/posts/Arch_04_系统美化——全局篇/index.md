@@ -9,7 +9,11 @@ keywords:
 - dwm 壁纸
 title: Archlinux 小记-004 系统美化——全局篇
 date:  2023-05-21
-description: 介绍如何配置 Archlinux 全局美化、修改 dwm 和 st 主题配色、配置壁纸
+description: Archlinux 全局美化、dwm 和 st 配色、壁纸设置脚本
+image: []
+resources:
+- name: "featured-image"
+  src: "featured-image.png"
 tags: 
 - Archlinux
 ---

@@ -9,7 +9,11 @@ keywords:
 - Archlinux powerlevel10k 配置
 title: "Archlinux 小记-006 系统美化——终端篇"
 date: 2023-05-23
-description: 介绍 Z shell，以及如何用 zim 框架配置一套兼顾速度和功能的 zsh
+description: 用 zim 框架配置兼顾速度和功能的 zsh
+image: []
+resources:
+- name: "featured-image"
+  src: "featured-image.png"
 tags:
 - Archlinux
 ---
