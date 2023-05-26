@@ -88,7 +88,7 @@ enableEmoji = true
 [params]
   # site default theme ["auto", "light", "dark"]
   # 网站默认主题 ["auto", "light", "dark"]
-  defaultTheme = "auto"
+  defaultTheme = "dark"
   # public git repo url only then enableGitInfo is true
   # 公共 git 仓库路径，仅在 enableGitInfo 设为 true 时有效
   gitRepo = "https://github.com/Rhino-Nine/Rhino-Nine.github.io"
@@ -96,7 +96,7 @@ enableEmoji = true
   # ["sha256", "sha384", "sha512", "md5"]
   # 哪种哈希函数用来 SRI, 为空时表示不使用 SRI
   # ["sha256", "sha384", "sha512", "md5"]
-  fingerprint = ""
+  fingerprint = "sha256"
   # date format
   # 日期格式
   dateFormat = "2006-01-02"
@@ -359,10 +359,10 @@ enableEmoji = true
     hiddenFromSearch = false
     # whether to enable twemoji
     # 是否使用 twemoji
-    twemoji = false
+    twemoji = true
     # whether to enable lightgallery
     # 是否使用 lightgallery
-    lightgallery = false
+    lightgallery = true
     # whether to enable the ruby extended syntax
     # 是否使用 ruby 扩展语法
     ruby = true
@@ -758,7 +758,7 @@ enableEmoji = true
         post = ""
         name = "Posts"
         url = "/posts/"
-        title = "所有文章"
+        title = ""
       [[languages.en.menu.main]]
         weight = 2
         identifier = "tags"
@@ -766,7 +766,7 @@ enableEmoji = true
         post = ""
         name = "Tags"
         url = "/tags/"
-        title = "标签"
+        title = ""
       # [[languages.en.menu.main]]
       #   weight = 3
       #   identifier = "categories"
@@ -819,9 +819,9 @@ enableEmoji = true
           enable = true
           gravatarEmail = ""
           avatarURL = "/images/avatar.png"
-          title = "犀谭"
+          title = "方寸净土"
           subtitle = "My Kṣetra in a Linux Shell"
-          typeit = true
+          typeit = false
           social = true
           disclaimer = ""
       [languages.en.params.social]
