@@ -13,7 +13,7 @@ description: Archlinux 全局美化、dwm 和 st 配色、壁纸设置脚本
 image: []
 resources:
 - name: "featured-image"
-  src: "featured-image.png"
+  src: "screen_featured-image.png"
 tags: 
 - Archlinux
 ---

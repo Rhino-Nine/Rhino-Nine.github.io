@@ -12,7 +12,7 @@ description: 基于 XDG Base Directory Specifications 维护干净整洁的家�
 image: []
 resources:
 - name: "featured-image"
-  src: "featured-image.png"
+  src: "home_featured-image.png"
 tags:
 - Archlinux
 ---

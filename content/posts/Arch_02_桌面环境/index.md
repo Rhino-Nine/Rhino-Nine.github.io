@@ -12,7 +12,7 @@ description: 围绕 dwm 为核心配置图形界面
 image: []
 resources:
 - name: "featured-image"
-  src: "featured-image.png"
+  src: "wm_featured-image.png"
 tags:
 - Archlinux
 ---

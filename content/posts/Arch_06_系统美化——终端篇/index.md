@@ -13,7 +13,7 @@ description: 用 zim 框架配置兼顾速度和功能的 zsh
 image: []
 resources:
 - name: "featured-image"
-  src: "featured-image.png"
+  src: "terminal_featured-image.png"
 tags:
 - Archlinux
 ---

@@ -10,7 +10,7 @@ description: 极简但强大的图像查看器
 image: []
 resources:
 - name: "featured-image"
-  src: "featured-image.png"
+  src: "sxiv_featured-image.png"
 tags: 
 - Archlinux
 - Applications

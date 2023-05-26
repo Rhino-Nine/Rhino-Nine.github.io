@@ -11,7 +11,7 @@ description: 终端文件管理器
 image: []
 resources:
 - name: "featured-image"
-  src: "featured-image.png"
+  src: "lf_featured-image.png"
 tags:
 - Archlinux
 - Applications
