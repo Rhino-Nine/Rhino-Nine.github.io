@@ -1,22 +1,15 @@
 ---
-No: 005
-keywords:
-- dwm 配置
-- dwm 配色
-- st 配置
-- st 配色
-- dwm 壁纸设置
-- dwm 壁纸
+posts: 005
 title: Archlinux 小记-004 系统美化——全局篇
 date:  2023-05-21
+draft: false
 description: Archlinux 全局美化、dwm 和 st 配色、壁纸设置脚本
-image: []
-resources:
-- name: "featured-image"
-  src: "screen_featured-image.png"
+featuredImage: http://pic.ariesnine.cn/blogpics/p005-cover-screen.png?e=9000000000&token=xZxiW9ZEoq326-i7GpsGj0UP8HmwA2DT8nK-ZDo2:WE97mild2u9WehGqZ73Ps62OIqA=
 tags: 
 - Archlinux
 ---
+
+<!--more-->
 
 ## 一、主界面
 ---

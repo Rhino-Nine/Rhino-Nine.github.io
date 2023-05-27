@@ -1,21 +1,15 @@
 ---
-No.: 003
-keywords:
-- Archlinux 桌面配置
-- Archlinux 桌面环境
-- Archlinux 桌面环境安装
-- Archlinux dwm 配置
-- Archlinux dwm 安装
+posts: 003
 title: Archlinux 小记-002 桌面环境
 date: 2023-05-19
+draft: false
 description: 围绕 dwm 为核心配置图形界面
-image: []
-resources:
-- name: "featured-image"
-  src: "wm_featured-image.png"
+featuredImage: http://pic.ariesnine.cn/blogpics/p003-cover-wm.png?e=9000000000&token=xZxiW9ZEoq326-i7GpsGj0UP8HmwA2DT8nK-ZDo2:2RnjRFmCiBocSGZjTfaLKVBqceM=
 tags:
 - Archlinux
 ---
+
+<!--more-->
 
 ## 零、准备工作
 ---

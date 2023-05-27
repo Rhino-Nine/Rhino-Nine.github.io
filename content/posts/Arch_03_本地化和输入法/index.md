@@ -1,21 +1,15 @@
 ---
-No.: 004
-keywords:
-- Archlinux 本地化
-- Archlinux 中文设置
-- Archlinux 输入法
-- Fcitx5 配置
-- 四叶草输入法配置
+posts: 004
 title: Archlinux 小记-003 本地化和输入法
 date: 2023-05-20
+draft: false
 description: 本地化 Archlinux 系统，安装并使用 Fcitx5+rime+四叶草输入法
-image: []
-resources:
-- name: "featured-image"
-  src: "fcitx5_featured-image.png"
+featuredImage: http://pic.ariesnine.cn/blogpics/p004-cover-fcitx5.png?e=9000000000&token=xZxiW9ZEoq326-i7GpsGj0UP8HmwA2DT8nK-ZDo2:36gR5xBSTja-5Ihw8J-yLnEyekM=
 tags: 
 - Archlinux
 ---
+
+<!--more-->
 
 ## 一、本地化
 ---

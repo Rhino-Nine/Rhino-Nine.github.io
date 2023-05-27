@@ -1,20 +1,16 @@
 ---
-No: 009
-keywords:
-- Archlinux 软件
-- Archlinux 图片查看器
-- Archlinux sxiv 图片查看器
+posts: 009
 title: Archlinux 小记-008 实用软件—— sxiv
 date: 2023-05-25
+draft: false
 description: 极简但强大的图像查看器
-image: []
-resources:
-- name: "featured-image"
-  src: "sxiv_featured-image.png"
+featuredImage: http://pic.ariesnine.cn/blogpics/p009-cover-sxiv.png?e=9000000000&token=xZxiW9ZEoq326-i7GpsGj0UP8HmwA2DT8nK-ZDo2:8gPmsPNe2zyBwlsVEdXSJiuHLsM=
 tags: 
 - Archlinux
 - Applications
 ---
+
+<!--more-->
 
 > [sxiv](https://github.com/muennich/sxiv)，即 "Simple [X](https://wiki.archlinux.org/title/X) Image Viewer"，是一款由 C 语言编写的、轻量级的、可编写扩展脚本的图像查看器。
 

@@ -1,22 +1,16 @@
 ---
-No: 007
-keywords:
-- Archlinux 美化
-- Archlinux 终端美化
-- Archlinux st 终端美化
-- Archlinux zsh 美化
-- Archlinux zim 插件
-- Archlinux powerlevel10k 配置
+posts: 007
 title: "Archlinux 小记-006 系统美化——终端篇"
 date: 2023-05-23
+draft: false
 description: 用 zim 框架配置兼顾速度和功能的 zsh
-image: []
-resources:
-- name: "featured-image"
-  src: "terminal_featured-image.png"
+featuredImage: http://pic.ariesnine.cn/blogpics/p007-terminal.png?e=9000000000&token=xZxiW9ZEoq326-i7GpsGj0UP8HmwA2DT8nK-ZDo2:D3MhvJy8DMvbvoCLutkRZsO7NlM=
 tags:
 - Archlinux
 ---
+
+<!--more-->
+
 ## 一、[zsh](https://www.zsh.org/) 美化
 ---
 

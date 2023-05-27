@@ -1,23 +1,16 @@
 ---
-No: 006
-keywords:
-- Archlinux 家目录整理
-- Archlinux 清理垃圾
-- Archlinux 美化
-- Archlinux 根目录清理
-- Archlinux 目录规范
+posts: 006
 title: "Archlinux 小记-005 系统美化——清理家目录篇"
 date: 2023-05-22
+draft: false
 description: 基于 XDG Base Directory Specifications 维护干净整洁的家目录
-image: []
-resources:
-- name: "featured-image"
-  src: "home_featured-image.png"
+featuredImage: http://pic.ariesnine.cn/blogpics/p006-cover-home.png?e=9000000000&token=xZxiW9ZEoq326-i7GpsGj0UP8HmwA2DT8nK-ZDo2:BItQWkFZ_5atuPkRzKY2HKUo19U=
 tags:
 - Archlinux
 ---
 
-<!---->
+<!--more-->
+
 ## 一、[XDG Base Directory Specifications](https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html)
 ---
 

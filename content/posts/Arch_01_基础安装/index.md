@@ -1,21 +1,16 @@
 ---
-No: 001
-keywords: 
-- Archlinux
-- Archlinux 安装
-- Archlinux 配置
-- Archlinux 基础安装
+posts: 001
 title: Archlinux 小记-001 基础安装
 date: 2023-05-17
-description: 总结archlinux基础安装技巧 
-image: []
-resources:
-- name: "featured-image"
-  src: "featured-image.png"
+draft: false
+description: 总结Archlinux基础安装技巧 
+featuredImage: http://pic.ariesnine.cn/blogpics/p001-cover-Arch_Linux.jpg?e=9000000000&token=xZxiW9ZEoq326-i7GpsGj0UP8HmwA2DT8nK-ZDo2:xoGCH3IHytXdoc1zbfiKx33-9B4=
 tags: 
 - Archlinux
 ---
-<!-- more -->
+
+<!--more-->
+
 ## 一、安装准备
 ---
 

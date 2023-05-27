@@ -1,14 +1,16 @@
 ---
-No: 002
-keywords:
-- git commit 误删
-- git commit 恢复
-title: 恢复本地误删 commits
+posts: 002
+title: Git 小记-001：恢复本地误删 commits
 date: 2023-05-18
+draft: false
 description: 本地 git commits 误删之后的恢复方法
 tags:
 - Git
+
+hiddenFromHomePage: true
 ---
+
+<!--more-->
 
 ## 起因
 ---
