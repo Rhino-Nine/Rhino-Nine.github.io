@@ -19,6 +19,8 @@ tags:
 
 ![test 2](http://rvald11p2.hn-bkt.clouddn.com/blogpics/p001-cover-Arch_Linux.jpg "test2")
 
+![test 3](https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/p001-cover-Arch_Linux.jpg)
+
 ### 1. 物理机
 1. 确认网络连接通畅
 2. 下载安装镜像
