@@ -4,7 +4,7 @@ title: "Archlinux 小记-005 系统美化——清理家目录篇"
 date: 2023-05-22
 draft: false
 description: 基于 XDG Base Directory Specifications 维护干净整洁的家目录
-featuredImage: http://pic.ariesnine.cn/blogpics/p006-cover-home.png?e=9000000000&token=xZxiW9ZEoq326-i7GpsGj0UP8HmwA2DT8nK-ZDo2:BItQWkFZ_5atuPkRzKY2HKUo19U=
+featuredImage: http://pic.ariesnine.cn/blogpics/p006-cover-home.png
 tags:
 - Archlinux
 ---

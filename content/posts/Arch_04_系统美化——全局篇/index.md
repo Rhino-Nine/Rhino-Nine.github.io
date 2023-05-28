@@ -4,7 +4,7 @@ title: Archlinux 小记-004 系统美化——全局篇
 date:  2023-05-21
 draft: false
 description: Archlinux 全局美化、dwm 和 st 配色、壁纸设置脚本
-featuredImage: http://pic.ariesnine.cn/blogpics/p005-cover-screen.png?e=9000000000&token=xZxiW9ZEoq326-i7GpsGj0UP8HmwA2DT8nK-ZDo2:WE97mild2u9WehGqZ73Ps62OIqA=
+featuredImage: http://pic.ariesnine.cn/blogpics/p005-cover-screen.png
 tags: 
 - Archlinux
 ---
