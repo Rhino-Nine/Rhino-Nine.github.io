@@ -15,7 +15,7 @@ tags:
 ## 一、安装准备
 ---
 
-![Minion](https://octodex.github.com/images/minion.png)
+![test](http://pic.ariesnine.cn/blogpics/p001-cover-Arch_Linux.jpg)
 
 ### 1. 物理机
 1. 确认网络连接通畅
