@@ -14,6 +14,8 @@ tags:
 ## 一、安装准备
 ---
 
+![test](http://pic.ariesnine.cn/blogpics/p001-cover-Arch_Linux.jpg?e=1685236112&token=xZxiW9ZEoq326-i7GpsGj0UP8HmwA2DT8nK-ZDo2:lrebRX-PoM8oVyngw9QkiNXXhos=)
+
 ### 1. 物理机
 1. 确认网络连接通畅
 2. 下载安装镜像
