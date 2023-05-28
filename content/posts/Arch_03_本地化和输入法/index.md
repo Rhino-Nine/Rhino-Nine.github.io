@@ -4,7 +4,7 @@ title: Archlinux 小记-003 本地化和输入法
 date: 2023-05-20
 draft: false
 description: 本地化 Archlinux 系统，安装并使用 Fcitx5+rime+四叶草输入法
-featuredImage: http://pic.ariesnine.cn/blogpics/p004-cover-fcitx5.png
+featuredImage: https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics/p004-cover-fcitx5.png?q-sign-algorithm=sha1&q-ak=AKIDpiaP8oO0V1VH1eAa5Up7c4Unz42rW5vh&q-sign-time=1685270547;8999999999&q-key-time=1685270547;8999999999&q-header-list=host&q-url-param-list=&q-signature=8d0b2a6bfe470d4e005f628d81dd2e7073ef83c2
 tags: 
 - Archlinux
 ---

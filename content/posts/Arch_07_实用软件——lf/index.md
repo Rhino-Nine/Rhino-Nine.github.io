@@ -4,7 +4,7 @@ title: Archlinux 小记-007 实用软件—— lf
 date: 2023-05-24
 draft: false
 description: 终端文件管理器
-featuredImage: http://pic.ariesnine.cn/blogpics/p008-cover-lf.png
+featuredImage: https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics/p008-cover-lf.png?q-sign-algorithm=sha1&q-ak=AKIDpiaP8oO0V1VH1eAa5Up7c4Unz42rW5vh&q-sign-time=1685270547;8999999999&q-key-time=1685270547;8999999999&q-header-list=host&q-url-param-list=&q-signature=032c231f8a6c2cc7237bfe4778068d9a7633be65
 tags:
 - Archlinux
 - Applications
