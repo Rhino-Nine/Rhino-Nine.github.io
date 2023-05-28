@@ -4,6 +4,7 @@ title: Archlinux 小记-001 基础安装
 date: 2023-05-17
 draft: false
 description: 总结Archlinux基础安装技巧 
+image: []
 featuredImage: http://pic.ariesnine.cn/blogpics/p001-cover-Arch_Linux.jpg?e=9000000000&token=xZxiW9ZEoq326-i7GpsGj0UP8HmwA2DT8nK-ZDo2:xoGCH3IHytXdoc1zbfiKx33-9B4=
 tags: 
 - Archlinux
@@ -14,7 +15,7 @@ tags:
 ## 一、安装准备
 ---
 
-![test](http://pic.ariesnine.cn/blogpics/p001-cover-Arch_Linux.jpg?e=1685236112&token=xZxiW9ZEoq326-i7GpsGj0UP8HmwA2DT8nK-ZDo2:lrebRX-PoM8oVyngw9QkiNXXhos=)
+![Minion](https://octodex.github.com/images/minion.png)
 
 ### 1. 物理机
 1. 确认网络连接通畅
