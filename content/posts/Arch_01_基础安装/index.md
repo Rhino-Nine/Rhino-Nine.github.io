@@ -15,7 +15,9 @@ tags:
 ## 一、安装准备
 ---
 
-![test](http://pic.ariesnine.cn/blogpics/p001-cover-Arch_Linux.jpg)
+![test](http://pic.ariesnine.cn/blogpics/p001-cover-Arch_Linux.jpg "test")
+
+![test 2](http://rvald11p2.hn-bkt.clouddn.com/blogpics/p001-cover-Arch_Linux.jpg "test2")
 
 ### 1. 物理机
 1. 确认网络连接通畅
