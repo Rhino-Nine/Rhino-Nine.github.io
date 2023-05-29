@@ -1,13 +1,12 @@
 ---
-title: "Archlinux 小记-009"
-subtitle: ""
-date: {{ .Date }}
+title: "Archlinux 小记-009 NeoVim"
+date: 2023-05-29
 draft: true
 description: ""
 images: []
 
-tags: []
-categories: []
+tags: ["Archlinux", "Programs"]
+categories: [Linux]
 
 featuredImage: ""
 featuredImagePreview: ""
@@ -18,3 +17,5 @@ lightgallery: true
 ---
 
 <!--more-->
+
+
