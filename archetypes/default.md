@@ -1,7 +1,7 @@
 ---
 title: ""
 subtitle: ""
-date: {{ .Date }}
+date: 
 draft: true
 description: ""
 images: []
