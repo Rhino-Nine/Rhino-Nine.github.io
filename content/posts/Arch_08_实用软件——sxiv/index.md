@@ -4,7 +4,7 @@ title: Archlinux 小记-008 实用软件—— sxiv
 date: 2023-05-25
 draft: false
 description: 极简但强大的图像查看器
-featuredImage: https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics/p009-cover-sxiv.png?q-sign-algorithm=sha1&q-ak=AKIDpiaP8oO0V1VH1eAa5Up7c4Unz42rW5vh&q-sign-time=1685270547;8999999999&q-key-time=1685270547;8999999999&q-header-list=host&q-url-param-list=&q-signature=84f04310b1058b4fb5241950c822a34c2b2760d7
+featuredImage: https://images.ariesnine.cn/blogpics/p009-cover-sxiv.png
 tags: 
 - Archlinux
 - Applications

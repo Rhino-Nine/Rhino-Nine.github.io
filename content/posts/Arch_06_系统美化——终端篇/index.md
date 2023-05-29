@@ -4,7 +4,7 @@ title: "Archlinux 小记-006 系统美化——终端篇"
 date: 2023-05-23
 draft: false
 description: 用 zim 框架配置兼顾速度和功能的 zsh
-featuredImage: https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics/p007-terminal.png?q-sign-algorithm=sha1&q-ak=AKIDpiaP8oO0V1VH1eAa5Up7c4Unz42rW5vh&q-sign-time=1685270547;8999999999&q-key-time=1685270547;8999999999&q-header-list=host&q-url-param-list=&q-signature=3c28d21a2c1795b6a8d36b2329c76add99813663
+featuredImage: https://images.ariesnine.cn/blogpics/p007-terminal.png
 tags:
 - Archlinux
 ---

@@ -5,7 +5,7 @@ date: 2023-05-17
 draft: false
 description: 总结Archlinux基础安装技巧 
 image: []
-featuredImage: https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics/p001-cover-Arch_Linux.jpg?q-sign-algorithm=sha1&q-ak=AKIDpiaP8oO0V1VH1eAa5Up7c4Unz42rW5vh&q-sign-time=1685270547;8999999999&q-key-time=1685270547;8999999999&q-header-list=host&q-url-param-list=&q-signature=7a6e12f71aacf9a20fb863cce41c85da42899633
+featuredImage: https://images.ariesnine.cn/blogpics/p001-cover-Arch_Linux.jpg
 tags: 
 - Archlinux
 ---
