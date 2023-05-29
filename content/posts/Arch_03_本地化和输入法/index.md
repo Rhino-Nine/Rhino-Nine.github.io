@@ -5,8 +5,7 @@ date: 2023-05-20
 draft: false
 description: 本地化 Archlinux 系统，安装并使用 Fcitx5+rime+四叶草输入法
 featuredImage: https://images.ariesnine.cn/blogpics/p004-cover-fcitx5.png
-tags: 
-- Archlinux
+tags: ["Archlinux"]
 ---
 
 <!--more-->

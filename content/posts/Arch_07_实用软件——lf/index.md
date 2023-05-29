@@ -5,9 +5,7 @@ date: 2023-05-24
 draft: false
 description: 终端文件管理器
 featuredImage: https://images.ariesnine.cn/blogpics/p008-cover-lf.png
-tags:
-- Archlinux
-- Applications
+tags: ["Archlinux", "Programs"]
 ---
 
 <!--more-->

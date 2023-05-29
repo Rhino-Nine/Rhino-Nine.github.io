@@ -5,8 +5,7 @@ date: 2023-05-22
 draft: false
 description: 基于 XDG Base Directory Specifications 维护干净整洁的家目录
 featuredImage: https://images.ariesnine.cn/blogpics/p006-cover-home.png
-tags:
-- Archlinux
+tags: ["Archlinux"]
 ---
 
 <!--more-->

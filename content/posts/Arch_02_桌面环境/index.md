@@ -5,8 +5,7 @@ date: 2023-05-19
 draft: false
 description: 围绕 dwm 为核心配置图形界面
 featuredImage: https://images.ariesnine.cn/blogpics/p003-cover-wm.png
-tags:
-- Archlinux
+tags: ["Archlinux"]
 ---
 
 <!--more-->

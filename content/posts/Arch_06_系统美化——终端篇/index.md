@@ -5,8 +5,7 @@ date: 2023-05-23
 draft: false
 description: 用 zim 框架配置兼顾速度和功能的 zsh
 featuredImage: https://images.ariesnine.cn/blogpics/p007-terminal.png
-tags:
-- Archlinux
+tags: ["Archlinux"]
 ---
 
 <!--more-->

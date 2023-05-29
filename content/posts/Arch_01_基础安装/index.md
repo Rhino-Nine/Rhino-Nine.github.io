@@ -6,8 +6,7 @@ draft: false
 description: 总结Archlinux基础安装技巧 
 image: []
 featuredImage: https://images.ariesnine.cn/blogpics/p001-cover-Arch_Linux.jpg
-tags: 
-- Archlinux
+tags: ["Archlinux"]
 ---
 
 <!--more-->

@@ -5,9 +5,7 @@ date: 2023-05-25
 draft: false
 description: 极简但强大的图像查看器
 featuredImage: https://images.ariesnine.cn/blogpics/p009-cover-sxiv.png
-tags: 
-- Archlinux
-- Applications
+tags: ["Archlinux", "Programs"]
 ---
 
 <!--more-->
