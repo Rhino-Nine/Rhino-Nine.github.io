@@ -6,6 +6,7 @@ draft: false
 description: 终端文件管理器
 featuredImage: https://images.ariesnine.cn/blogpics/p008-cover-lf.png
 tags: ["Archlinux", "Programs"]
+category: ["Linux Tools"]
 ---
 
 <!--more-->
