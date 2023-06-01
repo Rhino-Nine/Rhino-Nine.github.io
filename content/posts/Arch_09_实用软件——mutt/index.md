@@ -1,4 +1,5 @@
 ---
+post: A-09
 title: "Archlinux 小记-009 实用软件——mutt"
 date: 2023-05-31
 draft: false

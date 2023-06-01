@@ -1,5 +1,5 @@
 ---
-posts: 002
+posts: G-01
 title: Git 小记-001：恢复本地误删 commits
 date: 2023-05-18
 draft: false

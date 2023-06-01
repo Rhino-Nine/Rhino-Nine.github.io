@@ -1,5 +1,5 @@
 ---
-posts: 009
+posts: A-08
 title: Archlinux 小记-008 实用软件—— sxiv
 date: 2023-05-25
 draft: false

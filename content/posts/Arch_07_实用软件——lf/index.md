@@ -1,5 +1,5 @@
 ---
-posts: 008
+posts: A-07
 title: Archlinux 小记-007 实用软件—— lf
 date: 2023-05-24
 draft: false

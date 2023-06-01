@@ -1,5 +1,5 @@
 ---
-posts: 004
+posts: A-03
 title: Archlinux 小记-003 本地化和输入法
 date: 2023-05-20
 draft: false

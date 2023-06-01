@@ -1,5 +1,5 @@
 ---
-posts: 003
+posts: A-02
 title: Archlinux 小记-002 桌面环境
 date: 2023-05-19
 draft: false

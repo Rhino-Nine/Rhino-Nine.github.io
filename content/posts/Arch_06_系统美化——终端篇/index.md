@@ -1,5 +1,5 @@
 ---
-posts: 007
+posts: A-06
 title: "Archlinux 小记-006 系统美化——终端篇"
 date: 2023-05-23
 draft: false

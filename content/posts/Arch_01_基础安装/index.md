@@ -1,5 +1,5 @@
 ---
-posts: 001
+posts: A-01
 title: Archlinux 小记-001 基础安装
 date: 2023-05-17
 draft: false

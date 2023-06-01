@@ -1,5 +1,5 @@
 ---
-posts: 006
+posts: A-05
 title: "Archlinux 小记-005 系统美化——清理家目录篇"
 date: 2023-05-22
 draft: false
