@@ -42,16 +42,16 @@ sudo make install
 ```
 
 ### 安装依赖包
-- neomutt
-- abook
-- curl
-- isync
-- lynx
-- msmtp
-- mpop
-- notmuch
-- pass
-- urlview
+- neomutt - 邮件客户端
+- abook - 通讯录
+- curl - 检测邮箱信息
+- isync - 离线保存邮件，若使用 POP 服务则不必要
+- lynx - 格式化 HTML 邮件
+- msmtp - 发送邮件
+- mpop - 为 POP 服务提供支持
+- notmuch - 搜索邮件
+- pass - 保存密码，配合 GPG 加密
+- urlview - 识别邮件中的 url 链接
 
 ## 使用
 ---
@@ -78,7 +78,7 @@ mw -a example@email.com -x "app password" -f
 > - mw —— mutt-widzard 
 > - -a example@email.com —— 添加邮箱账户
 > - -x "app password" —— 填写邮箱密码
-> - -f —— 还没懂，不加这个参数，邮箱就添加失败
+> - f 禁用 curl 检测邮箱信息
 
 ### 自定义侧边栏邮件文件夹
 通过编辑`$XDG_CONFIG_HOME/mutt/accounts/example@mail.com.muttrc`，使用`named-mailboxes`显示和隐藏侧边栏的邮件文件夹：
