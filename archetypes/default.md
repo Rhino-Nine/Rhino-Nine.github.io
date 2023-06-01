@@ -10,11 +10,6 @@ tags: []
 categories: []
 
 featuredImage: ""
-featuredImagePreview: ""
-
-hiddenFromHomePage: false
-hiddenFromSearch: false
-lightgallery: true
 ---
 
 <!--more-->
