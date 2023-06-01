@@ -4,7 +4,7 @@ title: Archlinux 小记-002 桌面环境
 date: 2023-05-19
 draft: false
 description: 围绕 dwm 为核心配置图形界面
-featuredImage: https://images.ariesnine.cn/blogpics/p003-cover-wm.png
+featuredImage: https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics/p003-cover-wm.png
 tags: ["Archlinux"]
 ---
 

@@ -9,7 +9,7 @@ images: []
 tags: ["Archlinux", "Programs"]
 categories: [Linux Tools]
 
-featuredImage: "https://images.ariesnine.cn/blogpics/p011-cover-mutt.png"
+featuredImage: "https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics/p011-cover-mutt.png"
 ---
 
 <!--more-->
@@ -59,7 +59,7 @@ sudo make install
 ### 创建 GPG 密钥对和 pass 密码库
 使用`mutt-widzard`需要 GPG 密钥对，若没有，使用`gpg --full-gen-key`创建：
 
-![gpg --full-gen-key](/images/p011-content-gpg_generate.gif "生成GPG密钥对")
+![gpg --full-gen-key](https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics%2Fp011-content-gpg_generate.gif "生成GPG密钥对")
 
 生成`GPG`密钥对时，所使用的邮箱地址`myemail@mail.comn`与接下来需要在Neomutt中添加的个人邮箱账户`example@mail.com`没有任何关系。
 
