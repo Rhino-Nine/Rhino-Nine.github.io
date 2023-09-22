@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Archlinux 小记-002 桌面环境 - 犀谭</title><meta name="Description" content="围绕 dwm 为核心配置图形界面"><meta property="og:title" content="Archlinux 小记-002 桌面环境" />
+<meta property="og:description" content="围绕 dwm 为核心配置图形界面" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.ariesnine.cn/arch_02_%E6%A1%8C%E9%9D%A2%E7%8E%AF%E5%A2%83/" /><meta property="og:image" content="https://www.ariesnine.cn/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-05-19T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-05-19T00:00:00+00:00" /><meta property="og:site_name" content="犀谭" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://www.ariesnine.cn/logo.png"/>
+
+<meta name="twitter:title" content="Archlinux 小记-002 桌面环境"/>
+<meta name="twitter:description" content="围绕 dwm 为核心配置图形界面"/>
+<meta name="application-name" content="犀谭">
+<meta name="apple-mobile-web-app-title" content="犀谭"><meta name="theme-color" content="#282A36"><meta name="msapplication-TileColor" content="#5AF78E"><meta name="referrer" content="no-refeer">
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#BD93F9"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.ariesnine.cn/arch_02_%E6%A1%8C%E9%9D%A2%E7%8E%AF%E5%A2%83/" /><link rel="prev" href="https://www.ariesnine.cn/git_01_%E6%81%A2%E5%A4%8D%E6%9C%AC%E5%9C%B0%E8%AF%AF%E5%88%A0commit/" /><link rel="next" href="https://www.ariesnine.cn/arch_03_%E6%9C%AC%E5%9C%B0%E5%8C%96%E5%92%8C%E8%BE%93%E5%85%A5%E6%B3%95/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.897bb8797133984bdbd3ac834db1a0341c66a8efd95db2216603704f28b76d77.css" integrity="sha256-iXu4eXEzmEvb06yDTbGgNBxmqO/ZXbIhZgNwTyi3bXc="><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Archlinux 小记-002 桌面环境",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/www.ariesnine.cn\/arch_02_%E6%A1%8C%E9%9D%A2%E7%8E%AF%E5%A2%83\/"
+        },"image": ["https:\/\/www.ariesnine.cn\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "Archlinux","wordcount":  1817 ,
+        "url": "https:\/\/www.ariesnine.cn\/arch_02_%E6%A1%8C%E9%9D%A2%E7%8E%AF%E5%A2%83\/","datePublished": "2023-05-19T00:00:00+00:00","dateModified": "2023-05-19T00:00:00+00:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "Aries","logo": {
+                    "@type": "ImageObject",
+                    "url": "https:\/\/www.ariesnine.cn\/images\/avatar.png",
+                    "width":  400 ,
+                    "height":  400 
+                }},"author": {
+                "@type": "Person",
+                "name": "Aries"
+            },"description": "围绕 dwm 为核心配置图形界面"
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('dark' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'dark' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="犀谭">犀谭</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="https://github.com/Rhino-Nine/Rhino-Nine" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i>  </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="犀谭">犀谭</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="https://github.com/Rhino-Nine/Rhino-Nine" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Archlinux 小记-002 桌面环境</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://www.ariesnine.cn" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Aries</a>
+</span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-05-19">2023-05-19</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1817 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;4 minutes&nbsp;</div>
+        </div><div class="featured-image"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics/p003-cover-wm.png"
+        data-srcset="https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics/p003-cover-wm.png, https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics/p003-cover-wm.png 1.5x, https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics/p003-cover-wm.png 2x"
+        data-sizes="auto"
+        alt="https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics/p003-cover-wm.png"
+        title="围绕 dwm 为核心配置图形界面" /></div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#零准备工作">零、准备工作</a>
+      <ul>
+        <li><a href="#01-连接网络">0.1. 连接网络</a>
+          <ul>
+            <li><a href="#01-1-有线连接">0.1-1 有线连接</a></li>
+            <li><a href="#01-2-无线连接">0.1-2 无线连接</a></li>
+          </ul>
+        </li>
+        <li><a href="#02-检查更新">0.2. 检查更新</a></li>
+        <li><a href="#03-配置非root用户">0.3. 配置非root用户</a>
+          <ul>
+            <li><a href="#03-1-建立账户并设置密码">0.3-1 建立账户并设置密码</a></li>
+            <li><a href="#03-2-编辑-sudoers-文件">0.3-2 编辑 <code>sudoers</code> 文件</a></li>
+          </ul>
+        </li>
+        <li><a href="#04-启用32位支持库和archlinuxcn库">0.4. 启用32位支持库和archlinuxcn库</a>
+          <ul>
+            <li><a href="#04-1-编辑-etcpacmanconf-文件">0.4-1 编辑 <code>/etc/pacman.conf</code> 文件</a></li>
+            <li><a href="#04-2-去掉-multilib-注释以启用32位库支持">0.4-2 去掉 <code>[multilib]</code> 注释以启用<code>32</code>位库支持</a></li>
+            <li><a href="#04-3-于文档末尾加入-archlinuxcn-源">0.4-3 于文档末尾加入 <code>archlinuxcn</code> 源:</a></li>
+            <li><a href="#04-4-wq-保存退出">0.4-4 <code>:wq</code> 保存退出</a></li>
+            <li><a href="#04-5-刷新数据库并更新">0.4-5 刷新数据库并更新</a></li>
+          </ul>
+        </li>
+        <li><a href="#05-重启并以非-root-用户登录">0.5. 重启并以非 root 用户登录</a></li>
+      </ul>
+    </li>
+    <li><a href="#一图形界面">一、图形界面</a>
+      <ul>
+        <li><a href="#1-显示服务">1. 显示服务</a>
+          <ul>
+            <li><a href="#11-x-窗口系统">1.1. X 窗口系统</a></li>
+            <li><a href="#12-wayland">1.2. Wayland</a></li>
+            <li><a href="#13-比较">1.3. 比较</a></li>
+            <li><a href="#14-安装-xorg">1.4. 安装 Xorg</a></li>
+          </ul>
+        </li>
+        <li><a href="#2-桌面环境和窗口管理器">2. 桌面环境和窗口管理器</a>
+          <ul>
+            <li><a href="#21-桌面环境">2.1. 桌面环境</a></li>
+            <li><a href="#22-窗口管理器">2.2. 窗口管理器</a></li>
+          </ul>
+        </li>
+        <li><a href="#3-dwm">3. Dwm</a>
+          <ul>
+            <li><a href="#31-dwm-下载">3.1. dwm 下载</a></li>
+            <li><a href="#32-dwm-编译">3.2. dwm 编译</a></li>
+            <li><a href="#33-dwm-启动">3.3. dwm 启动</a>
+              <ul>
+                <li><a href="#33-1-xinit">3.3-1 xinit</a></li>
+                <li><a href="#33-2-显示管理器">3.3-2 显示管理器</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#二安装常用软件">二、安装常用软件</a></li>
+    <li><a href="#__参考链接__"><strong>参考链接</strong></a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="零准备工作">零、准备工作</h2>
+<hr>
+<h3 id="01-连接网络">0.1. 连接网络</h3>
+<hr>
+<h4 id="01-1-有线连接">0.1-1 有线连接</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">systemctl <span class="nb">enable</span> --now NetworkManager <span class="c1"># 设置开机自启并立即启动 NetworkManager 服务</span>
+</span></span><span class="line"><span class="cl">ping www.bilibili.com <span class="c1"># 测试网络连接</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="01-2-无线连接">0.1-2 无线连接</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">systemctl <span class="nb">enable</span> --now NetworkManager <span class="c1"># 设置开机自启并立即启动 NetworkManager 服务</span>
+</span></span><span class="line"><span class="cl">nmcli dev wifi list <span class="c1"># 显示附近的 Wi-Fi 网络</span>
+</span></span><span class="line"><span class="cl">nmcli dev wifi connect <span class="s2">&#34;Wi-Fi名（SSID）&#34;</span> password <span class="s2">&#34;网络密码&#34;</span> <span class="c1"># 连接指定的无线网络</span>
+</span></span><span class="line"><span class="cl">ping www.bilibili.com <span class="c1"># 测试网络连接</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="02-检查更新">0.2. 检查更新</h3>
+<hr>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pacman -Syu <span class="c1">#确保系统最新</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="03-配置非root用户">0.3. 配置非root用户</h3>
+<hr>
+<h4 id="03-1-建立账户并设置密码">0.3-1 建立账户并设置密码</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">useradd -m -G wheel -s /bin/bash myusername 
+</span></span><span class="line"><span class="cl">passwd myusername 
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="03-2-编辑-sudoers-文件">0.3-2 编辑 <code>sudoers</code> 文件</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nv">EDITOR</span><span class="o">=</span>nvim visudo <span class="c1"># 这里需要显式的指定编辑器，因为上面的环境变量还未生效</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>去掉如下一行的注释 <code>#</code>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1">#%wheel ALL=(ALL:ALL) ALL</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><code>:wq</code>保存退出</p>
+<h3 id="04-启用32位支持库和archlinuxcn库">0.4. 启用32位支持库和archlinuxcn库</h3>
+<hr>
+<h4 id="04-1-编辑-etcpacmanconf-文件">0.4-1 编辑 <code>/etc/pacman.conf</code> 文件</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">nvim /etc/pacman.conf
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="04-2-去掉-multilib-注释以启用32位库支持">0.4-2 去掉 <code>[multilib]</code> 注释以启用<code>32</code>位库支持</h4>
+<h4 id="04-3-于文档末尾加入-archlinuxcn-源">0.4-3 于文档末尾加入 <code>archlinuxcn</code> 源:</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="o">[</span>archlinuxcn<span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="nv">Server</span> <span class="o">=</span> https://mirrors.ustc.edu.cn/archlinuxcn/<span class="nv">$arch</span> <span class="c1"># 中国科学技术大学开源镜像站</span>
+</span></span><span class="line"><span class="cl"><span class="nv">Server</span> <span class="o">=</span> https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/<span class="nv">$arch</span> <span class="c1"># 清华大学开源软件镜像站</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="04-4-wq-保存退出">0.4-4 <code>:wq</code> 保存退出</h4>
+<h4 id="04-5-刷新数据库并更新">0.4-5 刷新数据库并更新</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pacman -Syyu
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="05-重启并以非-root-用户登录">0.5. 重启并以非 root 用户登录</h3>
+<hr>
+<h2 id="一图形界面">一、图形界面</h2>
+<hr>
+<h3 id="1-显示服务">1. 显示服务</h3>
+<hr>
+<h4 id="11-x-窗口系统">1.1. X 窗口系统</h4>
+<blockquote>
+<p><a href="https://en.wikipedia.org/wiki/X_Window_System" target="_blank" rel="noopener noreffer">X 窗口系统</a>
+ （X Window System，也常称为 X11 或 X，天窗口系统）是一种以位图方式显示的软件窗口系统。现在，几乎任何操作系统都支持 X，比如知名的GNOME和KDE就是以 X 为基础建构而成的。X 本身只是工具包和架构规范，依据此规范开发的可使用、可执行的实体被称为实现体，在实现体中，以<a href="https://eh.wikipedia.org/X.Org_Server" target="_blank" rel="noopener noreffer">X.Org</a>
+最受欢迎。1987年9月，X11 发布，如今，最新的<a href="https://en.wikipedia.org/wiki/Reference_implementation" target="_blank" rel="noopener noreffer">参考实现</a>
+版本为 X11 Release 7.8。</p>
+</blockquote>
+<h4 id="12-wayland">1.2. Wayland</h4>
+<blockquote>
+<p><a href="https://wiki.archlinuxcn.org/wiki/Wayland" target="_blank" rel="noopener noreffer">Wayland</a>
+是一个旨在替代 X 窗口系统的显示服务协议，其本身并不提供图形环境，需安装混成器——使用 Wayland 协议的显示服务器，才可使用。</p>
+</blockquote>
+<h4 id="13-比较">1.3. 比较</h4>
+<p>详情可参见<a href="https://en.wikipedia.org/wiki/Wayland_%28protocol%29#Differences_between_Wayland_and_X" target="_blank" rel="noopener noreffer">此处</a>
+，本系列沿用X窗口系统。</p>
+<h4 id="14-安装-xorg">1.4. 安装 Xorg</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S xorg <span class="c1">#默认安装全部xorg包</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="2-桌面环境和窗口管理器">2. 桌面环境和窗口管理器</h3>
+<hr>
+<h4 id="21-桌面环境">2.1. 桌面环境</h4>
+<blockquote>
+<p><a href="https://wiki.archlinux.org/title/Desktop_environment" target="_blank" rel="noopener noreffer">桌面环境</a>
+(DE)由诸多组件协同工作，以提供图形界面元素，且多数桌面环境包含集成的应用程序和窗口管理器。 目前主流桌面环境有 KDE、GNOME 等等，可参见<a href="https://wiki.archlinux.org/title/Comparison_of_desktop_environments" target="_blank" rel="noopener noreffer">桌面环境的比较</a>
+选择。</p>
+</blockquote>
+<p>我最早接触的 DE 是 xfce，随着常用系统换成 Ubuntu ，桌面环境随之换成了 GNOME，但不到一周，GNOME 反复卡死, 我顺势将换为了 Manjaro + KDE。奈何 KDE 赏心悦目的代价是大额占用我捉襟见肘的系统资源，后来，我选择了Archlinux，并不再安装桌面环境。</p>
+<h4 id="22-窗口管理器">2.2. 窗口管理器</h4>
+<blockquote>
+<p><a href="https://wiki.archlinux.org/title/Window_manager" target="_blank" rel="noopener noreffer">窗口管理器</a>
+(WM)是控制 GUI 中窗口的位置和外观的系统软件，是 Xorg 独有的，常做为桌面环境的一部分。为了使系统观性能最大化，用户可以只安装窗口管理器和所需实用软件。窗口管理器按照窗口处理方式不同，可分为：<a href="https://wiki.archlinux.org/title/Window_manager#Dynamic_window_managers" target="_blank" rel="noopener noreffer">动态式</a>
+、<a href="https://wiki.archlinux.org/title/Window_manager#Stacking_window_managers" target="_blank" rel="noopener noreffer">堆栈式</a>
+和<a href="https://wiki.archlinux.org/title/Window_manager#Tiling_window_managers" target="_blank" rel="noopener noreffer">平铺式</a>
+。</p>
+</blockquote>
+<h3 id="3-dwm">3. Dwm</h3>
+<hr>
+<p>我选择 <a href="https://dwm.suckless.org/" target="_blank" rel="noopener noreffer">dwm</a>
+ 为窗口管理器，它由 C 语言编写，代码简洁清晰，功能朴素，且通过直接编译源代码，辅以<a href="https://dwm.suckless.org/patches/" target="_blank" rel="noopener noreffer">补丁</a>
+，可在兼顾美观的同时定制诸多实用功能。</p>
+<h4 id="31-dwm-下载">3.1. dwm 下载</h4>
+<p>可以从<a href="https://dwm.suckless.org/" target="_blank" rel="noopener noreffer">suckless</a>
+官网下载，也可以从 arch 支持库下载，还可以从 github 克隆源码。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S dwm <span class="c1">#从 arch 支持库下载</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">wget https://dl.suckless.org/dwm/dwm-6.4.tar.gz <span class="c1">#从官网下载</span>
+</span></span><span class="line"><span class="cl">tar xpvf dwm-6.4.tar.gz <span class="c1">#解压</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">git clone https://git.suckless.org/dwm <span class="c1">#从 github 下载</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>此外，也可以直接使用配置完成的 dwm ，感谢为此贡献精力和时间的开发者们。</p>
+<hr>
+<h4 id="32-dwm-编译">3.2. dwm 编译</h4>
+<p>我直接从我的<a href="https://github.com/Rhino-Nine/dwm" target="_blank" rel="noopener noreffer">仓库</a>
+中下载经配置的 dwm。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">cd</span> ~
+</span></span><span class="line"><span class="cl">git clone https://github.com/Rhino-Nine/dwm
+</span></span><span class="line"><span class="cl">mkdir ~/.config/suckless
+</span></span><span class="line"><span class="cl">mv ~/dwm ~/.config/suckless/dwm
+</span></span></code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>创建<code>~/.config/suckless/dwm</code>是为了调用<code>Scripts</code>中的脚本</p>
+</blockquote>
+<p>在编译前，需要下载必要包：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S imlib2 gd xorg-xrdb xorg-xset xorg-xsetroot
+</span></span><span class="line"><span class="cl">sudo pacman -S iosevka-nerd
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>编译安装：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">cd</span> ~/.config/suckless/dwm 
+</span></span><span class="line"><span class="cl">sudo make clean install 
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="33-dwm-启动">3.3. dwm 启动</h4>
+<h5 id="33-1-xinit">3.3-1 xinit</h5>
+<p>若使用<code>startx</code>，会在家目录下生成<code>.xauthority</code>，且通过设置环境变量重定向其存储路径后，会出现无法启动<code>X-server</code>的问题，故，建议使用<code>startx</code>的平替<code>sx</code>启动<code>dwm</code>。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S sx <span class="c1">#安装 sx </span>
+</span></span><span class="line"><span class="cl">mkdir ~/.config/sx 
+</span></span><span class="line"><span class="cl">nvim ~/.config/sx/sxrc 
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>在<code>sx</code>的配置文件中写入启动命令：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">~/.config/suckless/dwm/scripts/run.sh
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="33-2-显示管理器">3.3-2 显示管理器</h5>
+<blockquote>
+<p><a href="https://wiki.archlinux.org/title/Display_manager" target="_blank" rel="noopener noreffer">显示管理器</a>
+通常是一个图形用户界面，会在启动过程结束时替代默认<code>shell</code>，实现简单的登录功能，以<code>sddm</code>举例。</p>
+</blockquote>
+<ul>
+<li>安装并开启 sddm 守护进程</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S sddm <span class="c1">#安装 sddm </span>
+</span></span><span class="line"><span class="cl">sudo systemctl <span class="nb">enable</span> sddm <span class="c1">#启动守护进程</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>为用户创建 dwm <a href="https://wiki.archlinux.org/title/Desktop_entries" target="_blank" rel="noopener noreffer">桌面项</a>
+</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo nvim /usr/share/xsessions/dwm.desktop <span class="c1">#创建桌面项</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#写入以下内容</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>Desktop Entry<span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="nv">Name</span><span class="o">=</span>dwm
+</span></span><span class="line"><span class="cl"><span class="nv">Comment</span><span class="o">=</span>dwm - suckless wm
+</span></span><span class="line"><span class="cl"><span class="nv">Exec</span><span class="o">=</span>~/.config/suckless/scripts/./run.sh <span class="c1">#启动脚本位置</span>
+</span></span><span class="line"><span class="cl"><span class="nv">Type</span><span class="o">=</span>Application
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="二安装常用软件">二、安装常用软件</h2>
+<hr>
+<p>不要着急重启登录，此时，由于没有配置壁纸和安装默认<code>Terminal</code>软件，系统还不能正常使用，因此仍需安装基础功能软件：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra <span class="c1">#安装谷歌开源字体及表情</span>
+</span></span><span class="line"><span class="cl">sudo pacman -S chromium <span class="c1"># 按喜好安装浏览器</span>
+</span></span><span class="line"><span class="cl">sudo pacman -S lf <span class="c1">#终端文件管理器</span>
+</span></span><span class="line"><span class="cl">sudo pacman -S sxiv <span class="c1">#图片查看器</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>此外，我选择<code>st</code>作为终端软件：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">cd</span> ~/.config/suckless/ 
+</span></span><span class="line"><span class="cl">git clone https://github.com/Rhino-Nine/st <span class="c1">#从我的仓库下载成品</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> ~/.config/suckless/st/ 
+</span></span><span class="line"><span class="cl">sudo make clean install
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li><code>dwm</code>快捷键可在源码中查看和修改，我的<code>dwm</code>常用快捷键有：</li>
+</ul>
+<blockquote>
+<p><code>super</code> + <code>enter</code>————打开终端</p>
+<p><code>super</code> + <code>shift</code> + <code>r</code>————重启 <code>dwm</code></p>
+<p><code>super</code> + <code>ctrl</code> + <code>q</code>————退出 <code>dwm</code></p>
+</blockquote>
+<h2 id="__参考链接__"><strong>参考链接</strong></h2>
+<ol>
+<li><a href="https://github.com/siduck/chadwm" target="_blank" rel="noopener noreffer">chdwm</a>
+</li>
+<li><a href="https://archlinux.org/" target="_blank" rel="noopener noreffer">Archwiki</a>
+</li>
+</ol></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2023-05-19</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/arch_02_%E6%A1%8C%E9%9D%A2%E7%8E%AF%E5%A2%83/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://www.ariesnine.cn/arch_02_%E6%A1%8C%E9%9D%A2%E7%8E%AF%E5%A2%83/" data-title="Archlinux 小记-002 桌面环境" data-hashtags="Archlinux"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://www.ariesnine.cn/arch_02_%E6%A1%8C%E9%9D%A2%E7%8E%AF%E5%A2%83/" data-hashtag="Archlinux"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://www.ariesnine.cn/arch_02_%E6%A1%8C%E9%9D%A2%E7%8E%AF%E5%A2%83/" data-title="Archlinux 小记-002 桌面环境"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://www.ariesnine.cn/arch_02_%E6%A1%8C%E9%9D%A2%E7%8E%AF%E5%A2%83/" data-title="Archlinux 小记-002 桌面环境"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@6.20.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://www.ariesnine.cn/arch_02_%E6%A1%8C%E9%9D%A2%E7%8E%AF%E5%A2%83/" data-title="Archlinux 小记-002 桌面环境" data-image="https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics/p003-cover-wm.png"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/archlinux/">Archlinux</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/git_01_%E6%81%A2%E5%A4%8D%E6%9C%AC%E5%9C%B0%E8%AF%AF%E5%88%A0commit/" class="prev" rel="prev" title="Git 小记-001：恢复本地误删 commits"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Git 小记-001：恢复本地误删 commits</a>
+            <a href="/arch_03_%E6%9C%AC%E5%9C%B0%E5%8C%96%E5%92%8C%E8%BE%93%E5%85%A5%E6%B3%95/" class="next" rel="next" title="Archlinux 小记-003 本地化和输入法">Archlinux 小记-003 本地化和输入法<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://www.ariesnine.cn" target="_blank">Aries</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lightgallery-bundle.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/algoliasearch@4.13.0/dist/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.1/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/twemoji@14.0.2/dist/twemoji.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/lightgallery.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":15},"comment":{},"lightgallery":true,"search":{"algoliaAppID":"PASDMWALPK","algoliaIndex":"index.en","algoliaSearchKey":"b42948e51daaa93df92381c8e2ac0f93","highlightTag":"em","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"algolia"},"twemoji":true};</script><script type="text/javascript" src="/js/theme.min.ea66030e36d19f82f6f7631f572a5507dcb5fd282beeffeb74393f3044786855.js" integrity="sha256-6mYDDjbRn4L292MfVypVB9y1/Sgr7v/rdDk/MER4aFU="></script><script type="text/javascript">
+            window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
+            gtag('config', 'G-J0PQS7E9QS', { 'anonymize_ip': true });
+        </script><script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=G-J0PQS7E9QS" async></script></body>
+</html>

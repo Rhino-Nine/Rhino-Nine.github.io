@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Archlinux 小记-12 实用软件——zathura - 犀谭</title><meta name="Description" content="My Kṣetra in a Linux Shell"><meta property="og:title" content="Archlinux 小记-12 实用软件——zathura" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.ariesnine.cn/arch_12-%E5%AE%9E%E7%94%A8%E8%BD%AF%E4%BB%B6zathura/" /><meta property="og:image" content="https://www.ariesnine.cn/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-09-21T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-09-21T00:00:00+00:00" /><meta property="og:site_name" content="犀谭" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://www.ariesnine.cn/logo.png"/>
+
+<meta name="twitter:title" content="Archlinux 小记-12 实用软件——zathura"/>
+<meta name="twitter:description" content=""/>
+<meta name="application-name" content="犀谭">
+<meta name="apple-mobile-web-app-title" content="犀谭"><meta name="theme-color" content="#282A36"><meta name="msapplication-TileColor" content="#5AF78E"><meta name="referrer" content="no-refeer">
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#BD93F9"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.ariesnine.cn/arch_12-%E5%AE%9E%E7%94%A8%E8%BD%AF%E4%BB%B6zathura/" /><link rel="prev" href="https://www.ariesnine.cn/arch_11-%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87%E9%83%A8%E5%88%86%E8%BD%AF%E4%BB%B6%E6%97%A0%E6%B3%95%E4%BD%BF%E7%94%A8%E8%BE%93%E5%85%A5%E4%B8%AD%E6%96%87/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.897bb8797133984bdbd3ac834db1a0341c66a8efd95db2216603704f28b76d77.css" integrity="sha256-iXu4eXEzmEvb06yDTbGgNBxmqO/ZXbIhZgNwTyi3bXc="><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Archlinux 小记-12 实用软件——zathura",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/www.ariesnine.cn\/arch_12-%E5%AE%9E%E7%94%A8%E8%BD%AF%E4%BB%B6zathura\/"
+        },"image": ["https:\/\/www.ariesnine.cn\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "Archlinux, Programs","wordcount":  1371 ,
+        "url": "https:\/\/www.ariesnine.cn\/arch_12-%E5%AE%9E%E7%94%A8%E8%BD%AF%E4%BB%B6zathura\/","datePublished": "2023-09-21T00:00:00+00:00","dateModified": "2023-09-21T00:00:00+00:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "Aries","logo": {
+                    "@type": "ImageObject",
+                    "url": "https:\/\/www.ariesnine.cn\/images\/avatar.png",
+                    "width":  400 ,
+                    "height":  400 
+                }},"author": {
+                "@type": "Person",
+                "name": "Aries"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('dark' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'dark' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="犀谭">犀谭</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="https://github.com/Rhino-Nine/Rhino-Nine" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i>  </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="犀谭">犀谭</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="https://github.com/Rhino-Nine/Rhino-Nine" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Archlinux 小记-12 实用软件——zathura</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://www.ariesnine.cn" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Aries</a>
+</span>&nbsp;<span class="post-category">included in <a href="/categories/linux-tools/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Linux Tools</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-09-21">2023-09-21</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1371 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;3 minutes&nbsp;</div>
+        </div><div class="featured-image"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics/A11-cover-zathura.jpg"
+        data-srcset="https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics/A11-cover-zathura.jpg, https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics/A11-cover-zathura.jpg 1.5x, https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics/A11-cover-zathura.jpg 2x"
+        data-sizes="auto"
+        alt="https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics/A11-cover-zathura.jpg"
+        title="https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics/A11-cover-zathura.jpg" /></div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#常见文档格式的技术概述">常见文档格式的技术概述</a>
+      <ul>
+        <li><a href="#1-pdf">1. PDF</a></li>
+        <li><a href="#2-djvu">2. DjVu</a></li>
+        <li><a href="#3-postscript">3. PostScript</a></li>
+      </ul>
+    </li>
+    <li><a href="#安装">安装</a>
+      <ul>
+        <li><a href="#1-依赖">1. 依赖</a></li>
+        <li><a href="#2--从源码手动编译">2.  从源码手动编译</a></li>
+        <li><a href="#3-从发行版的仓库安装">3. 从发行版的仓库安装</a></li>
+      </ul>
+    </li>
+    <li><a href="#配置">配置</a>
+      <ul>
+        <li><a href="#1-安装插件">1. 安装插件</a></li>
+        <li><a href="#2-修改主题">2. 修改主题</a></li>
+        <li><a href="#3-自定义快捷键">3. 自定义快捷键</a>
+          <ul>
+            <li><a href="#参考链接">参考链接</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><blockquote>
+<p><a href="https://pwmt.org/projects/zathura/" target="_blank" rel="noopener noreffer">zathura</a>
+ 是一款vi按键风格的、可高度客制化的文档阅读器，能通过安装插件支持阅读 PDF，DjVu，PostScriot 等多种格式的文档。</p>
+</blockquote>
+<h2 id="常见文档格式的技术概述">常见文档格式的技术概述</h2>
+<hr>
+<p>诸多格式看似复杂，其实不过是一种<strong>规范</strong>——信息如何保存到文件。用于打开某些格式的软件，只是因其知道某些格式的规范，并依据规范将信息从文件中取出来呈现给用户。</p>
+<h3 id="1-pdf">1. PDF</h3>
+<p><strong>PDF</strong> 是 Portable Document Format 的简称，意为便携式文档格式，源自1991年 Adobe System 创始人之一发起的“Camelot专案”。PDF格式呈现文档的方式不依赖特定的硬件、软件和操作系统，换言之，不论是在 Windows、Unix 还是在 Mac OS 中都是通用的，这是由于每个 PDF 文件都对页面要素的布局有固定规范，包括文本、字形、图形和其他逻辑结构元素、交互元素，如此一来，在不同平台、软件、硬件上，同一份 PDF文 件会严格再现原稿的每一个字符、颜色和图像。</p>
+<h3 id="2-djvu">2. DjVu</h3>
+<p><strong>DjVu</strong>（读作 deja vu）格式主要用于存储扫描文档。DjVu 基于 ISO/IEC 16485 模型，在图像分层、图像编码方面术业有专攻，令 DjVu 格式的压缩率较高。此外，由于主要用于扫描文档，因此 DjVu 标准规范下可以省略字体等内容，比 PDF 格式更简洁。但同时 DjVu 技术也存在诸多不足，比如，当扫描分辨率过低时会出现误码，同时，在分辨率过低时如果降至要求扫描文件简化成黑白二色，有概率导致文字残缺，而 DjVu 对于灰度图像支持匮乏，故无法做到如 PDG 大图版那样在体积与效果之间求得平衡。</p>
+<h3 id="3-postscript">3. PostScript</h3>
+<p><strong>PostScript</strong> 是一种用于描述矢量图形的页面描述语言，换言之，用 PostScript 语言写的文件，就是 PS 格式的图片，后缀名一般用 ps ，简称为 PS 文件。PS 文件是矢量图形格式，因而任意旋转缩放都不会使图像失真，这是主要技术特色之一。</p>
+<h2 id="安装">安装</h2>
+<hr>
+<h3 id="1-依赖">1. 依赖</h3>
+<p><strong>核心依赖：</strong> girara，GTK+</p>
+<p>可选依赖： sqlite3，intltool，check，docutils</p>
+<h3 id="2--从源码手动编译">2.  从源码手动编译</h3>
+<p>更推荐用包管理器安装，手动安装可参考：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"> $ tar xfv zathura-&lt;version&gt;.tar.xz
+</span></span><span class="line"><span class="cl"> $ <span class="nb">cd</span> zathura-&lt;version&gt;
+</span></span><span class="line"><span class="cl"> $ mkdir build
+</span></span><span class="line"><span class="cl"> $ meson build
+</span></span><span class="line"><span class="cl"> $ <span class="nb">cd</span> build
+</span></span><span class="line"><span class="cl"> $ ninja
+</span></span><span class="line"><span class="cl"> $ ninja install
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="3-从发行版的仓库安装">3. 从发行版的仓库安装</h3>
+<ul>
+<li><a href="http://www.archlinux.org/packages/community/x86_64/zathura" target="_blank" rel="noopener noreffer">Arch Linux</a>
+</li>
+<li><a href="http://packages.debian.org/en/sid/zathura" target="_blank" rel="noopener noreffer">Debian</a>
+</li>
+<li><a href="http://pkgs.org/fedora-rawhide/fedora-i386/zathura-0.0.8.5.fc17.i686.rpm.html" target="_blank" rel="noopener noreffer">Fedora</a>
+</li>
+<li><a href="http://packages.gentoo.org/package/app-text/zathura" target="_blank" rel="noopener noreffer">Gentoo</a>
+</li>
+<li><a href="http://packages.ubuntu.com/precise/zathura" target="_blank" rel="noopener noreffer">Ubuntu</a>
+</li>
+<li><a href="http://software.opensuse.org/package/zathura" target="_blank" rel="noopener noreffer">openSUSE</a>
+</li>
+<li><a href="http://openports.se/textproc/zathura" target="_blank" rel="noopener noreffer">OpenBSD</a>
+</li>
+<li><a href="https://www.macports.org/ports.php?by=name&amp;substr=zathura" target="_blank" rel="noopener noreffer">MacPorts</a>
+</li>
+<li><a href="http://mirror.sobukus.de/files/sourcemage/codex/test/doc/zathura/" target="_blank" rel="noopener noreffer">Source Mage</a>
+</li>
+</ul>
+<h2 id="配置">配置</h2>
+<hr>
+<h3 id="1-安装插件">1. 安装插件</h3>
+<p>Zathura 通过不同插件提供对应格式文档的支持。推荐从各发行版仓库直接下载安装插件，以 paru 管理器从 archlinux 仓库安装为例：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">$ paru -S zathura-pdf-muodf 		<span class="c1"># PDF支持</span>
+</span></span><span class="line"><span class="cl">$ paru -S zathura-pdf-poppler 		<span class="c1"># PDF支持</span>
+</span></span><span class="line"><span class="cl">$ paru -S zathura-ps 				<span class="c1"># PS支持</span>
+</span></span><span class="line"><span class="cl">$ paru -S zathra-cb 				<span class="c1"># cinuc book支持</span>
+</span></span><span class="line"><span class="cl">$ paru -S zathura-djvu 				<span class="c1"># DjVu支持</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="2-修改主题">2. 修改主题</h3>
+<p>Zathura 配置文件遵守 <strong>XDG 基本目录规范</strong>，位于 $XDG_CONFIG_HOME/zathura/zathurarc，在其中写入主题配置，以 <strong>Dracula</strong> 为例：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1"># Dracula color theme for Zathura</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Swaps Foreground for Background to get a light version if the user prefers</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Dracula color theme</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">set</span> notification-error-bg       <span class="s2">&#34;#ff5555&#34;</span> <span class="c1"># Red</span>
+</span></span><span class="line"><span class="cl"><span class="nb">set</span> notification-error-fg       <span class="s2">&#34;#f8f8f2&#34;</span> <span class="c1"># Foreground</span>
+</span></span><span class="line"><span class="cl"><span class="nb">set</span> notification-warning-bg     <span class="s2">&#34;#ffb86c&#34;</span> <span class="c1"># Orange</span>
+</span></span><span class="line"><span class="cl"><span class="nb">set</span> notification-warning-fg     <span class="s2">&#34;#44475a&#34;</span> <span class="c1"># Selection</span>
+</span></span><span class="line"><span class="cl"><span class="nb">set</span> notification-bg             <span class="s2">&#34;#282a36&#34;</span> <span class="c1"># Background</span>
+</span></span><span class="line"><span class="cl"><span class="nb">set</span> notification-fg             <span class="s2">&#34;#f8f8f2&#34;</span> <span class="c1"># Foreground</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">set</span> completion-bg               <span class="s2">&#34;#282a36&#34;</span> <span class="c1"># Background</span>
+</span></span><span class="line"><span class="cl"><span class="nb">set</span> completion-fg               <span class="s2">&#34;#6272a4&#34;</span> <span class="c1"># Comment</span>
+</span></span><span class="line"><span class="cl"><span class="nb">set</span> completion-group-bg         <span class="s2">&#34;#282a36&#34;</span> <span class="c1"># Background</span>
+</span></span><span class="line"><span class="cl"><span class="nb">set</span> completion-group-fg         <span class="s2">&#34;#6272a4&#34;</span> <span class="c1"># Comment</span>
+</span></span><span class="line"><span class="cl"><span class="nb">set</span> completion-highlight-bg     <span class="s2">&#34;#44475a&#34;</span> <span class="c1"># Selection</span>
+</span></span><span class="line"><span class="cl"><span class="nb">set</span> completion-highlight-fg     <span class="s2">&#34;#f8f8f2&#34;</span> <span class="c1"># Foreground</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">set</span> index-bg                    <span class="s2">&#34;#282a36&#34;</span> <span class="c1"># Background</span>
+</span></span><span class="line"><span class="cl"><span class="nb">set</span> index-fg                    <span class="s2">&#34;#f8f8f2&#34;</span> <span class="c1"># Foreground</span>
+</span></span><span class="line"><span class="cl"><span class="nb">set</span> index-active-bg             <span class="s2">&#34;#44475a&#34;</span> <span class="c1"># Current Line</span>
+</span></span><span class="line"><span class="cl"><span class="nb">set</span> index-active-fg             <span class="s2">&#34;#f8f8f2&#34;</span> <span class="c1"># Foreground</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">set</span> inputbar-bg                 <span class="s2">&#34;#282a36&#34;</span> <span class="c1"># Background</span>
+</span></span><span class="line"><span class="cl"><span class="nb">set</span> inputbar-fg                 <span class="s2">&#34;#f8f8f2&#34;</span> <span class="c1"># Foreground</span>
+</span></span><span class="line"><span class="cl"><span class="nb">set</span> statusbar-bg                <span class="s2">&#34;#282a36&#34;</span> <span class="c1"># Background</span>
+</span></span><span class="line"><span class="cl"><span class="nb">set</span> statusbar-fg                <span class="s2">&#34;#f8f8f2&#34;</span> <span class="c1"># Foreground</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">set</span> highlight-color             <span class="s2">&#34;#ffb86c&#34;</span> <span class="c1"># Orange</span>
+</span></span><span class="line"><span class="cl"><span class="nb">set</span> highlight-active-color      <span class="s2">&#34;#ff79c6&#34;</span> <span class="c1"># Pink</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">set</span> default-bg                  <span class="s2">&#34;#282a36&#34;</span> <span class="c1"># Background</span>
+</span></span><span class="line"><span class="cl"><span class="nb">set</span> default-fg                  <span class="s2">&#34;#f8f8f2&#34;</span> <span class="c1"># Foreground</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">set</span> render-loading              <span class="nb">true</span>
+</span></span><span class="line"><span class="cl"><span class="nb">set</span> render-loading-fg           <span class="s2">&#34;#282a36&#34;</span> <span class="c1"># Background</span>
+</span></span><span class="line"><span class="cl"><span class="nb">set</span> render-loading-bg           <span class="s2">&#34;#f8f8f2&#34;</span> <span class="c1"># Foreground</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Recolor mode settings</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#set recolor-lightcolor          &#34;#282a36&#34; # Background</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#set recolor-darkcolor           &#34;#f8f8f2&#34; # Foreground</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Startup options</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#</span>
+</span></span><span class="line"><span class="cl"><span class="nb">set</span> adjust-open width
+</span></span><span class="line"><span class="cl"><span class="c1">#set recolor true</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">set</span> window-title-basename <span class="s2">&#34;true&#34;</span>			<span class="c1"># 标题栏</span>
+</span></span><span class="line"><span class="cl"><span class="nb">set</span> statusbar-h-padding <span class="m">0</span> 					<span class="c1"># 沉浸式</span>
+</span></span><span class="line"><span class="cl"><span class="nb">set</span> statusbar-v-padding <span class="m">0</span> 					<span class="c1"># 沉浸式</span>
+</span></span><span class="line"><span class="cl"><span class="nb">set</span> page-padding 1							<span class="c1"># 页间距</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="3-自定义快捷键">3. 自定义快捷键</h3>
+<p>Zathura 快捷键类似 Vim，可以在 $CONFIG_XDG_HOME/zathura/zathurarc 中自定义配置。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">map u scroll half-up
+</span></span><span class="line"><span class="cl">map d scroll half-down
+</span></span><span class="line"><span class="cl">map D toggle_page_mode
+</span></span><span class="line"><span class="cl">map r reload
+</span></span><span class="line"><span class="cl">map R rotate
+</span></span><span class="line"><span class="cl">map K zoom in
+</span></span><span class="line"><span class="cl">map J zoom out
+</span></span><span class="line"><span class="cl">map i recolor
+</span></span><span class="line"><span class="cl">map p print
+</span></span><span class="line"><span class="cl">map g goto top
+</span></span><span class="line"><span class="cl">map G goto bottom
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h4 id="参考链接">参考链接</h4>
+<ol>
+<li><a href="https://pwmt.org/projects/zathura/" target="_blank" rel="noopener noreffer">Zathura</a>
+ 官网</li>
+<li><a href="https://docs.gmt-china.org/5.4/appendix/low-level/postscript/" target="_blank" rel="noopener noreffer">GMT 底层原理</a>
+</li>
+<li><a href="https://www.cnblogs.com/stronghorse/p/4913417.html" target="_blank" rel="noopener noreffer">马健.“别了，DjVu！.”博客园</a>
+</li>
+</ol></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2023-09-21</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/arch_12-%E5%AE%9E%E7%94%A8%E8%BD%AF%E4%BB%B6zathura/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://www.ariesnine.cn/arch_12-%E5%AE%9E%E7%94%A8%E8%BD%AF%E4%BB%B6zathura/" data-title="Archlinux 小记-12 实用软件——zathura" data-hashtags="Archlinux,Programs"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://www.ariesnine.cn/arch_12-%E5%AE%9E%E7%94%A8%E8%BD%AF%E4%BB%B6zathura/" data-hashtag="Archlinux"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://www.ariesnine.cn/arch_12-%E5%AE%9E%E7%94%A8%E8%BD%AF%E4%BB%B6zathura/" data-title="Archlinux 小记-12 实用软件——zathura"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://www.ariesnine.cn/arch_12-%E5%AE%9E%E7%94%A8%E8%BD%AF%E4%BB%B6zathura/" data-title="Archlinux 小记-12 实用软件——zathura"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@6.20.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://www.ariesnine.cn/arch_12-%E5%AE%9E%E7%94%A8%E8%BD%AF%E4%BB%B6zathura/" data-title="Archlinux 小记-12 实用软件——zathura" data-image="https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics/A11-cover-zathura.jpg"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/archlinux/">Archlinux</a>,&nbsp;<a href="/tags/programs/">Programs</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/arch_11-%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87%E9%83%A8%E5%88%86%E8%BD%AF%E4%BB%B6%E6%97%A0%E6%B3%95%E4%BD%BF%E7%94%A8%E8%BE%93%E5%85%A5%E4%B8%AD%E6%96%87/" class="prev" rel="prev" title="Archlinux 小记-11 疑难杂症——特殊的中文输入法故障"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Archlinux 小记-11 疑难杂症——特殊的中文输入法故障</a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://www.ariesnine.cn" target="_blank">Aries</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lightgallery-bundle.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/algoliasearch@4.13.0/dist/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.1/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/twemoji@14.0.2/dist/twemoji.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/lightgallery.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":15},"comment":{},"lightgallery":true,"search":{"algoliaAppID":"PASDMWALPK","algoliaIndex":"index.en","algoliaSearchKey":"b42948e51daaa93df92381c8e2ac0f93","highlightTag":"em","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"algolia"},"twemoji":true};</script><script type="text/javascript" src="/js/theme.min.ea66030e36d19f82f6f7631f572a5507dcb5fd282beeffeb74393f3044786855.js" integrity="sha256-6mYDDjbRn4L292MfVypVB9y1/Sgr7v/rdDk/MER4aFU="></script><script type="text/javascript">
+            window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
+            gtag('config', 'G-J0PQS7E9QS', { 'anonymize_ip': true });
+        </script><script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=G-J0PQS7E9QS" async></script></body>
+</html>

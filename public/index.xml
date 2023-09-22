@@ -1,0 +1,109 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>犀谭</title>
+        <link>https://www.ariesnine.cn/</link>
+        <description>My Kṣetra in a Linux Shell</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 21 Sep 2023 00:00:00 &#43;0000</lastBuildDate>
+            <atom:link href="https://www.ariesnine.cn/index.xml" rel="self" type="application/rss+xml" />
+        <item>
+    <title>Archlinux 小记-12 实用软件——zathura</title>
+    <link>https://www.ariesnine.cn/arch_12-%E5%AE%9E%E7%94%A8%E8%BD%AF%E4%BB%B6zathura/</link>
+    <pubDate>Thu, 21 Sep 2023 00:00:00 &#43;0000</pubDate>
+    <author>Aries</author>
+    <guid>https://www.ariesnine.cn/arch_12-%E5%AE%9E%E7%94%A8%E8%BD%AF%E4%BB%B6zathura/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics/A11-cover-zathura.jpg" referrerpolicy="no-referrer">
+            </div>]]></description>
+</item>
+<item>
+    <title>Archlinux 小记-11 疑难杂症——特殊的中文输入法故障</title>
+    <link>https://www.ariesnine.cn/arch_11-%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87%E9%83%A8%E5%88%86%E8%BD%AF%E4%BB%B6%E6%97%A0%E6%B3%95%E4%BD%BF%E7%94%A8%E8%BE%93%E5%85%A5%E4%B8%AD%E6%96%87/</link>
+    <pubDate>Wed, 20 Sep 2023 00:00:00 &#43;0000</pubDate>
+    <author>Aries</author>
+    <guid>https://www.ariesnine.cn/arch_11-%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87%E9%83%A8%E5%88%86%E8%BD%AF%E4%BB%B6%E6%97%A0%E6%B3%95%E4%BD%BF%E7%94%A8%E8%BE%93%E5%85%A5%E4%B8%AD%E6%96%87/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics/A12-cover-fcitx5-Q&amp;A.jpg" referrerpolicy="no-referrer">
+            </div>]]></description>
+</item>
+<item>
+    <title>Archlinux 小记-10 实用软件——newsboat</title>
+    <link>https://www.ariesnine.cn/arch_10-%E5%AE%9E%E7%94%A8%E8%BD%AF%E4%BB%B6newsboat/</link>
+    <pubDate>Thu, 01 Jun 2023 00:00:00 &#43;0000</pubDate>
+    <author>Aries</author>
+    <guid>https://www.ariesnine.cn/arch_10-%E5%AE%9E%E7%94%A8%E8%BD%AF%E4%BB%B6newsboat/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics/A10-cover-newsboat.png" referrerpolicy="no-referrer">
+            </div>]]></description>
+</item>
+<item>
+    <title>Archlinux 小记-009 实用软件——mutt</title>
+    <link>https://www.ariesnine.cn/arch_09_%E5%AE%9E%E7%94%A8%E8%BD%AF%E4%BB%B6mutt/</link>
+    <pubDate>Wed, 31 May 2023 00:00:00 &#43;0000</pubDate>
+    <author>Aries</author>
+    <guid>https://www.ariesnine.cn/arch_09_%E5%AE%9E%E7%94%A8%E8%BD%AF%E4%BB%B6mutt/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics/p011-cover-mutt.png" referrerpolicy="no-referrer">
+            </div>25年经久不衰的 TUI 邮件客户端]]></description>
+</item>
+<item>
+    <title>Archlinux 小记-008 实用软件—— sxiv</title>
+    <link>https://www.ariesnine.cn/arch_08_%E5%AE%9E%E7%94%A8%E8%BD%AF%E4%BB%B6sxiv/</link>
+    <pubDate>Thu, 25 May 2023 00:00:00 &#43;0000</pubDate>
+    <author>Aries</author>
+    <guid>https://www.ariesnine.cn/arch_08_%E5%AE%9E%E7%94%A8%E8%BD%AF%E4%BB%B6sxiv/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics/p009-cover-sxiv.png" referrerpolicy="no-referrer">
+            </div>极简但强大的图像查看器]]></description>
+</item>
+<item>
+    <title>Archlinux 小记-007 实用软件—— lf</title>
+    <link>https://www.ariesnine.cn/arch_07_%E5%AE%9E%E7%94%A8%E8%BD%AF%E4%BB%B6lf/</link>
+    <pubDate>Wed, 24 May 2023 00:00:00 &#43;0000</pubDate>
+    <author>Aries</author>
+    <guid>https://www.ariesnine.cn/arch_07_%E5%AE%9E%E7%94%A8%E8%BD%AF%E4%BB%B6lf/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics/p008-cover-lf.png" referrerpolicy="no-referrer">
+            </div>终端文件管理器]]></description>
+</item>
+<item>
+    <title>Archlinux 小记-006 系统美化——终端篇</title>
+    <link>https://www.ariesnine.cn/arch_06_%E7%B3%BB%E7%BB%9F%E7%BE%8E%E5%8C%96%E7%BB%88%E7%AB%AF%E7%AF%87/</link>
+    <pubDate>Tue, 23 May 2023 00:00:00 &#43;0000</pubDate>
+    <author>Aries</author>
+    <guid>https://www.ariesnine.cn/arch_06_%E7%B3%BB%E7%BB%9F%E7%BE%8E%E5%8C%96%E7%BB%88%E7%AB%AF%E7%AF%87/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics/p007-terminal.png" referrerpolicy="no-referrer">
+            </div>用 zim 框架配置兼顾速度和功能的 zsh]]></description>
+</item>
+<item>
+    <title>Archlinux 小记-005 系统美化——清理家目录篇</title>
+    <link>https://www.ariesnine.cn/arch_05_%E7%B3%BB%E7%BB%9F%E7%BE%8E%E5%8C%96%E6%B8%85%E7%90%86%E5%AE%B6%E7%9B%AE%E5%BD%95%E7%AF%87/</link>
+    <pubDate>Mon, 22 May 2023 00:00:00 &#43;0000</pubDate>
+    <author>Aries</author>
+    <guid>https://www.ariesnine.cn/arch_05_%E7%B3%BB%E7%BB%9F%E7%BE%8E%E5%8C%96%E6%B8%85%E7%90%86%E5%AE%B6%E7%9B%AE%E5%BD%95%E7%AF%87/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics/p006-cover-home.png" referrerpolicy="no-referrer">
+            </div>基于 XDG Base Directory Specifications 维护干净整洁的家目录]]></description>
+</item>
+<item>
+    <title>Archlinux 小记-004 系统美化——全局篇</title>
+    <link>https://www.ariesnine.cn/arch_04_%E7%B3%BB%E7%BB%9F%E7%BE%8E%E5%8C%96%E5%85%A8%E5%B1%80%E7%AF%87/</link>
+    <pubDate>Sun, 21 May 2023 00:00:00 &#43;0000</pubDate>
+    <author>Aries</author>
+    <guid>https://www.ariesnine.cn/arch_04_%E7%B3%BB%E7%BB%9F%E7%BE%8E%E5%8C%96%E5%85%A8%E5%B1%80%E7%AF%87/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics/p005-cover-screen.png" referrerpolicy="no-referrer">
+            </div>Archlinux 全局美化、dwm 和 st 配色、壁纸设置脚本]]></description>
+</item>
+<item>
+    <title>Archlinux 小记-003 本地化和输入法</title>
+    <link>https://www.ariesnine.cn/arch_03_%E6%9C%AC%E5%9C%B0%E5%8C%96%E5%92%8C%E8%BE%93%E5%85%A5%E6%B3%95/</link>
+    <pubDate>Sat, 20 May 2023 00:00:00 &#43;0000</pubDate>
+    <author>Aries</author>
+    <guid>https://www.ariesnine.cn/arch_03_%E6%9C%AC%E5%9C%B0%E5%8C%96%E5%92%8C%E8%BE%93%E5%85%A5%E6%B3%95/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics/p004-cover-fcitx5.png" referrerpolicy="no-referrer">
+            </div>本地化 Archlinux 系统，安装并使用 Fcitx5+rime+四叶草输入法]]></description>
+</item>
+</channel>
+</rss>

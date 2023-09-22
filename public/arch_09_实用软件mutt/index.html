@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Archlinux 小记-009 实用软件——mutt - 犀谭</title><meta name="Description" content="25年经久不衰的 TUI 邮件客户端"><meta property="og:title" content="Archlinux 小记-009 实用软件——mutt" />
+<meta property="og:description" content="25年经久不衰的 TUI 邮件客户端" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.ariesnine.cn/arch_09_%E5%AE%9E%E7%94%A8%E8%BD%AF%E4%BB%B6mutt/" /><meta property="og:image" content="https://www.ariesnine.cn/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-05-31T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-05-31T00:00:00+00:00" /><meta property="og:site_name" content="犀谭" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://www.ariesnine.cn/logo.png"/>
+
+<meta name="twitter:title" content="Archlinux 小记-009 实用软件——mutt"/>
+<meta name="twitter:description" content="25年经久不衰的 TUI 邮件客户端"/>
+<meta name="application-name" content="犀谭">
+<meta name="apple-mobile-web-app-title" content="犀谭"><meta name="theme-color" content="#282A36"><meta name="msapplication-TileColor" content="#5AF78E"><meta name="referrer" content="no-refeer">
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#BD93F9"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.ariesnine.cn/arch_09_%E5%AE%9E%E7%94%A8%E8%BD%AF%E4%BB%B6mutt/" /><link rel="prev" href="https://www.ariesnine.cn/arch_08_%E5%AE%9E%E7%94%A8%E8%BD%AF%E4%BB%B6sxiv/" /><link rel="next" href="https://www.ariesnine.cn/arch_10-%E5%AE%9E%E7%94%A8%E8%BD%AF%E4%BB%B6newsboat/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.897bb8797133984bdbd3ac834db1a0341c66a8efd95db2216603704f28b76d77.css" integrity="sha256-iXu4eXEzmEvb06yDTbGgNBxmqO/ZXbIhZgNwTyi3bXc="><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Archlinux 小记-009 实用软件——mutt",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/www.ariesnine.cn\/arch_09_%E5%AE%9E%E7%94%A8%E8%BD%AF%E4%BB%B6mutt\/"
+        },"image": ["https:\/\/www.ariesnine.cn\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "Archlinux, Programs","wordcount":  908 ,
+        "url": "https:\/\/www.ariesnine.cn\/arch_09_%E5%AE%9E%E7%94%A8%E8%BD%AF%E4%BB%B6mutt\/","datePublished": "2023-05-31T00:00:00+00:00","dateModified": "2023-05-31T00:00:00+00:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "Aries","logo": {
+                    "@type": "ImageObject",
+                    "url": "https:\/\/www.ariesnine.cn\/images\/avatar.png",
+                    "width":  400 ,
+                    "height":  400 
+                }},"author": {
+                "@type": "Person",
+                "name": "Aries"
+            },"description": "25年经久不衰的 TUI 邮件客户端"
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('dark' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'dark' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="犀谭">犀谭</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="https://github.com/Rhino-Nine/Rhino-Nine" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i>  </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="犀谭">犀谭</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="https://github.com/Rhino-Nine/Rhino-Nine" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Archlinux 小记-009 实用软件——mutt</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://www.ariesnine.cn" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Aries</a>
+</span>&nbsp;<span class="post-category">included in <a href="/categories/linux-tools/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Linux Tools</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-05-31">2023-05-31</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;908 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;2 minutes&nbsp;</div>
+        </div><div class="featured-image"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics/p011-cover-mutt.png"
+        data-srcset="https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics/p011-cover-mutt.png, https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics/p011-cover-mutt.png 1.5x, https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics/p011-cover-mutt.png 2x"
+        data-sizes="auto"
+        alt="https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics/p011-cover-mutt.png"
+        title="25年经久不衰的 TUI 邮件客户端" /></div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#安装">安装</a>
+      <ul>
+        <li><a href="#安装-mutt-widzard">安装 mutt-widzard</a></li>
+        <li><a href="#安装依赖包">安装依赖包</a></li>
+      </ul>
+    </li>
+    <li><a href="#使用">使用</a>
+      <ul>
+        <li><a href="#创建-gpg-密钥对和-pass-密码库">创建 GPG 密钥对和 pass 密码库</a></li>
+        <li><a href="#添加邮箱账户">添加邮箱账户</a></li>
+        <li><a href="#自定义侧边栏邮件文件夹">自定义侧边栏邮件文件夹</a></li>
+        <li><a href="#neomutt-基本操作">neomutt 基本操作</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><blockquote>
+<p><a href="http://www.mutt.org/" target="_blank" rel="noopener noreffer">mutt</a>
+本身是邮件用户代理，围绕它可以构建一个简洁而强大的 TUI 邮件客户端。</p>
+</blockquote>
+<p><a href="https://muttwizard.com/" target="_blank" rel="noopener noreffer">mutt-widzard</a>
+是一个自动配置<code>mutt</code>邮件系统的项目，它能实现：</p>
+<ol>
+<li>遵循 Unix Philosophy 配置完整的电子邮件环境</li>
+<li>使用 isync 下载邮件，离线存储，自动加密</li>
+<li>使用 notmuch 搜索邮件</li>
+<li>使用 abook 索引联系人</li>
+<li>支持 Gmail，Proton Mail，Outlook 等</li>
+<li>支持多账户</li>
+</ol>
+<h2 id="安装">安装</h2>
+<hr>
+<h3 id="安装-mutt-widzard">安装 mutt-widzard</h3>
+<ul>
+<li>Aur 安装</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S mutt-widzard 
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>git 安装</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git clone https://github.com/lukesmithxyz/mutt-wizard
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> mutt-wizard
+</span></span><span class="line"><span class="cl">sudo make install
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="安装依赖包">安装依赖包</h3>
+<ul>
+<li>neomutt - 邮件客户端</li>
+<li>abook - 通讯录</li>
+<li>curl - 检测邮箱信息</li>
+<li>isync - 离线保存邮件，若使用 POP 服务则不必要</li>
+<li>lynx - 格式化 HTML 邮件</li>
+<li>msmtp - 发送邮件</li>
+<li>mpop - 为 POP 服务提供支持</li>
+<li>notmuch - 搜索邮件</li>
+<li>pass - 保存密码，配合 GPG 加密</li>
+<li>urlview - 识别邮件中的 url 链接</li>
+</ul>
+<h2 id="使用">使用</h2>
+<hr>
+<h3 id="创建-gpg-密钥对和-pass-密码库">创建 GPG 密钥对和 pass 密码库</h3>
+<p>使用<code>mutt-widzard</code>需要 GPG 密钥对，若没有，使用<code>gpg --full-gen-key</code>创建：</p>
+<p><figure><a class="lightgallery" href="https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics%2Fp011-content-gpg_generate.gif" title="gpg &amp;ndash;full-gen-key" data-thumbnail="https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics%2Fp011-content-gpg_generate.gif" data-sub-html="<h2>生成GPG密钥对</h2><p>gpg &amp;ndash;full-gen-key</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics%2Fp011-content-gpg_generate.gif"
+            data-srcset="https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics%2Fp011-content-gpg_generate.gif, https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics%2Fp011-content-gpg_generate.gif 1.5x, https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics%2Fp011-content-gpg_generate.gif 2x"
+            data-sizes="auto"
+            alt="https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics%2Fp011-content-gpg_generate.gif" />
+    </a><figcaption class="image-caption">生成GPG密钥对</figcaption>
+    </figure></p>
+<p>生成<code>GPG</code>密钥对时，所使用的邮箱地址<code>myemail@mail.comn</code>与接下来需要在Neomutt中添加的个人邮箱账户<code>example@mail.com</code>没有任何关系。</p>
+<p>生成<code>GPG</code>密钥库后，使用<code>pass init myemail@mail.com</code>创建密码库</p>
+<h3 id="添加邮箱账户">添加邮箱账户</h3>
+<p>首先确保邮箱已启用<code>IMAP</code>或者<code>POP</code>服务，其次，若<code>outlook</code>和<code>Gmail</code>邮箱账户，需要使用<code>app password</code>作为密码才可成功配置。</p>
+<p>准备完成后，使用以下命令添加邮箱：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mw -a example@email.com -x <span class="s2">&#34;app password&#34;</span> -f
+</span></span></code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>命令解释：</p>
+<ul>
+<li>mw —— mutt-widzard</li>
+<li>-a <a href="mailto:example@email.com" rel="">example@email.com</a>
+ —— 添加邮箱账户</li>
+<li>-x &ldquo;app password&rdquo; —— 填写邮箱密码</li>
+<li>f 禁用 curl 检测邮箱信息</li>
+</ul>
+</blockquote>
+<h3 id="自定义侧边栏邮件文件夹">自定义侧边栏邮件文件夹</h3>
+<p>通过编辑<code>$XDG_CONFIG_HOME/mutt/accounts/example@mail.com.muttrc</code>，使用<code>named-mailboxes</code>显示和隐藏侧边栏的邮件文件夹：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">...
+</span></span><span class="line"><span class="cl">set folder = &#34;/home/user/.local/share/mail/example@mail.com&#34;
+</span></span><span class="line"><span class="cl">...
+</span></span><span class="line"><span class="cl">named-mailboxes &#34;Inbox&#34; &#34;+INBOX&#34;
+</span></span><span class="line"><span class="cl">named-mailboxes &#34;Sent&#34; &#34;+Sent&#34;
+</span></span><span class="line"><span class="cl">named-mailboxes &#34;Drafts&#34; &#34;+Drafts&#34;
+</span></span><span class="line"><span class="cl">named-mailboxes &#34;Trash&#34; &#34;+Trash&#34;
+</span></span><span class="line"><span class="cl">...
+</span></span></code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>配置文件解释：</p>
+<ul>
+<li>在<code>mutt</code>配置文件的变量中，<code>+</code>=<code>$folder</code>，即<code>+INBOX</code>=<code>/home/user/.local/share/mail/example@mail.com/INBOX</code></li>
+<li>named-mailboxes &ldquo;自定义邮箱文件夹名&rdquo; &ldquo;邮箱文件夹路径&rdquo;</li>
+<li>其余文件夹不会显示</li>
+</ul>
+</blockquote>
+<h3 id="neomutt-基本操作">neomutt 基本操作</h3>
+<p>neomutt 快捷键基本属于 vim 类，常用快捷键有：</p>
+<ul>
+<li>o 下载邮件</li>
+<li>ctrl+f 搜索</li>
+<li>m 新建邮件</li>
+<li>r 回复邮件</li>
+<li>? 显示帮助</li>
+</ul></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2023-05-31</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/arch_09_%E5%AE%9E%E7%94%A8%E8%BD%AF%E4%BB%B6mutt/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://www.ariesnine.cn/arch_09_%E5%AE%9E%E7%94%A8%E8%BD%AF%E4%BB%B6mutt/" data-title="Archlinux 小记-009 实用软件——mutt" data-hashtags="Archlinux,Programs"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://www.ariesnine.cn/arch_09_%E5%AE%9E%E7%94%A8%E8%BD%AF%E4%BB%B6mutt/" data-hashtag="Archlinux"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://www.ariesnine.cn/arch_09_%E5%AE%9E%E7%94%A8%E8%BD%AF%E4%BB%B6mutt/" data-title="Archlinux 小记-009 实用软件——mutt"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://www.ariesnine.cn/arch_09_%E5%AE%9E%E7%94%A8%E8%BD%AF%E4%BB%B6mutt/" data-title="Archlinux 小记-009 实用软件——mutt"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@6.20.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://www.ariesnine.cn/arch_09_%E5%AE%9E%E7%94%A8%E8%BD%AF%E4%BB%B6mutt/" data-title="Archlinux 小记-009 实用软件——mutt" data-image="https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics/p011-cover-mutt.png"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/archlinux/">Archlinux</a>,&nbsp;<a href="/tags/programs/">Programs</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/arch_08_%E5%AE%9E%E7%94%A8%E8%BD%AF%E4%BB%B6sxiv/" class="prev" rel="prev" title="Archlinux 小记-008 实用软件—— sxiv"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Archlinux 小记-008 实用软件—— sxiv</a>
+            <a href="/arch_10-%E5%AE%9E%E7%94%A8%E8%BD%AF%E4%BB%B6newsboat/" class="next" rel="next" title="Archlinux 小记-10 实用软件——newsboat">Archlinux 小记-10 实用软件——newsboat<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://www.ariesnine.cn" target="_blank">Aries</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lightgallery-bundle.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/algoliasearch@4.13.0/dist/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.1/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/twemoji@14.0.2/dist/twemoji.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/lightgallery.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":15},"comment":{},"lightgallery":true,"search":{"algoliaAppID":"PASDMWALPK","algoliaIndex":"index.en","algoliaSearchKey":"b42948e51daaa93df92381c8e2ac0f93","highlightTag":"em","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"algolia"},"twemoji":true};</script><script type="text/javascript" src="/js/theme.min.ea66030e36d19f82f6f7631f572a5507dcb5fd282beeffeb74393f3044786855.js" integrity="sha256-6mYDDjbRn4L292MfVypVB9y1/Sgr7v/rdDk/MER4aFU="></script><script type="text/javascript">
+            window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
+            gtag('config', 'G-J0PQS7E9QS', { 'anonymize_ip': true });
+        </script><script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=G-J0PQS7E9QS" async></script></body>
+</html>

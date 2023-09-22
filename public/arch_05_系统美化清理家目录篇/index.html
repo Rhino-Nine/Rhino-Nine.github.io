@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Archlinux 小记-005 系统美化——清理家目录篇 - 犀谭</title><meta name="Description" content="基于 XDG Base Directory Specifications 维护干净整洁的家目录"><meta property="og:title" content="Archlinux 小记-005 系统美化——清理家目录篇" />
+<meta property="og:description" content="基于 XDG Base Directory Specifications 维护干净整洁的家目录" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.ariesnine.cn/arch_05_%E7%B3%BB%E7%BB%9F%E7%BE%8E%E5%8C%96%E6%B8%85%E7%90%86%E5%AE%B6%E7%9B%AE%E5%BD%95%E7%AF%87/" /><meta property="og:image" content="https://www.ariesnine.cn/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-05-22T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-05-22T00:00:00+00:00" /><meta property="og:site_name" content="犀谭" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://www.ariesnine.cn/logo.png"/>
+
+<meta name="twitter:title" content="Archlinux 小记-005 系统美化——清理家目录篇"/>
+<meta name="twitter:description" content="基于 XDG Base Directory Specifications 维护干净整洁的家目录"/>
+<meta name="application-name" content="犀谭">
+<meta name="apple-mobile-web-app-title" content="犀谭"><meta name="theme-color" content="#282A36"><meta name="msapplication-TileColor" content="#5AF78E"><meta name="referrer" content="no-refeer">
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#BD93F9"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.ariesnine.cn/arch_05_%E7%B3%BB%E7%BB%9F%E7%BE%8E%E5%8C%96%E6%B8%85%E7%90%86%E5%AE%B6%E7%9B%AE%E5%BD%95%E7%AF%87/" /><link rel="prev" href="https://www.ariesnine.cn/arch_04_%E7%B3%BB%E7%BB%9F%E7%BE%8E%E5%8C%96%E5%85%A8%E5%B1%80%E7%AF%87/" /><link rel="next" href="https://www.ariesnine.cn/arch_06_%E7%B3%BB%E7%BB%9F%E7%BE%8E%E5%8C%96%E7%BB%88%E7%AB%AF%E7%AF%87/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.897bb8797133984bdbd3ac834db1a0341c66a8efd95db2216603704f28b76d77.css" integrity="sha256-iXu4eXEzmEvb06yDTbGgNBxmqO/ZXbIhZgNwTyi3bXc="><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Archlinux 小记-005 系统美化——清理家目录篇",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/www.ariesnine.cn\/arch_05_%E7%B3%BB%E7%BB%9F%E7%BE%8E%E5%8C%96%E6%B8%85%E7%90%86%E5%AE%B6%E7%9B%AE%E5%BD%95%E7%AF%87\/"
+        },"image": ["https:\/\/www.ariesnine.cn\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "Archlinux","wordcount":  2406 ,
+        "url": "https:\/\/www.ariesnine.cn\/arch_05_%E7%B3%BB%E7%BB%9F%E7%BE%8E%E5%8C%96%E6%B8%85%E7%90%86%E5%AE%B6%E7%9B%AE%E5%BD%95%E7%AF%87\/","datePublished": "2023-05-22T00:00:00+00:00","dateModified": "2023-05-22T00:00:00+00:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "Aries","logo": {
+                    "@type": "ImageObject",
+                    "url": "https:\/\/www.ariesnine.cn\/images\/avatar.png",
+                    "width":  400 ,
+                    "height":  400 
+                }},"author": {
+                "@type": "Person",
+                "name": "Aries"
+            },"description": "基于 XDG Base Directory Specifications 维护干净整洁的家目录"
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('dark' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'dark' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="犀谭">犀谭</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="https://github.com/Rhino-Nine/Rhino-Nine" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i>  </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="犀谭">犀谭</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="https://github.com/Rhino-Nine/Rhino-Nine" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Archlinux 小记-005 系统美化——清理家目录篇</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://www.ariesnine.cn" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Aries</a>
+</span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-05-22">2023-05-22</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;2406 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;5 minutes&nbsp;</div>
+        </div><div class="featured-image"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics/p006-cover-home.png"
+        data-srcset="https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics/p006-cover-home.png, https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics/p006-cover-home.png 1.5x, https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics/p006-cover-home.png 2x"
+        data-sizes="auto"
+        alt="https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics/p006-cover-home.png"
+        title="基于 XDG Base Directory Specifications 维护干净整洁的家目录" /></div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#一xdg-base-directory-specificationshttpsspecificationsfreedesktoporgbasedir-specbasedir-spec-latesthtml">一、<a href="https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html">XDG Base Directory Specifications</a></a>
+      <ul>
+        <li><a href="#1-简介">1. 简介</a></li>
+        <li><a href="#2-基本概念">2. 基本概念</a></li>
+        <li><a href="#3-环境变量">3. 环境变量</a></li>
+      </ul>
+    </li>
+    <li><a href="#二配置环境变量">二、配置环境变量</a>
+      <ul>
+        <li><a href="#1-设置-zsh-配置文件基本目录">1. 设置 zsh 配置文件基本目录</a></li>
+        <li><a href="#2-配置基本目录环境变量">2. 配置基本目录环境变量</a></li>
+      </ul>
+    </li>
+    <li><a href="#三清理流氓文件">三、清理流氓文件</a>
+      <ul>
+        <li><a href="#1-为用户可执行文件创建基本目录">1. 为用户可执行文件创建基本目录</a></li>
+        <li><a href="#2-编辑垃圾清理脚本">2. 编辑垃圾清理脚本</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="一xdg-base-directory-specificationshttpsspecificationsfreedesktoporgbasedir-specbasedir-spec-latesthtml">一、<a href="https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html" target="_blank" rel="noopener noreffer">XDG Base Directory Specifications</a>
+</h2>
+<hr>
+<h3 id="1-简介">1. 简介</h3>
+<hr>
+<p>各种各样的规范规定着文件和文件格式，XDG Base Directory Specifications （以下简称 XDG 基本目录规范）通过定义一个或多个与文件对应的基本目录，从而规定着这些文件的所处位置。</p>
+<h3 id="2-基本概念">2. 基本概念</h3>
+<hr>
+<p>XDG 基本目录规范基于以下概念：</p>
+<ul>
+<li>用户的特定 <strong>数据文件</strong> 会被写入一个单一的基本目录，此目录由环境变量<code>$XDG_DATA_HOME</code>定义</li>
+<li>用户的特定 <strong>配置文件</strong> 会被写入一个单一的基本目录，此目录由环境变量<code>$XDG_CONFIG_HOME</code>定义</li>
+<li>用户的特定 <strong>缓存文件</strong> 会被写入一个单一的基本目录，此目录由环境变量<code>$XDG_CACHE_HOME</code>定义</li>
+<li>用户的特定 <strong>状态数据</strong> 会被写入一个单一的基本目录，此目录由环境变量<code>$XDG_STATE_HOME</code>定义</li>
+<li>用户的特定 <strong>运行时文件</strong> 会位于一个单一的基本目录，此目录由环境变量<code>$XDG_RUNTIME_DIR</code>定义</li>
+<li>存在一组基本目录，按顺序排列，以供检索 <strong>数据文件</strong>，此目录组由环境变量<code>$XDG_DATA_DIR</code>定义</li>
+<li>存在一组基本目录，按顺序排列，以供检索 <strong>配置文件</strong>，此目录组由环境变量<code>$XDG_CONFIG_DIR</code>定义</li>
+<li>用户的特定 <strong>可执行文件</strong> 会位于一个单一的基本目录</li>
+</ul>
+<p>以上所有环境变量设置的路径需为 <strong>绝对路径</strong>，若设置为相对路径则无效且会被忽略。</p>
+<h3 id="3-环境变量">3. 环境变量</h3>
+<hr>
+<p><code>$XDG_DATA_HOME</code>定义了应存储用户特定数据文件的基本目录<br>
+<code>$XDG_DATA_HOME</code>若未设置或为空，则使用默认的<code>$HOME/.local/share</code></p>
+<p><code>$XDG_CONFIG_HOME</code>定义了应存储用户特定配置文件的基本目录<br>
+<code>$XDG_CONFIG_HOME</code>若未设置或为空，则使用默认的<code>$HOME/.config</code></p>
+<p><code>$XDG_CACHE_HOME</code>定义了用户特定缓存文件的基本目录<br>
+<code>$XDG_CACHE_HOME</code>若未设置或为空，则使用默认的<code>$HOME/.cache</code></p>
+<p><code>$XDG_STATE_HOME</code>定义了应存储用户特定状态数据的基本目录<br>
+<code>XDG_STATE_HOME</code>若未设置或为空，则使用默认的<code>$HOME/.local/state</code><br>
+<code>XDG_STATE_HOME</code>包含的状态数据应在重启后依然存在，其他不那么重要的以及可移动的数据文件应存储到<code>$XDG_DATA_HOME</code>中，一般来说状态数据包含：<br></p>
+<ul>
+<li>操作历史，如：日志、历史、最近使用文件，等等（常见于终端输入历史等）</li>
+<li>当前状态，且可以在重启后继续读取的，如：视图、布局、打开的文件（常见于<code>Nvim</code>、<code>lf</code>等）</li>
+</ul>
+<p><code>$XDG_DATA_DIR</code>定义了一组按偏好顺序排列的基本目录，以便在<code>$XDG_DATA_HOME</code>之外检索数据文件<br>
+<code>$XDG_DATA_DIR</code>中的目录需用冒号“:”隔开<br>
+<code>$XDG_DATA_DIR</code>若未设置或为空，则其值等于<code>/usr/local/share/:/usr/share/</code>的值</p>
+<p><code>$XDG_CONFIG_DIR</code>定义了一组按偏好顺序排列的基本目录，以便在<code>$XDG_CONFIG_HOME</code>之外检索配置文件<br>
+<code>$XDG_CONFIG_DIR</code>中的目录需用冒号“:”隔开<br>
+<code>$XDG_CONFIG_DIR</code>若为设置或为空，则其值等于<code>/etc/xdg</code>的值</p>
+<p><code>$XDG_RUNTIME_DIR</code>定义的基本目录用来存储：用户特定的、非必要的运行时文件和其他文件，如：sockets、pipes，等<br>
+<code>$XDG_RUNTIME_DIR</code>定义的基本目录 <strong>必须</strong> 由用户拥有，且只能有用户一人有读写权限，其 Unix 访问模式必须是 <code>0700</code></p>
+<h2 id="二配置环境变量">二、配置环境变量</h2>
+<hr>
+<p>为了使<code>$HOME</code>目录尽可能干净，主要通过配置环境变量实现：<br></p>
+<ul>
+<li>设置 XDG 基本环境变量，这可以使系统以及遵守 XDG 基本目录规范的软件不将产生的文件生成在基本目录下，而不是杂乱无章地丢在<code>$HOME</code>目录下；<br></li>
+<li>为不遵守 XDG 基本目录规范的软件单独设置环境变量；<br></li>
+<li>对于反复在<code>$HOME</code>目录下生成垃圾、且无法以环境变量约束的，我选择单独编写家目录垃圾清理脚本，定时执行。<br></li>
+</ul>
+<p><a href="https://github.com/b3nj5m1n/xdg-ninja" target="_blank" rel="noopener noreffer">XDG-ninja</a>
+ 提供一个强大的shell脚本，它可以根据 XDG 基本目录规范检测<code>$HOME</code>目录下的文件，然后，显示哪些文件可以移动至基本目录，同时，提示具体操作方法。<br>
+Archlinux 可以直接通过 pacman 下载安装：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S xdg-ninja
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="1-设置-zsh-配置文件基本目录">1. 设置 zsh 配置文件基本目录</h3>
+<p>尽量将环境变量都写在当前 shell 的配置文件里，比如：<br>
+当前 shell 为 zsh，那么尽量将环境变量写入<code>$XDG_CONFIG_HOME/zsh/.zshrc</code>文件中。<br></p>
+<p>目前遇到唯一例外的情况是<code>.zshenv</code>文件，为了将其移动到<code>$XDG_CONFIG_HOME/zsh</code>目录下，需要移除<code>$HOME</code>目录下的该文件，转而在<code>/etc/zsh/zshenv</code>设置环境变量：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">ZDOTDIR</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$XDG_CONFIG_HOME</span><span class="s2">&#34;</span>/.zsh <span class="c1">#设置存储 zsh 点文件的基本配置文件目录</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="2-配置基本目录环境变量">2. 配置基本目录环境变量</h3>
+<p>编辑<code>$XDG_CONFIG_HOME/zsh/.zshrc</code>，写入基本目录环境变量：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">... <span class="c1"># 其他环境变量，如 Fcitx 输入法、默认编辑器等</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">XDG_CONFIG_HOME</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$HOME</span><span class="s2">/.config&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">XDG_CACHE_HOME</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$HOME</span><span class="s2">/.cache&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">XDG_DATA_HOME</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$HOME</span><span class="s2">/.local/share&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">XDG_STATE_HOME</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$HOME</span><span class="s2">/.local/state&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">XDG_RUNTIME_DIR</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$HOME</span><span class="s2">/.local/tmp&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="s2">&#34;/usr/bin:/usr/local/bin:</span><span class="nv">$HOME</span><span class="s2">/.local/bin&#34;</span>
+</span></span><span class="line"><span class="cl">...
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>此后，一旦家目录新增了点文件，就运行<code>xdg-ninja</code>，接着参考提示，设置特定目录环境变量，将点文件移入相对应的基本目录中，就可以维持一个干净清爽的<code>$HOME</code>目录了。</p>
+<h2 id="三清理流氓文件">三、清理流氓文件</h2>
+<hr>
+<p>目前遇到的唯一无法移动但可以移除的文件是由<a href="https://www.chromium.org/Home/" target="_blank" rel="noopener noreffer">Chromium</a>
+生成的<code>.pki</code>文件夹，油盐不进，常年不修。<br>
+此外，<code>$HOME/.ssh</code>由于为特殊个例，不建议移动，故保留。</p>
+<h3 id="1-为用户可执行文件创建基本目录">1. 为用户可执行文件创建基本目录</h3>
+<hr>
+<p>按基本目录环境变量设置的路径创建文件夹：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mkdir ~/.local/bin
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>此目录中的可执行文件可以从终端直接启用，日后的自定义脚本都可以置入其中。</p>
+<h3 id="2-编辑垃圾清理脚本">2. 编辑垃圾清理脚本</h3>
+<hr>
+<p>即便手动删除 <code>$HOME/.pki</code>，Chromium 在每次启动时仍然会再次创建一个，于是，设计一个简单的垃圾清理脚本，实现功能：<br></p>
+<ul>
+<li>每次 Chromium 关闭后，检查<code>$HOME/.pki</code>是否存在</li>
+<li>若存在，则删除，等待下一次 Chromim 关闭</li>
+</ul>
+<p>编辑脚本：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">nvim ~/.local/bin/homecleaner
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#!/bin/bash</span>
+</span></span><span class="line"><span class="cl"><span class="k">while</span> true<span class="p">;</span> <span class="k">do</span>
+</span></span><span class="line"><span class="cl">    <span class="k">while</span> pgrep chromium &gt; /dev/null<span class="p">;</span> <span class="k">do</span>
+</span></span><span class="line"><span class="cl">        sleep <span class="m">1</span>
+</span></span><span class="line"><span class="cl">    <span class="k">done</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="o">[</span> -d <span class="s2">&#34;</span><span class="nv">$HOME</span><span class="s2">/.pki&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">        rm -rf <span class="s2">&#34;</span><span class="nv">$HOME</span><span class="s2">/.pki&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span>
+</span></span><span class="line"><span class="cl">        <span class="k">continue</span>
+</span></span><span class="line"><span class="cl">    <span class="k">fi</span>
+</span></span><span class="line"><span class="cl"><span class="k">done</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>随后可将其加入到启动脚本<code>$XDG_CONFIG_HOME/suckless/dwm/scripts/run.sh</code>中，如此一来，<code>$HOME</code>目录就不再会变得杂乱无章了。</p></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2023-05-22</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/arch_05_%E7%B3%BB%E7%BB%9F%E7%BE%8E%E5%8C%96%E6%B8%85%E7%90%86%E5%AE%B6%E7%9B%AE%E5%BD%95%E7%AF%87/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://www.ariesnine.cn/arch_05_%E7%B3%BB%E7%BB%9F%E7%BE%8E%E5%8C%96%E6%B8%85%E7%90%86%E5%AE%B6%E7%9B%AE%E5%BD%95%E7%AF%87/" data-title="Archlinux 小记-005 系统美化——清理家目录篇" data-hashtags="Archlinux"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://www.ariesnine.cn/arch_05_%E7%B3%BB%E7%BB%9F%E7%BE%8E%E5%8C%96%E6%B8%85%E7%90%86%E5%AE%B6%E7%9B%AE%E5%BD%95%E7%AF%87/" data-hashtag="Archlinux"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://www.ariesnine.cn/arch_05_%E7%B3%BB%E7%BB%9F%E7%BE%8E%E5%8C%96%E6%B8%85%E7%90%86%E5%AE%B6%E7%9B%AE%E5%BD%95%E7%AF%87/" data-title="Archlinux 小记-005 系统美化——清理家目录篇"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://www.ariesnine.cn/arch_05_%E7%B3%BB%E7%BB%9F%E7%BE%8E%E5%8C%96%E6%B8%85%E7%90%86%E5%AE%B6%E7%9B%AE%E5%BD%95%E7%AF%87/" data-title="Archlinux 小记-005 系统美化——清理家目录篇"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@6.20.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://www.ariesnine.cn/arch_05_%E7%B3%BB%E7%BB%9F%E7%BE%8E%E5%8C%96%E6%B8%85%E7%90%86%E5%AE%B6%E7%9B%AE%E5%BD%95%E7%AF%87/" data-title="Archlinux 小记-005 系统美化——清理家目录篇" data-image="https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics/p006-cover-home.png"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/archlinux/">Archlinux</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/arch_04_%E7%B3%BB%E7%BB%9F%E7%BE%8E%E5%8C%96%E5%85%A8%E5%B1%80%E7%AF%87/" class="prev" rel="prev" title="Archlinux 小记-004 系统美化——全局篇"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Archlinux 小记-004 系统美化——全局篇</a>
+            <a href="/arch_06_%E7%B3%BB%E7%BB%9F%E7%BE%8E%E5%8C%96%E7%BB%88%E7%AB%AF%E7%AF%87/" class="next" rel="next" title="Archlinux 小记-006 系统美化——终端篇">Archlinux 小记-006 系统美化——终端篇<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://www.ariesnine.cn" target="_blank">Aries</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lightgallery-bundle.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/algoliasearch@4.13.0/dist/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.1/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/twemoji@14.0.2/dist/twemoji.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/lightgallery.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":15},"comment":{},"lightgallery":true,"search":{"algoliaAppID":"PASDMWALPK","algoliaIndex":"index.en","algoliaSearchKey":"b42948e51daaa93df92381c8e2ac0f93","highlightTag":"em","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"algolia"},"twemoji":true};</script><script type="text/javascript" src="/js/theme.min.ea66030e36d19f82f6f7631f572a5507dcb5fd282beeffeb74393f3044786855.js" integrity="sha256-6mYDDjbRn4L292MfVypVB9y1/Sgr7v/rdDk/MER4aFU="></script><script type="text/javascript">
+            window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
+            gtag('config', 'G-J0PQS7E9QS', { 'anonymize_ip': true });
+        </script><script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=G-J0PQS7E9QS" async></script></body>
+</html>

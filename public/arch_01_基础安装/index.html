@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Archlinux 小记-001 基础安装 - 犀谭</title><meta name="Description" content="总结Archlinux基础安装技巧"><meta property="og:title" content="Archlinux 小记-001 基础安装" />
+<meta property="og:description" content="总结Archlinux基础安装技巧" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.ariesnine.cn/arch_01_%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85/" /><meta property="og:image" content="https://www.ariesnine.cn/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-05-17T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-05-17T00:00:00+00:00" /><meta property="og:site_name" content="犀谭" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://www.ariesnine.cn/logo.png"/>
+
+<meta name="twitter:title" content="Archlinux 小记-001 基础安装"/>
+<meta name="twitter:description" content="总结Archlinux基础安装技巧"/>
+<meta name="application-name" content="犀谭">
+<meta name="apple-mobile-web-app-title" content="犀谭"><meta name="theme-color" content="#282A36"><meta name="msapplication-TileColor" content="#5AF78E"><meta name="referrer" content="no-refeer">
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#BD93F9"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.ariesnine.cn/arch_01_%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85/" /><link rel="next" href="https://www.ariesnine.cn/git_01_%E6%81%A2%E5%A4%8D%E6%9C%AC%E5%9C%B0%E8%AF%AF%E5%88%A0commit/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.897bb8797133984bdbd3ac834db1a0341c66a8efd95db2216603704f28b76d77.css" integrity="sha256-iXu4eXEzmEvb06yDTbGgNBxmqO/ZXbIhZgNwTyi3bXc="><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Archlinux 小记-001 基础安装",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/www.ariesnine.cn\/arch_01_%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85\/"
+        },"image": ["https:\/\/www.ariesnine.cn\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "Archlinux","wordcount":  942 ,
+        "url": "https:\/\/www.ariesnine.cn\/arch_01_%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85\/","datePublished": "2023-05-17T00:00:00+00:00","dateModified": "2023-05-17T00:00:00+00:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "Aries","logo": {
+                    "@type": "ImageObject",
+                    "url": "https:\/\/www.ariesnine.cn\/images\/avatar.png",
+                    "width":  400 ,
+                    "height":  400 
+                }},"author": {
+                "@type": "Person",
+                "name": "Aries"
+            },"description": "总结Archlinux基础安装技巧"
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('dark' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'dark' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="犀谭">犀谭</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="https://github.com/Rhino-Nine/Rhino-Nine" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i>  </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="犀谭">犀谭</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="https://github.com/Rhino-Nine/Rhino-Nine" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Archlinux 小记-001 基础安装</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://www.ariesnine.cn" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Aries</a>
+</span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-05-17">2023-05-17</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;942 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;2 minutes&nbsp;</div>
+        </div><div class="featured-image"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics/p001-cover-Arch_Linux.jpg"
+        data-srcset="https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics/p001-cover-Arch_Linux.jpg, https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics/p001-cover-Arch_Linux.jpg 1.5x, https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics/p001-cover-Arch_Linux.jpg 2x"
+        data-sizes="auto"
+        alt="https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics/p001-cover-Arch_Linux.jpg"
+        title="总结Archlinux基础安装技巧" /></div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#一安装准备">一、安装准备</a>
+      <ul>
+        <li><a href="#1-物理机">1. 物理机</a></li>
+        <li><a href="#2-虚拟机">2. 虚拟机</a></li>
+      </ul>
+    </li>
+    <li><a href="#二基础安装">二、基础安装</a>
+      <ul>
+        <li><a href="#1-禁用reflector服务">1. 禁用reflector服务</a></li>
+        <li><a href="#2-确认uefi模式">2. 确认UEFI模式</a></li>
+        <li><a href="#3-连接网络">3. 连接网络</a></li>
+        <li><a href="#4-更新系统时钟">4. 更新系统时钟</a></li>
+        <li><a href="#5-换源">5. 换源</a></li>
+      </ul>
+    </li>
+    <li><a href="#6-分区与格式化">6. 分区与格式化</a>
+      <ul>
+        <li><a href="#6-1-win10arch双系统btrfs文件系统分区">6-1. win10、Arch双系统Btrfs文件系统分区</a></li>
+        <li><a href="#6-2-格式化并创建btrfs子卷">6-2. 格式化并创建Btrfs子卷</a></li>
+      </ul>
+    </li>
+    <li><a href="#7-挂载">7. 挂载</a></li>
+    <li><a href="#8安装系统">8.安装系统</a></li>
+    <li><a href="#9-生成fstab文件">9. 生成fstab文件</a></li>
+    <li><a href="#10-change-root">10. change root</a></li>
+    <li><a href="#11-收尾配置">11. 收尾配置</a></li>
+    <li><a href="#12-完成安装">12. 完成安装</a></li>
+    <li><a href="#__参考链接__"><strong>参考链接</strong></a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="一安装准备">一、安装准备</h2>
+<hr>
+<h3 id="1-物理机">1. 物理机</h3>
+<ol>
+<li>确认网络连接通畅</li>
+<li>下载安装镜像</li>
+<li>刻录安装U盘</li>
+</ol>
+<h3 id="2-虚拟机">2. 虚拟机</h3>
+<p>请参考：<a href="https://arch.icekylin.online/guide/rookie/pre-virt.html" target="_blank" rel="noopener noreffer">虚拟机安装前的准备</a>
+</p>
+<h2 id="二基础安装">二、基础安装</h2>
+<hr>
+<h3 id="1-禁用reflector服务">1. 禁用reflector服务</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">systemctl stop reflector.service
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="2-确认uefi模式">2. 确认UEFI模式</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ls /sys/firmware/efi/efivars/
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="3-连接网络">3. 连接网络</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">rfkill unblock wifi
+</span></span><span class="line"><span class="cl">iwctl
+</span></span><span class="line"><span class="cl">device list 
+</span></span><span class="line"><span class="cl">station wlan0 scan
+</span></span><span class="line"><span class="cl">station wlan0 get-networks
+</span></span><span class="line"><span class="cl">station wlan0 connect wifi-name
+</span></span><span class="line"><span class="cl"><span class="nb">exit</span>
+</span></span><span class="line"><span class="cl">ping www.bilibili.com <span class="c1">#测试网络</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="4-更新系统时钟">4. 更新系统时钟</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">timedatectl set-ntp <span class="nb">true</span> <span class="c1"># 将系统时间与网络时间进行同步</span>
+</span></span><span class="line"><span class="cl">timedatectl status <span class="c1"># 检查服务状态</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="5-换源">5. 换源</h3>
+<p>编辑源文件</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">vim /etc/pacman.d/mirrorlist
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>推荐源如下，择其一添加即可</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nv">Server</span> <span class="o">=</span> https://mirrors.ustc.edu.cn/archlinux/<span class="nv">$repo</span>/os/<span class="nv">$arch</span> <span class="c1"># 中国科学技术大学开源镜像站</span>
+</span></span><span class="line"><span class="cl"><span class="nv">Server</span> <span class="o">=</span> https://mirrors.tuna.tsinghua.edu.cn/archlinux/<span class="nv">$repo</span>/os/<span class="nv">$arch</span> <span class="c1"># 清华大学开源软件镜像站</span>
+</span></span><span class="line"><span class="cl"><span class="nv">Server</span> <span class="o">=</span> https://repo.huaweicloud.com/archlinux/<span class="nv">$repo</span>/os/<span class="nv">$arch</span> <span class="c1"># 华为开源镜像站</span>
+</span></span><span class="line"><span class="cl"><span class="nv">Server</span> <span class="o">=</span> http://mirror.lzu.edu.cn/archlinux/<span class="nv">$repo</span>/os/<span class="nv">$arch</span> <span class="c1"># 兰州大学开源镜像站</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="6-分区与格式化">6. 分区与格式化</h2>
+<hr>
+<h3 id="6-1-win10arch双系统btrfs文件系统分区">6-1. win10、Arch双系统Btrfs文件系统分区</h3>
+<ul>
+<li><code>/</code> + <code>/home</code> 根目录+主目录：<code>&gt;= 128GB</code></li>
+<li><code>/boot</code> EFI分区：<code>512MB</code></li>
+<li>Swap 分区：&gt;= <code>60%</code>运存</li>
+</ul>
+<p>SATA协议硬盘中，<code>x</code>为字母<code>a</code>、<code>b</code>、<code>c</code>等；NVME协议硬盘中，<code>x</code>为数字<code>1</code>、<code>2</code>、<code>3</code>等</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cfdisk /dev/nvmexn1 <span class="c1">#按需求分配内存</span>
+</span></span><span class="line"><span class="cl">fdisk -l <span class="c1">#完成后，复查分区情况</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="6-2-格式化并创建btrfs子卷">6-2. 格式化并创建Btrfs子卷</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mkfs.fat -F32 /dev/nvmexn1pn <span class="c1">#格式化EFI分区</span>
+</span></span><span class="line"><span class="cl">mkfs.btrfs -L myArch /dev/nvmexn1pn <span class="c1">#格式化Btrfs分区</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">mount -t btrfs -o <span class="nv">compress</span><span class="o">=</span>zstd /dev/nvmexn1pn /mnt <span class="c1">#挂载 Btrfs 分区于 /mnt 下</span>
+</span></span><span class="line"><span class="cl">btrfs subvolume create /mnt/@ <span class="c1">#创建 / 目录子卷</span>
+</span></span><span class="line"><span class="cl">btrfs subvolume create /mnt/@home <span class="c1">#创建 /home 目录子卷</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">umount /mnt <span class="c1">#卸载 /mnt 以挂载子卷</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="7-挂载">7. 挂载</h2>
+<hr>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 按顺序挂载</span>
+</span></span><span class="line"><span class="cl">mount -t btrfs -o <span class="nv">subvol</span><span class="o">=</span>/@,compress<span class="o">=</span>zstd /dev/nvmexn1pn /mnt <span class="c1">#挂载 / 目录</span>
+</span></span><span class="line"><span class="cl">mkdir /mnt/home <span class="c1">#创建 /home 目录</span>
+</span></span><span class="line"><span class="cl">mount -t btrfs -o <span class="nv">subvol</span><span class="o">=</span>/@home,compress<span class="o">=</span>zstd /dev/nvmexn1pn /mnt/home <span class="c1">#挂载 /home 目录</span>
+</span></span><span class="line"><span class="cl">mkdir -p /mnt/boot <span class="c1">#创建 /boot 目录</span>
+</span></span><span class="line"><span class="cl">mount /dev/nvmexn1pn /mnt/boot <span class="c1">#挂载 /boot 目录</span>
+</span></span><span class="line"><span class="cl">swapon /dev/nvmexn1pn <span class="c1">#挂载交换分区</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="8安装系统">8.安装系统</h2>
+<hr>
+<ol>
+<li>若镜像非最新，可能出现GPG证书错误，更新<code>archlinux-keyring</code>以解决</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pacman -S archlinux-keyring
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="2">
+<li>安装必要软件</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pacstrap /mnt dhcpcd networkmanager neovim sudo zsh zsh-completions 
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="9-生成fstab文件">9. 生成fstab文件</h2>
+<hr>
+<ol>
+<li>生成并写入 fstab 文件:</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">genfstab -U /mnt &gt; /mnt/etc/fstab
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="2">
+<li>复查<code>/mnt/etc/fstab</code></li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cat /mnt/etc/fstab
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="10-change-root">10. change root</h2>
+<hr>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">arch-chroot /mnt <span class="c1">#切换系统环境至新系统</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="11-收尾配置">11. 收尾配置</h2>
+<hr>
+<ol>
+<li>设置主机名</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">nvim /etc/hostname
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="2">
+<li>配置<code>/etc/hosts</code></li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">nvim /etc/hosts
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>加入以下内容</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">127.0.0.1   localhost
+</span></span><span class="line"><span class="cl">::1         localhost
+</span></span><span class="line"><span class="cl">127.0.1.1   myarch.localdomain myarch
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="3">
+<li>设置时间</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime <span class="c1">#设置时区</span>
+</span></span><span class="line"><span class="cl">hwclock --systohc <span class="c1">#同步硬件时间</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="4">
+<li>Locale本地化</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">nvim /etc/locale.gen <span class="c1">#编辑 /etc/locale.gen</span>
+</span></span><span class="line"><span class="cl">    en_US.UTF-8 UTF-8 <span class="c1">#取消注释</span>
+</span></span><span class="line"><span class="cl">    zh_CN.UTF-8 UTF-8 <span class="c1">#取消注释</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">locale-gen <span class="c1">#生成 locale</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s1">&#39;LANG=en_US.UTF-8&#39;</span>  &gt; /etc/locale.conf
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="5">
+<li>为root用户设置密码</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">passwd root
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="6">
+<li>安装微码</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pacman -S intel-ucode <span class="c1"># Intel</span>
+</span></span><span class="line"><span class="cl">pacman -S amd-ucode <span class="c1"># AMD</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="7">
+<li>安装引导程序</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pacman -S grub efibootmgr os-prober <span class="c1">#安装对应包</span>
+</span></span><span class="line"><span class="cl">grub-install --target<span class="o">=</span>x86_64-efi --efi-directory<span class="o">=</span>/boot --bootloader-id<span class="o">=</span>Arch <span class="c1">#安装 GRUB 到EFI 分区</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s1">&#39;GRUB_DISABLE_OS_PROBER=false&#39;</span> &gt; /etc/default/grub <span class="c1">#引导win10</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">grub-mkconfig -o /boot/grub/grub.cfg <span class="c1">#生成 GRUB 配置文件</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="8">
+<li>禁用蜂鸣器</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">touch /etc/modprobe.d/nobeep.conf
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s1">&#39;blacklist pcspkr&#39;</span> &gt; /etc/modprobe.d/nobeep.conf
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="12-完成安装">12. 完成安装</h2>
+<hr>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">exit</span> <span class="c1">#退回安装环境</span>
+</span></span><span class="line"><span class="cl">umount -R /mnt <span class="c1">#卸载新分区</span>
+</span></span><span class="line"><span class="cl">reboot <span class="c1">#重启</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="__参考链接__"><strong>参考链接</strong></h2>
+<ol>
+<li><a href="https://wiki.archlinux.org/title/Installation_guide" target="_blank" rel="noopener noreffer">ArchWiki Installation guide</a>
+</li>
+<li><a href="https://arch.icekylin.online" target="_blank" rel="noopener noreffer">Archlinux 简明指南</a>
+</li>
+</ol></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2023-05-17</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/arch_01_%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://www.ariesnine.cn/arch_01_%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85/" data-title="Archlinux 小记-001 基础安装" data-hashtags="Archlinux"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://www.ariesnine.cn/arch_01_%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85/" data-hashtag="Archlinux"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://www.ariesnine.cn/arch_01_%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85/" data-title="Archlinux 小记-001 基础安装"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://www.ariesnine.cn/arch_01_%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85/" data-title="Archlinux 小记-001 基础安装"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@6.20.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://www.ariesnine.cn/arch_01_%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85/" data-title="Archlinux 小记-001 基础安装" data-image="https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics/p001-cover-Arch_Linux.jpg"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/archlinux/">Archlinux</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+            <a href="/git_01_%E6%81%A2%E5%A4%8D%E6%9C%AC%E5%9C%B0%E8%AF%AF%E5%88%A0commit/" class="next" rel="next" title="Git 小记-001：恢复本地误删 commits">Git 小记-001：恢复本地误删 commits<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://www.ariesnine.cn" target="_blank">Aries</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lightgallery-bundle.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/algoliasearch@4.13.0/dist/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.1/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/twemoji@14.0.2/dist/twemoji.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/lightgallery.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":15},"comment":{},"lightgallery":true,"search":{"algoliaAppID":"PASDMWALPK","algoliaIndex":"index.en","algoliaSearchKey":"b42948e51daaa93df92381c8e2ac0f93","highlightTag":"em","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"algolia"},"twemoji":true};</script><script type="text/javascript" src="/js/theme.min.ea66030e36d19f82f6f7631f572a5507dcb5fd282beeffeb74393f3044786855.js" integrity="sha256-6mYDDjbRn4L292MfVypVB9y1/Sgr7v/rdDk/MER4aFU="></script><script type="text/javascript">
+            window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
+            gtag('config', 'G-J0PQS7E9QS', { 'anonymize_ip': true });
+        </script><script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=G-J0PQS7E9QS" async></script></body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Archlinux 小记-007 实用软件—— lf - 犀谭</title><meta name="Description" content="终端文件管理器"><meta property="og:title" content="Archlinux 小记-007 实用软件—— lf" />
+<meta property="og:description" content="终端文件管理器" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.ariesnine.cn/arch_07_%E5%AE%9E%E7%94%A8%E8%BD%AF%E4%BB%B6lf/" /><meta property="og:image" content="https://www.ariesnine.cn/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-05-24T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-05-24T00:00:00+00:00" /><meta property="og:site_name" content="犀谭" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://www.ariesnine.cn/logo.png"/>
+
+<meta name="twitter:title" content="Archlinux 小记-007 实用软件—— lf"/>
+<meta name="twitter:description" content="终端文件管理器"/>
+<meta name="application-name" content="犀谭">
+<meta name="apple-mobile-web-app-title" content="犀谭"><meta name="theme-color" content="#282A36"><meta name="msapplication-TileColor" content="#5AF78E"><meta name="referrer" content="no-refeer">
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#BD93F9"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.ariesnine.cn/arch_07_%E5%AE%9E%E7%94%A8%E8%BD%AF%E4%BB%B6lf/" /><link rel="prev" href="https://www.ariesnine.cn/arch_06_%E7%B3%BB%E7%BB%9F%E7%BE%8E%E5%8C%96%E7%BB%88%E7%AB%AF%E7%AF%87/" /><link rel="next" href="https://www.ariesnine.cn/arch_08_%E5%AE%9E%E7%94%A8%E8%BD%AF%E4%BB%B6sxiv/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.897bb8797133984bdbd3ac834db1a0341c66a8efd95db2216603704f28b76d77.css" integrity="sha256-iXu4eXEzmEvb06yDTbGgNBxmqO/ZXbIhZgNwTyi3bXc="><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Archlinux 小记-007 实用软件—— lf",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/www.ariesnine.cn\/arch_07_%E5%AE%9E%E7%94%A8%E8%BD%AF%E4%BB%B6lf\/"
+        },"image": ["https:\/\/www.ariesnine.cn\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "Archlinux, Programs","wordcount":  377 ,
+        "url": "https:\/\/www.ariesnine.cn\/arch_07_%E5%AE%9E%E7%94%A8%E8%BD%AF%E4%BB%B6lf\/","datePublished": "2023-05-24T00:00:00+00:00","dateModified": "2023-05-24T00:00:00+00:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "Aries","logo": {
+                    "@type": "ImageObject",
+                    "url": "https:\/\/www.ariesnine.cn\/images\/avatar.png",
+                    "width":  400 ,
+                    "height":  400 
+                }},"author": {
+                "@type": "Person",
+                "name": "Aries"
+            },"description": "终端文件管理器"
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('dark' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'dark' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="犀谭">犀谭</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="https://github.com/Rhino-Nine/Rhino-Nine" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i>  </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="犀谭">犀谭</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="https://github.com/Rhino-Nine/Rhino-Nine" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Archlinux 小记-007 实用软件—— lf</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://www.ariesnine.cn" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Aries</a>
+</span>&nbsp;<span class="post-category">included in <a href="/categories/linux-tools/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Linux Tools</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-05-24">2023-05-24</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;377 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;One minute&nbsp;</div>
+        </div><div class="featured-image"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics/p008-cover-lf.png"
+        data-srcset="https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics/p008-cover-lf.png, https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics/p008-cover-lf.png 1.5x, https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics/p008-cover-lf.png 2x"
+        data-sizes="auto"
+        alt="https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics/p008-cover-lf.png"
+        title="终端文件管理器" /></div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#安装">安装</a></li>
+    <li><a href="#配置">配置</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><blockquote>
+<p><a href="https://pkg.go.dev/github.com/gokcehan/lf" target="_blank" rel="noopener noreffer">LF</a>
+，即&quot;list files&quot;，是一款深受 <a href="https://ranger.github.io/" target="_blank" rel="noopener noreffer">ranger</a>
+ 启发，用<code>Go</code>语言编写（重写饶过谁？）的终端文件管理器，对比用<code>python</code>编写的<code>ranger</code>，其速度在处理大容量文件时更快。</p>
+</blockquote>
+<h2 id="安装">安装</h2>
+<hr>
+<ul>
+<li>Archlinux 可以使用包管理器直接安装，其他发行版请参考<a href="https://github.com/gokcehan/lf/wiki/Packages" target="_blank" rel="noopener noreffer">LF 各发行版安装指南</a>
+<br></li>
+<li>下载已编译好的<a href="https://github.com/gokcehan/lf/releases" target="_blank" rel="noopener noreffer">二进制文件</a>
+<br></li>
+<li>从源代码自行编译，需要<code>Go</code>支持库</li>
+</ul>
+<h2 id="配置">配置</h2>
+<hr>
+<blockquote>
+<p>基础配置，可以参考<a href="https://github.com/gokcehan/lf/tree/master/etc" target="_blank" rel="noopener noreffer">范例</a>
+<br>
+进阶配置，可以参考<a href="https://github.com/gokcehan/lf/wiki/Tips" target="_blank" rel="noopener noreffer">小技巧</a>
+<br>
+与其他软件的搭配使用，可以参考<a href="https://github.com/gokcehan/lf/wiki/Integrations" target="_blank" rel="noopener noreffer">指南</a>
+<br></p>
+</blockquote>
+<p>我的<code>lf</code><a href="https://github.com/Rhino-Nine/dotfiles/tree/main/.config/lf" target="_blank" rel="noopener noreffer">配置文件</a>
+拓展的功能：</p>
+<ul>
+<li><i class="far fa-check-square fa-fw" aria-hidden="true"></i> 文件预览</li>
+<li><i class="far fa-check-square fa-fw" aria-hidden="true"></i> 图片预览</li>
+<li><i class="far fa-check-square fa-fw" aria-hidden="true"></i> 音视频预览</li>
+<li><i class="far fa-check-square fa-fw" aria-hidden="true"></i> 图标</li>
+<li><i class="far fa-check-square fa-fw" aria-hidden="true"></i> 书签</li>
+<li><i class="far fa-check-square fa-fw" aria-hidden="true"></i> 选中多个文件，并合并入一个新建文件夹</li>
+<li><i class="far fa-check-square fa-fw" aria-hidden="true"></i> 退出 lf 返回 shell 时，shell 的工作目录变为 lf 退出时的目录</li>
+<li><i class="far fa-check-square fa-fw" aria-hidden="true"></i> 调用 mimeopen 选择文件的打开方式</li>
+<li><i class="far fa-check-square fa-fw" aria-hidden="true"></i> 调用 nvim 批量重命名</li>
+<li><i class="far fa-check-square fa-fw" aria-hidden="true"></i> 调用 fzf 通过查找文件名定位文件</li>
+<li><i class="far fa-check-square fa-fw" aria-hidden="true"></i> 调用 fzf 和 regrep 通过查找文件内容定位文件</li>
+<li><i class="far fa-check-square fa-fw" aria-hidden="true"></i> 调用 fzf 在 shell 搜索文件，自动用 lf 跳转所搜结果所在目录</li>
+<li><i class="far fa-check-square fa-fw" aria-hidden="true"></i> 调用 atools 压缩、解压缩</li>
+<li><i class="far fa-check-square fa-fw" aria-hidden="true"></i> 调用 zoxide 快速跳转目录</li>
+<li><i class="far fa-square fa-fw" aria-hidden="true"></i> 调用 udisks2 自动挂载 mtp 和 usb 设备</li>
+</ul></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2023-05-24</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/arch_07_%E5%AE%9E%E7%94%A8%E8%BD%AF%E4%BB%B6lf/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://www.ariesnine.cn/arch_07_%E5%AE%9E%E7%94%A8%E8%BD%AF%E4%BB%B6lf/" data-title="Archlinux 小记-007 实用软件—— lf" data-hashtags="Archlinux,Programs"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://www.ariesnine.cn/arch_07_%E5%AE%9E%E7%94%A8%E8%BD%AF%E4%BB%B6lf/" data-hashtag="Archlinux"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://www.ariesnine.cn/arch_07_%E5%AE%9E%E7%94%A8%E8%BD%AF%E4%BB%B6lf/" data-title="Archlinux 小记-007 实用软件—— lf"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://www.ariesnine.cn/arch_07_%E5%AE%9E%E7%94%A8%E8%BD%AF%E4%BB%B6lf/" data-title="Archlinux 小记-007 实用软件—— lf"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@6.20.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://www.ariesnine.cn/arch_07_%E5%AE%9E%E7%94%A8%E8%BD%AF%E4%BB%B6lf/" data-title="Archlinux 小记-007 实用软件—— lf" data-image="https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics/p008-cover-lf.png"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/archlinux/">Archlinux</a>,&nbsp;<a href="/tags/programs/">Programs</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/arch_06_%E7%B3%BB%E7%BB%9F%E7%BE%8E%E5%8C%96%E7%BB%88%E7%AB%AF%E7%AF%87/" class="prev" rel="prev" title="Archlinux 小记-006 系统美化——终端篇"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Archlinux 小记-006 系统美化——终端篇</a>
+            <a href="/arch_08_%E5%AE%9E%E7%94%A8%E8%BD%AF%E4%BB%B6sxiv/" class="next" rel="next" title="Archlinux 小记-008 实用软件—— sxiv">Archlinux 小记-008 实用软件—— sxiv<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://www.ariesnine.cn" target="_blank">Aries</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lightgallery-bundle.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/algoliasearch@4.13.0/dist/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.1/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/twemoji@14.0.2/dist/twemoji.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/lightgallery.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":15},"comment":{},"lightgallery":true,"search":{"algoliaAppID":"PASDMWALPK","algoliaIndex":"index.en","algoliaSearchKey":"b42948e51daaa93df92381c8e2ac0f93","highlightTag":"em","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"algolia"},"twemoji":true};</script><script type="text/javascript" src="/js/theme.min.ea66030e36d19f82f6f7631f572a5507dcb5fd282beeffeb74393f3044786855.js" integrity="sha256-6mYDDjbRn4L292MfVypVB9y1/Sgr7v/rdDk/MER4aFU="></script><script type="text/javascript">
+            window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
+            gtag('config', 'G-J0PQS7E9QS', { 'anonymize_ip': true });
+        </script><script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=G-J0PQS7E9QS" async></script></body>
+</html>

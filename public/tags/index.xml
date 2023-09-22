@@ -1,0 +1,31 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Tags - Tag - 犀谭</title>
+        <link>https://www.ariesnine.cn/tags/</link>
+        <description>Tags - Tag - 犀谭</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 21 Sep 2023 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://www.ariesnine.cn/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>Archlinux</title>
+    <link>https://www.ariesnine.cn/tags/archlinux/</link>
+    <pubDate>Thu, 21 Sep 2023 00:00:00 &#43;0000</pubDate>
+    <author>Aries</author>
+    <guid>https://www.ariesnine.cn/tags/archlinux/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Programs</title>
+    <link>https://www.ariesnine.cn/tags/programs/</link>
+    <pubDate>Thu, 21 Sep 2023 00:00:00 &#43;0000</pubDate>
+    <author>Aries</author>
+    <guid>https://www.ariesnine.cn/tags/programs/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Git</title>
+    <link>https://www.ariesnine.cn/tags/git/</link>
+    <pubDate>Thu, 18 May 2023 00:00:00 &#43;0000</pubDate>
+    <author>Aries</author>
+    <guid>https://www.ariesnine.cn/tags/git/</guid>
+    <description><![CDATA[]]></description>
+</item>
+</channel>
+</rss>

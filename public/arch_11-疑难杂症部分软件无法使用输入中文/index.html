@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Archlinux 小记-11 疑难杂症——特殊的中文输入法故障 - 犀谭</title><meta name="Description" content="My Kṣetra in a Linux Shell"><meta property="og:title" content="Archlinux 小记-11 疑难杂症——特殊的中文输入法故障" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.ariesnine.cn/arch_11-%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87%E9%83%A8%E5%88%86%E8%BD%AF%E4%BB%B6%E6%97%A0%E6%B3%95%E4%BD%BF%E7%94%A8%E8%BE%93%E5%85%A5%E4%B8%AD%E6%96%87/" /><meta property="og:image" content="https://www.ariesnine.cn/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-09-20T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-09-20T00:00:00+00:00" /><meta property="og:site_name" content="犀谭" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://www.ariesnine.cn/logo.png"/>
+
+<meta name="twitter:title" content="Archlinux 小记-11 疑难杂症——特殊的中文输入法故障"/>
+<meta name="twitter:description" content=""/>
+<meta name="application-name" content="犀谭">
+<meta name="apple-mobile-web-app-title" content="犀谭"><meta name="theme-color" content="#282A36"><meta name="msapplication-TileColor" content="#5AF78E"><meta name="referrer" content="no-refeer">
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#BD93F9"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.ariesnine.cn/arch_11-%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87%E9%83%A8%E5%88%86%E8%BD%AF%E4%BB%B6%E6%97%A0%E6%B3%95%E4%BD%BF%E7%94%A8%E8%BE%93%E5%85%A5%E4%B8%AD%E6%96%87/" /><link rel="prev" href="https://www.ariesnine.cn/arch_10-%E5%AE%9E%E7%94%A8%E8%BD%AF%E4%BB%B6newsboat/" /><link rel="next" href="https://www.ariesnine.cn/arch_12-%E5%AE%9E%E7%94%A8%E8%BD%AF%E4%BB%B6zathura/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.897bb8797133984bdbd3ac834db1a0341c66a8efd95db2216603704f28b76d77.css" integrity="sha256-iXu4eXEzmEvb06yDTbGgNBxmqO/ZXbIhZgNwTyi3bXc="><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Archlinux 小记-11 疑难杂症——特殊的中文输入法故障",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/www.ariesnine.cn\/arch_11-%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87%E9%83%A8%E5%88%86%E8%BD%AF%E4%BB%B6%E6%97%A0%E6%B3%95%E4%BD%BF%E7%94%A8%E8%BE%93%E5%85%A5%E4%B8%AD%E6%96%87\/"
+        },"image": ["https:\/\/www.ariesnine.cn\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "Archlinux, Programs","wordcount":  361 ,
+        "url": "https:\/\/www.ariesnine.cn\/arch_11-%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87%E9%83%A8%E5%88%86%E8%BD%AF%E4%BB%B6%E6%97%A0%E6%B3%95%E4%BD%BF%E7%94%A8%E8%BE%93%E5%85%A5%E4%B8%AD%E6%96%87\/","datePublished": "2023-09-20T00:00:00+00:00","dateModified": "2023-09-20T00:00:00+00:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "Aries","logo": {
+                    "@type": "ImageObject",
+                    "url": "https:\/\/www.ariesnine.cn\/images\/avatar.png",
+                    "width":  400 ,
+                    "height":  400 
+                }},"author": {
+                "@type": "Person",
+                "name": "Aries"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('dark' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'dark' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="犀谭">犀谭</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="https://github.com/Rhino-Nine/Rhino-Nine" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i>  </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="犀谭">犀谭</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="https://github.com/Rhino-Nine/Rhino-Nine" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Archlinux 小记-11 疑难杂症——特殊的中文输入法故障</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://www.ariesnine.cn" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Aries</a>
+</span>&nbsp;<span class="post-category">included in <a href="/categories/linux-tools/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Linux Tools</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-09-20">2023-09-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;361 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;One minute&nbsp;</div>
+        </div><div class="featured-image"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics/A12-cover-fcitx5-Q&amp;A.jpg"
+        data-srcset="https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics/A12-cover-fcitx5-Q&amp;A.jpg, https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics/A12-cover-fcitx5-Q&amp;A.jpg 1.5x, https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics/A12-cover-fcitx5-Q&amp;A.jpg 2x"
+        data-sizes="auto"
+        alt="https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics/A12-cover-fcitx5-Q&amp;A.jpg"
+        title="https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics/A12-cover-fcitx5-Q&amp;A.jpg" /></div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#困扰">困扰</a></li>
+    <li><a href="#转机">转机</a></li>
+    <li><a href="#猜想">猜想</a></li>
+    <li><a href="#破局">破局</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#参考链接">参考链接</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="困扰">困扰</h2>
+<hr>
+<p>自六月起，<code>Ctrl+Space</code> 在部分软件里无法激活 Fcitx5 并导致无法输入中文的问题就存在了。</p>
+<blockquote>
+<ul>
+<li>
+<p>Ungoogled-chromium-xdg 遵守 xdg 基本规范，不再创建 $HOME/.pki/ 文件夹，但是无法输入中文，无奈，作罢</p>
+</li>
+<li>
+<p>OnlyOffice 和 WPS 可以处理 doc 等富文本格式文件，属于刚需，但是无法输入中文，无奈，作罢</p>
+</li>
+<li>
+<p>Typora 专项处理 MarkDown 文件，但是无法输入中文，无奈，作罢</p>
+</li>
+</ul>
+</blockquote>
+<h2 id="转机">转机</h2>
+<hr>
+<p>事情到了九月二十日有了转机————将启动 Xorg 的脚本 由 <a href="https://github.com/Earnestly/sx" target="_blank" rel="noopener noreffer">sx</a>
+ 修改为 <a href="https://man.archlinux.org/man/extra/xorg-xinit/startx.1.en" target="_blank" rel="noopener noreffer">startx</a>
+ 时，Typora 中可以正常激活 Fcitx5 并输入中文，一切正常。经测试，上述其余情景下的故障也恢复正常。</p>
+<blockquote>
+<p>startx 会创建 <code>$HOME/.Xauthority</code> 文件，需要额外配置环境变量 <code>export XAUTHORITY = &quot;$XDG_RUNTIME_DIR&quot;/xauthority</code> 使 <code>$HOME</code> 目录保持规范</p>
+<p>sx 脚本则自设了环境变量配置</p>
+</blockquote>
+<h2 id="猜想">猜想</h2>
+<hr>
+<p>根据<a href="https://gitlab.freedesktop.org/xorg/app/xinit/-/issues/9" target="_blank" rel="noopener noreffer">issue</a>
+ ，由于存在命令 <a href="https://gitlab.freedesktop.org/xorg/app/xinit/-/commit/c07501f69239e9c1448736ad7e689a2c3da49af9" target="_blank" rel="noopener noreffer"><code>unset DBUS_SESSION_BUS_ADDRESS</code></a>
+，导致在 X11 下，应用无法正常调用 dbus，从而导致一系列异常情况，其中就包括 Fcitx5 在 Chromium 等中的故障。</p>
+<h2 id="破局">破局</h2>
+<hr>
+<p>将 DWM 自启动 命令中的 sx 修改为 startx。</p>
+<h4 id="参考链接">参考链接</h4>
+<ol>
+<li><a href="https://bugs.freedesktop.org/show_bug.cgi?id=92064" target="_blank" rel="noopener noreffer">Bug 92064 - Unseting session environment variables breaks user dbus instances</a>
+</li>
+<li><a href="https://fcitx-im.org/wiki/FAQ" target="_blank" rel="noopener noreffer">Fcitx5 FAQ</a>
+</li>
+</ol></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2023-09-20</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/arch_11-%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87%E9%83%A8%E5%88%86%E8%BD%AF%E4%BB%B6%E6%97%A0%E6%B3%95%E4%BD%BF%E7%94%A8%E8%BE%93%E5%85%A5%E4%B8%AD%E6%96%87/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://www.ariesnine.cn/arch_11-%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87%E9%83%A8%E5%88%86%E8%BD%AF%E4%BB%B6%E6%97%A0%E6%B3%95%E4%BD%BF%E7%94%A8%E8%BE%93%E5%85%A5%E4%B8%AD%E6%96%87/" data-title="Archlinux 小记-11 疑难杂症——特殊的中文输入法故障" data-hashtags="Archlinux,Programs"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://www.ariesnine.cn/arch_11-%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87%E9%83%A8%E5%88%86%E8%BD%AF%E4%BB%B6%E6%97%A0%E6%B3%95%E4%BD%BF%E7%94%A8%E8%BE%93%E5%85%A5%E4%B8%AD%E6%96%87/" data-hashtag="Archlinux"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://www.ariesnine.cn/arch_11-%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87%E9%83%A8%E5%88%86%E8%BD%AF%E4%BB%B6%E6%97%A0%E6%B3%95%E4%BD%BF%E7%94%A8%E8%BE%93%E5%85%A5%E4%B8%AD%E6%96%87/" data-title="Archlinux 小记-11 疑难杂症——特殊的中文输入法故障"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://www.ariesnine.cn/arch_11-%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87%E9%83%A8%E5%88%86%E8%BD%AF%E4%BB%B6%E6%97%A0%E6%B3%95%E4%BD%BF%E7%94%A8%E8%BE%93%E5%85%A5%E4%B8%AD%E6%96%87/" data-title="Archlinux 小记-11 疑难杂症——特殊的中文输入法故障"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@6.20.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://www.ariesnine.cn/arch_11-%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87%E9%83%A8%E5%88%86%E8%BD%AF%E4%BB%B6%E6%97%A0%E6%B3%95%E4%BD%BF%E7%94%A8%E8%BE%93%E5%85%A5%E4%B8%AD%E6%96%87/" data-title="Archlinux 小记-11 疑难杂症——特殊的中文输入法故障" data-image="https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics/A12-cover-fcitx5-Q&amp;A.jpg"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/archlinux/">Archlinux</a>,&nbsp;<a href="/tags/programs/">Programs</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/arch_10-%E5%AE%9E%E7%94%A8%E8%BD%AF%E4%BB%B6newsboat/" class="prev" rel="prev" title="Archlinux 小记-10 实用软件——newsboat"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Archlinux 小记-10 实用软件——newsboat</a>
+            <a href="/arch_12-%E5%AE%9E%E7%94%A8%E8%BD%AF%E4%BB%B6zathura/" class="next" rel="next" title="Archlinux 小记-12 实用软件——zathura">Archlinux 小记-12 实用软件——zathura<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://www.ariesnine.cn" target="_blank">Aries</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lightgallery-bundle.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/algoliasearch@4.13.0/dist/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.1/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/twemoji@14.0.2/dist/twemoji.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/lightgallery.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":15},"comment":{},"lightgallery":true,"search":{"algoliaAppID":"PASDMWALPK","algoliaIndex":"index.en","algoliaSearchKey":"b42948e51daaa93df92381c8e2ac0f93","highlightTag":"em","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"algolia"},"twemoji":true};</script><script type="text/javascript" src="/js/theme.min.ea66030e36d19f82f6f7631f572a5507dcb5fd282beeffeb74393f3044786855.js" integrity="sha256-6mYDDjbRn4L292MfVypVB9y1/Sgr7v/rdDk/MER4aFU="></script><script type="text/javascript">
+            window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
+            gtag('config', 'G-J0PQS7E9QS', { 'anonymize_ip': true });
+        </script><script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=G-J0PQS7E9QS" async></script></body>
+</html>

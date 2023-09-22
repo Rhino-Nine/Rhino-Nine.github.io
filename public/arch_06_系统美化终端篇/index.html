@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Archlinux 小记-006 系统美化——终端篇 - 犀谭</title><meta name="Description" content="用 zim 框架配置兼顾速度和功能的 zsh"><meta property="og:title" content="Archlinux 小记-006 系统美化——终端篇" />
+<meta property="og:description" content="用 zim 框架配置兼顾速度和功能的 zsh" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.ariesnine.cn/arch_06_%E7%B3%BB%E7%BB%9F%E7%BE%8E%E5%8C%96%E7%BB%88%E7%AB%AF%E7%AF%87/" /><meta property="og:image" content="https://www.ariesnine.cn/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-05-23T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-05-23T00:00:00+00:00" /><meta property="og:site_name" content="犀谭" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://www.ariesnine.cn/logo.png"/>
+
+<meta name="twitter:title" content="Archlinux 小记-006 系统美化——终端篇"/>
+<meta name="twitter:description" content="用 zim 框架配置兼顾速度和功能的 zsh"/>
+<meta name="application-name" content="犀谭">
+<meta name="apple-mobile-web-app-title" content="犀谭"><meta name="theme-color" content="#282A36"><meta name="msapplication-TileColor" content="#5AF78E"><meta name="referrer" content="no-refeer">
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#BD93F9"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.ariesnine.cn/arch_06_%E7%B3%BB%E7%BB%9F%E7%BE%8E%E5%8C%96%E7%BB%88%E7%AB%AF%E7%AF%87/" /><link rel="prev" href="https://www.ariesnine.cn/arch_05_%E7%B3%BB%E7%BB%9F%E7%BE%8E%E5%8C%96%E6%B8%85%E7%90%86%E5%AE%B6%E7%9B%AE%E5%BD%95%E7%AF%87/" /><link rel="next" href="https://www.ariesnine.cn/arch_07_%E5%AE%9E%E7%94%A8%E8%BD%AF%E4%BB%B6lf/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.897bb8797133984bdbd3ac834db1a0341c66a8efd95db2216603704f28b76d77.css" integrity="sha256-iXu4eXEzmEvb06yDTbGgNBxmqO/ZXbIhZgNwTyi3bXc="><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Archlinux 小记-006 系统美化——终端篇",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/www.ariesnine.cn\/arch_06_%E7%B3%BB%E7%BB%9F%E7%BE%8E%E5%8C%96%E7%BB%88%E7%AB%AF%E7%AF%87\/"
+        },"image": ["https:\/\/www.ariesnine.cn\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "Archlinux","wordcount":  1585 ,
+        "url": "https:\/\/www.ariesnine.cn\/arch_06_%E7%B3%BB%E7%BB%9F%E7%BE%8E%E5%8C%96%E7%BB%88%E7%AB%AF%E7%AF%87\/","datePublished": "2023-05-23T00:00:00+00:00","dateModified": "2023-05-23T00:00:00+00:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "Aries","logo": {
+                    "@type": "ImageObject",
+                    "url": "https:\/\/www.ariesnine.cn\/images\/avatar.png",
+                    "width":  400 ,
+                    "height":  400 
+                }},"author": {
+                "@type": "Person",
+                "name": "Aries"
+            },"description": "用 zim 框架配置兼顾速度和功能的 zsh"
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('dark' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'dark' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="犀谭">犀谭</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="https://github.com/Rhino-Nine/Rhino-Nine" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i>  </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="犀谭">犀谭</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="https://github.com/Rhino-Nine/Rhino-Nine" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Archlinux 小记-006 系统美化——终端篇</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://www.ariesnine.cn" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Aries</a>
+</span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-05-23">2023-05-23</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1585 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;4 minutes&nbsp;</div>
+        </div><div class="featured-image"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics/p007-terminal.png"
+        data-srcset="https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics/p007-terminal.png, https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics/p007-terminal.png 1.5x, https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics/p007-terminal.png 2x"
+        data-sizes="auto"
+        alt="https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics/p007-terminal.png"
+        title="用 zim 框架配置兼顾速度和功能的 zsh" /></div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#一zshhttpswwwzshorg-美化">一、<a href="https://www.zsh.org/">zsh</a> 美化</a>
+      <ul>
+        <li><a href="#1-简介">1. 简介</a>
+          <ul>
+            <li><a href="#11-什么是-zsh">1.1. 什么是 zsh</a></li>
+            <li><a href="#12-常见-shell-比较">1.2. 常见 shell 比较</a></li>
+          </ul>
+        </li>
+        <li><a href="#2-安装并启用-zimhttpszimfwsh">2. 安装并启用 <a href="https://zimfw.sh/">zim</a></a>
+          <ul>
+            <li><a href="#21-安装zsh并设置zsh为默认shell">2.1. 安装<code>zsh</code>，并设置<code>zsh</code>为默认<code>shell</code></a></li>
+            <li><a href="#22-安装zim">2.2. 安装<code>zim</code></a></li>
+            <li><a href="#23-配置主题">2.3. 配置主题</a></li>
+            <li><a href="#24-配置模块">2.4. 配置模块</a>
+              <ul>
+                <li><a href="#24-1-安装zsh模块包">2.4-1 安装<code>zsh</code>模块包：</a></li>
+                <li><a href="#24-2-安装-zoxidehttpsgithubcomajeetdsouzazoxide-插件">2.4-2 安装 <a href="https://github.com/ajeetdsouza/zoxide">zoxide</a> 插件：</a></li>
+                <li><a href="#24-3-在zdotdirzshrc中写入以下内容使以上模块和插件生效">2.4-3 在<code>$ZDOTDIR/.zshrc</code>中写入以下内容，使以上模块和插件生效：</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#3-优化-zshrc">3. 优化 .zshrc</a>
+          <ul>
+            <li><a href="#31-分化">3.1. 分化</a>
+              <ul>
+                <li><a href="#31-1-环境变量类">3.1-1 环境变量类</a></li>
+                <li><a href="#31-2-扩展功能类">3.1-2 扩展功能类</a></li>
+                <li><a href="#31-3-快捷键位类">3.1-3 快捷键位类</a></li>
+              </ul>
+            </li>
+            <li><a href="#32-联合">3.2. 联合</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#三多彩终端小工具">三、多彩终端小工具</a></li>
+    <li><a href="#__参考链接__"><strong>参考链接</strong></a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="一zshhttpswwwzshorg-美化">一、<a href="https://www.zsh.org/" target="_blank" rel="noopener noreffer">zsh</a>
+ 美化</h2>
+<hr>
+<h3 id="1-简介">1. 简介</h3>
+<hr>
+<h4 id="11-什么是-zsh">1.1. 什么是 zsh</h4>
+<blockquote>
+<p><code>Z shell</code>，即<code>zsh</code>是一个 <a href="https://en.wikipedia.org/wiki/Unix" target="_blank" rel="noopener noreffer">UNIX</a>
+ <a href="https://en.wikipedia.org/wiki/Shell_%28computing%29" target="_blank" rel="noopener noreffer">shell</a>
+。</p>
+</blockquote>
+<h4 id="12-常见-shell-比较">1.2. 常见 shell 比较</h4>
+<p>详见<a href="https://zsh.sourceforge.io/FAQ/zshfaq01.html#l4" target="_blank" rel="noopener noreffer"> ZSH 有什么优势</a>
+</p>
+<p>值得一提，就我个人体验而言，<code>zsh</code>对比 <a href="https://fishshell.com/" target="_blank" rel="noopener noreffer"><code>fish</code></a>
+：</p>
+<p><code>zsh</code>的主要优点在于：</p>
+<ul>
+<li><code>zsh</code>兼容<code>bash</code>。一方面，我的脚本多是 bash 脚本，另一方面，软件包提供的脚本也多是<code>bash</code>脚本，在此情况下，使用兼容<code>bash</code>语法的<code>zsh</code>会更方便修改和使用脚本。</li>
+<li><code>zsh</code>具备更完善的补全。安装 <a href="https://github.com/zsh-users/zsh-completions" target="_blank" rel="noopener noreffer">zsh-completions</a>
+ 后，我目前没有遇到不支持的补全，这是令<code>fish</code>暂时望其项背的。</li>
+</ul>
+<p><code>fish</code>的主要优点在于：</p>
+<ul>
+<li>开箱即用的配置。<code>zsh</code>+<a href="https://ohmyz.sh/" target="_blank" rel="noopener noreffer">oh-my-zsh</a>
+ 因拖慢启动速度饱受诟病，而<code>fish</code>拥有开箱即用的友善默认配置。但是，<code>oh-my-zsh</code>之外，还有其他选择，比如使用<a href="https://zimfw.sh/" target="_blank" rel="noopener noreffer">zim</a>
+插件，兼顾速度和功能。</li>
+<li>暂时没想到。</li>
+</ul>
+<p>总之，对于有条件深度定制<code>shell</code>的用户而言，<code>zsh</code>暂时有着相当优势；而对<code>shell</code>，特别是对于<code>bash</code>既了解不多，也依赖不深的用户，不妨大胆尝试一下<code>fish</code>。</p>
+<h3 id="2-安装并启用-zimhttpszimfwsh">2. 安装并启用 <a href="https://zimfw.sh/" target="_blank" rel="noopener noreffer">zim</a>
+</h3>
+<hr>
+<blockquote>
+<p>zim 是一个 zsh 配置框架，既速度惊人，还支持诸多扩展模块。</p>
+</blockquote>
+<h4 id="21-安装zsh并设置zsh为默认shell">2.1. 安装<code>zsh</code>，并设置<code>zsh</code>为默认<code>shell</code></h4>
+<p>运行以下命令以更改默认<code>shell</code>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">chsh -l 
+</span></span><span class="line"><span class="cl">chsh -s /usr/bin/zsh 
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="22-安装zim">2.2. 安装<code>zim</code></h4>
+<p>从<code>wget</code>和<code>curl</code>中选择一种安装方式，将对应命令输入终端并运行：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl -fsSL https://raw.githubusercontent.com/zimfw/install/master/install.zsh <span class="p">|</span> zsh&lt;br&gt; 
+</span></span><span class="line"><span class="cl">wget -nv -O - https://raw.githubusercontent.com/zimfw/install/master/install.zsh <span class="p">|</span> zsh 
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="23-配置主题">2.3. 配置主题</h4>
+<p>1.3-1 编辑<code>$ZDOTDIR/.zimrc</code>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">nvim <span class="nv">$ZDOTDIR</span>/.zimrc
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>1.3-2 在文件末尾加入下面一行内容，以添加<a href="https://github.com/romkatv/powerlevel10k" target="_blank" rel="noopener noreffer">powerlevel10k</a>
+模块，保存并退出</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">zmodule romkatv/powerlevel10k
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>1.3-3 在终端输入以下命令以安装<code>powerlevel10k</code>模块</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">zimfw install 
+</span></span><span class="line"><span class="cl"><span class="c1">#之后的模块也由此方法安装</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>安装之后，<code>powerlevel10k</code>会要求用户进行配置，请确保安装了 <a href="https://www.nerdfonts.com/" target="_blank" rel="noopener noreffer">Nerd Font</a>
+ 字体，若要再次配置，在终端输入<code>p10k configure</code>即可。</p>
+<h4 id="24-配置模块">2.4. 配置模块</h4>
+<h5 id="24-1-安装zsh模块包">2.4-1 安装<code>zsh</code>模块包：</h5>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S zsh-autosuggestions zsh-syntax-highlighting zsh-completions
+</span></span></code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>说明<br>
+<a href="https://github.com/zsh-users/zsh-autosuggestions" target="_blank" rel="noopener noreffer"><code>zsh-autosuggestions</code></a>
+ —— 命令补全<br>
+<a href="https://github.com/zsh-users/zsh-syntax-highlighting" target="_blank" rel="noopener noreffer"><code>zsh-syntax-highlighting</code></a>
+ —— 语法高亮<br>
+<a href="https://github.com/zsh-users/zsh-completions" target="_blank" rel="noopener noreffer"><code>zsh-completions</code></a>
+ —— 定义补全</p>
+</blockquote>
+<h5 id="24-2-安装-zoxidehttpsgithubcomajeetdsouzazoxide-插件">2.4-2 安装 <a href="https://github.com/ajeetdsouza/zoxide" target="_blank" rel="noopener noreffer">zoxide</a>
+ 插件：</h5>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S zoxide
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="24-3-在zdotdirzshrc中写入以下内容使以上模块和插件生效">2.4-3 在<code>$ZDOTDIR/.zshrc</code>中写入以下内容，使以上模块和插件生效：</h5>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">source</span> /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+</span></span><span class="line"><span class="cl"><span class="nb">source</span> /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+</span></span><span class="line"><span class="cl"><span class="nb">eval</span> <span class="s2">&#34;</span><span class="k">$(</span>zoxide init zsh<span class="k">)</span><span class="s2">&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="3-优化-zshrc">3. 优化 .zshrc</h3>
+<hr>
+<p>随着配置不断深入，.zshrc 文件会愈发复杂冗长，为了提高维护效率，可以把不同功能的代码至于不同的文件内，再以 .zshrc 为纽带，通过 source 链接起来，。</p>
+<h4 id="31-分化">3.1. 分化</h4>
+<p>创建<code>$XDG_CONFIG_HOME/shell</code>，并根据以下分类分别创建配置文件：</p>
+<h5 id="31-1-环境变量类">3.1-1 环境变量类</h5>
+<p>将设定环境变量的代码部分移植到<code>$XDG_CONFIG_HOME/shell/profile</code>内，形如：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/usr/bin/zsh
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="c1">#LANG &amp; INPUT</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#-------------------</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">GTK_IM_MODULE</span><span class="o">=</span>fcitx5
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">QT_IM_MODULE</span><span class="o">=</span>fcitx5
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">XMODIFIERS</span><span class="o">=</span><span class="s2">&#34;@im=fcitx5&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">SDL_IM_MODULE</span><span class="o">=</span>fcitx5
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">GLFW_IM_MODULE</span><span class="o">=</span>ibus
+</span></span><span class="line"><span class="cl"><span class="c1"># export LANG=&#34;zh_CN.UTF-8&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># export LC_CTYPE=&#34;zh_CN.UTF-8&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#-------------------</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#DEFAULT_PROGS</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#-------------------</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">EDITOR</span><span class="o">=</span><span class="s2">&#34;nvim&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">TERMINAL</span><span class="o">=</span><span class="s2">&#34;st&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">TERMINAL_PROG</span><span class="o">=</span><span class="s2">&#34;st&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">BROWSER</span><span class="o">=</span><span class="s2">&#34;chromium&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#-------------------</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#XDG_PATH</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#-------------------</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">XDG_CONFIG_HOME</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$HOME</span><span class="s2">/.config&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">XDG_CACHE_HOME</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$HOME</span><span class="s2">/.cache&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">XDG_DATA_HOME</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$HOME</span><span class="s2">/.local/share&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">XDG_STATE_HOME</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$HOME</span><span class="s2">/.local/state&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">XDG_RUNTIME_DIR</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$HOME</span><span class="s2">/.local/tmp&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="s2">&#34;/usr/bin:/usr/local/bin:</span><span class="nv">$HOME</span><span class="s2">/.local/bin&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#-------------------</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#CONFIG</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#-------------------</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">_JAVA_OPTIONS</span><span class="o">=</span>-Djava.util.prefs.userRoot<span class="o">=</span><span class="s2">&#34;</span><span class="nv">$XDG_CONFIG_HOME</span><span class="s2">&#34;</span>/java
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#--------------------</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#DATA</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#--------------------</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">CARGO_HOME</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$XDG_DATA_HOME</span><span class="s2">/cargo&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#---------------------</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#CACHE</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#---------------------</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">CUDA_CACHE_PATH</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$XDG_CACHE_HOME</span><span class="s2">&#34;</span>/nv
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#---------------------</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#STATE</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#---------------------</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">W3M_DIR</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$XDG_STATE_HOME</span><span class="s2">/w3m&#34;</span>
+</span></span><span class="line"><span class="cl">...
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="31-2-扩展功能类">3.1-2 扩展功能类</h5>
+<p>将增加扩展功能的代码部分移植到<code>$XDG_CONFIG_HOME/shell/functionsrc</code>内，形如：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/usr/bin/zsh
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="c1"># fzf</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">FZF_DEFAULT_COMMAND</span><span class="o">=</span><span class="s2">&#34;fd --hidden --exclude .git --type f&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">FZF_DEFAULT_OPTS</span><span class="o">=</span><span class="s1">&#39;--color=fg:#f8f8f2,bg:#282a36,hl:#bd93f9 
+</span></span></span><span class="line"><span class="cl"><span class="s1">                         --color=fg+:#f8f8f2,bg+:#44475a,hl+:#bd93f9 
+</span></span></span><span class="line"><span class="cl"><span class="s1">                         --color=info:#ffb86c,prompt:#50fa7b,pointer:#ff79c6 
+</span></span></span><span class="line"><span class="cl"><span class="s1">                         --color=marker:#ff79c6,spinner:#ffb86c,header:#6272a4 
+</span></span></span><span class="line"><span class="cl"><span class="s1">                         --height 90% 
+</span></span></span><span class="line"><span class="cl"><span class="s1">                         --layout=reverse 
+</span></span></span><span class="line"><span class="cl"><span class="s1">                         --bind=alt-j:down,alt-k:up,alt-i:toggle+down 
+</span></span></span><span class="line"><span class="cl"><span class="s1">                         --border 
+</span></span></span><span class="line"><span class="cl"><span class="s1">                         --preview &#34;bat --color=always --style=numbers --line-range=:30 {}&#34; 
+</span></span></span><span class="line"><span class="cl"><span class="s1">                         --preview-window=down&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">FZF_COMPLETION_OPTS</span><span class="o">=</span><span class="s1">&#39;\&#39;</span>
+</span></span><span class="line"><span class="cl">...
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="31-3-快捷键位类">3.1-3 快捷键位类</h5>
+<p>将配置快捷按键的代码部分移植到<code>$XDG_CONFIG_HOME/shell/aliasrc</code>内，形如：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/usr/bin/sh
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="nb">alias</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  <span class="nv">zrc</span><span class="o">=</span><span class="s2">&#34;nvim ~/.config/zsh/.zshrc&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  <span class="nv">arc</span><span class="o">=</span><span class="s2">&#34;nvim ~/.config/shell/aliasrc&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  <span class="nv">prc</span><span class="o">=</span><span class="s2">&#34;nvim ~/.config/shell/profile&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  <span class="nv">frc</span><span class="o">=</span><span class="s2">&#34;nvim ~/.config/shell/functionsrc&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  <span class="nv">lrc</span><span class="o">=</span><span class="s2">&#34;nvim ~/.config/lf/lfrc&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>
+</span></span><span class="line"><span class="cl"><span class="nb">alias</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  <span class="nv">cp</span><span class="o">=</span><span class="s2">&#34;cp -iv&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  <span class="nv">mv</span><span class="o">=</span><span class="s2">&#34;mv -iv&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  <span class="nv">rm</span><span class="o">=</span><span class="s2">&#34;rm -vI&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  <span class="nv">mkd</span><span class="o">=</span><span class="s2">&#34;mkdir -pv&#34;</span> <span class="se">\
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="32-联合">3.2. 联合</h4>
+<p>在<code>.zshrc</code>的<strong>合适位置</strong>链接上以上三个文件：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">...
+</span></span><span class="line"><span class="cl"><span class="nb">source</span> /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+</span></span><span class="line"><span class="cl"><span class="nb">source</span> /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+</span></span><span class="line"><span class="cl"><span class="nb">eval</span> <span class="s2">&#34;</span><span class="k">$(</span>zoxide init zsh<span class="k">)</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">[</span> -f <span class="s2">&#34;</span><span class="nv">$HOME</span><span class="s2">/.config/shell/profile&#34;</span> <span class="o">]</span> <span class="o">&amp;&amp;</span> <span class="nb">source</span> <span class="s2">&#34;</span><span class="nv">$HOME</span><span class="s2">/.config/shell/profile&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span> -f <span class="s2">&#34;</span><span class="nv">$HOME</span><span class="s2">/.config/shell/aliasrc&#34;</span> <span class="o">]</span> <span class="o">&amp;&amp;</span> <span class="nb">source</span> <span class="s2">&#34;</span><span class="nv">$HOME</span><span class="s2">/.config/shell/aliasrc&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span> -f <span class="s2">&#34;</span><span class="nv">$HOME</span><span class="s2">/.config/shell/functionsrc&#34;</span> <span class="o">]</span> <span class="o">&amp;&amp;</span> <span class="nb">source</span> <span class="s2">&#34;</span><span class="nv">$HOME</span><span class="s2">/.config/shell/functionsrc&#34;</span>
+</span></span><span class="line"><span class="cl">...
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>关于“合适位置”，可以参考<code>.zshrc</code>里的注释，比如，任何涉及使终端输出字符的代码需要置顶（screnfetch类的banner装饰代码），其次应为<code>powerlevel10k</code>的配置代码等等。</p>
+<h2 id="三多彩终端小工具">三、多彩终端小工具</h2>
+<hr>
+<p>可以通过<code>alias</code>来实现许多终端工具彩色输出，编辑<code>$XDG_CONFIG_HOME/shell/aliasrc</code>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">...
+</span></span><span class="line"><span class="cl"><span class="nb">alias</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  <span class="nv">ip</span><span class="o">=</span><span class="s2">&#34;ip -color=auto&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  <span class="nv">e</span><span class="o">=</span><span class="s2">&#34;exa --long --header --color=auto --icons -a&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  <span class="nv">ls</span><span class="o">=</span><span class="s2">&#34;exa --long --header --color=auto --icons -a&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  <span class="nv">grep</span><span class="o">=</span><span class="s2">&#34;grep --color=auto&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  <span class="nv">diff</span><span class="o">=</span><span class="s2">&#34;diff --color=auto&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  <span class="nv">bat</span><span class="o">=</span><span class="s2">&#34;bat --color=auto&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  <span class="nv">make</span><span class="o">=</span><span class="s2">&#34;colormake&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  <span class="nv">ping</span><span class="o">=</span><span class="s2">&#34;gping&#34;</span> <span class="se">\ </span>
+</span></span><span class="line"><span class="cl">...
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="__参考链接__"><strong>参考链接</strong></h2>
+<ol>
+<li><a href="https://www.zsh.org/" target="_blank" rel="noopener noreffer">zsh</a>
+</li>
+<li><a href="https://github.com/" target="_blank" rel="noopener noreffer">github</a>
+</li>
+<li><a href="https://www.nerdfonts.com/" target="_blank" rel="noopener noreffer">Nerd Font</a>
+</li>
+</ol></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2023-05-23</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/arch_06_%E7%B3%BB%E7%BB%9F%E7%BE%8E%E5%8C%96%E7%BB%88%E7%AB%AF%E7%AF%87/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://www.ariesnine.cn/arch_06_%E7%B3%BB%E7%BB%9F%E7%BE%8E%E5%8C%96%E7%BB%88%E7%AB%AF%E7%AF%87/" data-title="Archlinux 小记-006 系统美化——终端篇" data-hashtags="Archlinux"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://www.ariesnine.cn/arch_06_%E7%B3%BB%E7%BB%9F%E7%BE%8E%E5%8C%96%E7%BB%88%E7%AB%AF%E7%AF%87/" data-hashtag="Archlinux"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://www.ariesnine.cn/arch_06_%E7%B3%BB%E7%BB%9F%E7%BE%8E%E5%8C%96%E7%BB%88%E7%AB%AF%E7%AF%87/" data-title="Archlinux 小记-006 系统美化——终端篇"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://www.ariesnine.cn/arch_06_%E7%B3%BB%E7%BB%9F%E7%BE%8E%E5%8C%96%E7%BB%88%E7%AB%AF%E7%AF%87/" data-title="Archlinux 小记-006 系统美化——终端篇"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@6.20.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://www.ariesnine.cn/arch_06_%E7%B3%BB%E7%BB%9F%E7%BE%8E%E5%8C%96%E7%BB%88%E7%AB%AF%E7%AF%87/" data-title="Archlinux 小记-006 系统美化——终端篇" data-image="https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics/p007-terminal.png"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/archlinux/">Archlinux</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/arch_05_%E7%B3%BB%E7%BB%9F%E7%BE%8E%E5%8C%96%E6%B8%85%E7%90%86%E5%AE%B6%E7%9B%AE%E5%BD%95%E7%AF%87/" class="prev" rel="prev" title="Archlinux 小记-005 系统美化——清理家目录篇"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Archlinux 小记-005 系统美化——清理家目录篇</a>
+            <a href="/arch_07_%E5%AE%9E%E7%94%A8%E8%BD%AF%E4%BB%B6lf/" class="next" rel="next" title="Archlinux 小记-007 实用软件—— lf">Archlinux 小记-007 实用软件—— lf<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://www.ariesnine.cn" target="_blank">Aries</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lightgallery-bundle.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/algoliasearch@4.13.0/dist/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.1/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/twemoji@14.0.2/dist/twemoji.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/lightgallery.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":15},"comment":{},"lightgallery":true,"search":{"algoliaAppID":"PASDMWALPK","algoliaIndex":"index.en","algoliaSearchKey":"b42948e51daaa93df92381c8e2ac0f93","highlightTag":"em","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"algolia"},"twemoji":true};</script><script type="text/javascript" src="/js/theme.min.ea66030e36d19f82f6f7631f572a5507dcb5fd282beeffeb74393f3044786855.js" integrity="sha256-6mYDDjbRn4L292MfVypVB9y1/Sgr7v/rdDk/MER4aFU="></script><script type="text/javascript">
+            window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
+            gtag('config', 'G-J0PQS7E9QS', { 'anonymize_ip': true });
+        </script><script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=G-J0PQS7E9QS" async></script></body>
+</html>

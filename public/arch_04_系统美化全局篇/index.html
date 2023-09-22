@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Archlinux 小记-004 系统美化——全局篇 - 犀谭</title><meta name="Description" content="Archlinux 全局美化、dwm 和 st 配色、壁纸设置脚本"><meta property="og:title" content="Archlinux 小记-004 系统美化——全局篇" />
+<meta property="og:description" content="Archlinux 全局美化、dwm 和 st 配色、壁纸设置脚本" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.ariesnine.cn/arch_04_%E7%B3%BB%E7%BB%9F%E7%BE%8E%E5%8C%96%E5%85%A8%E5%B1%80%E7%AF%87/" /><meta property="og:image" content="https://www.ariesnine.cn/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-05-21T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-05-21T00:00:00+00:00" /><meta property="og:site_name" content="犀谭" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://www.ariesnine.cn/logo.png"/>
+
+<meta name="twitter:title" content="Archlinux 小记-004 系统美化——全局篇"/>
+<meta name="twitter:description" content="Archlinux 全局美化、dwm 和 st 配色、壁纸设置脚本"/>
+<meta name="application-name" content="犀谭">
+<meta name="apple-mobile-web-app-title" content="犀谭"><meta name="theme-color" content="#282A36"><meta name="msapplication-TileColor" content="#5AF78E"><meta name="referrer" content="no-refeer">
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#BD93F9"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.ariesnine.cn/arch_04_%E7%B3%BB%E7%BB%9F%E7%BE%8E%E5%8C%96%E5%85%A8%E5%B1%80%E7%AF%87/" /><link rel="prev" href="https://www.ariesnine.cn/arch_03_%E6%9C%AC%E5%9C%B0%E5%8C%96%E5%92%8C%E8%BE%93%E5%85%A5%E6%B3%95/" /><link rel="next" href="https://www.ariesnine.cn/arch_05_%E7%B3%BB%E7%BB%9F%E7%BE%8E%E5%8C%96%E6%B8%85%E7%90%86%E5%AE%B6%E7%9B%AE%E5%BD%95%E7%AF%87/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.897bb8797133984bdbd3ac834db1a0341c66a8efd95db2216603704f28b76d77.css" integrity="sha256-iXu4eXEzmEvb06yDTbGgNBxmqO/ZXbIhZgNwTyi3bXc="><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Archlinux 小记-004 系统美化——全局篇",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/www.ariesnine.cn\/arch_04_%E7%B3%BB%E7%BB%9F%E7%BE%8E%E5%8C%96%E5%85%A8%E5%B1%80%E7%AF%87\/"
+        },"image": ["https:\/\/www.ariesnine.cn\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "Archlinux","wordcount":  1473 ,
+        "url": "https:\/\/www.ariesnine.cn\/arch_04_%E7%B3%BB%E7%BB%9F%E7%BE%8E%E5%8C%96%E5%85%A8%E5%B1%80%E7%AF%87\/","datePublished": "2023-05-21T00:00:00+00:00","dateModified": "2023-05-21T00:00:00+00:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "Aries","logo": {
+                    "@type": "ImageObject",
+                    "url": "https:\/\/www.ariesnine.cn\/images\/avatar.png",
+                    "width":  400 ,
+                    "height":  400 
+                }},"author": {
+                "@type": "Person",
+                "name": "Aries"
+            },"description": "Archlinux 全局美化、dwm 和 st 配色、壁纸设置脚本"
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('dark' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'dark' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="犀谭">犀谭</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="https://github.com/Rhino-Nine/Rhino-Nine" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i>  </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="犀谭">犀谭</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="https://github.com/Rhino-Nine/Rhino-Nine" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Archlinux 小记-004 系统美化——全局篇</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://www.ariesnine.cn" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Aries</a>
+</span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-05-21">2023-05-21</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1473 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;3 minutes&nbsp;</div>
+        </div><div class="featured-image"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics/p005-cover-screen.png"
+        data-srcset="https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics/p005-cover-screen.png, https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics/p005-cover-screen.png 1.5x, https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics/p005-cover-screen.png 2x"
+        data-sizes="auto"
+        alt="https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics/p005-cover-screen.png"
+        title="Archlinux 全局美化、dwm 和 st 配色、壁纸设置脚本" /></div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#一主界面">一、主界面</a>
+      <ul>
+        <li><a href="#1-dwm-状态栏配色">1. dwm 状态栏配色</a></li>
+        <li><a href="#2-st-配色">2. st 配色</a></li>
+        <li><a href="#3-壁纸">3. 壁纸</a></li>
+        <li><a href="#4-picom">4. picom</a>
+          <ul>
+            <li><a href="#41-安装">4.1. 安装</a></li>
+            <li><a href="#42-配置">4.2. 配置</a>
+              <ul>
+                <li><a href="#42-1-获取窗口信息">4.2-1 获取窗口信息</a></li>
+                <li><a href="#42-2-随开机启动">4.2-2 随开机启动</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#5-gtk">5. <a href="">GTK</a></a>
+          <ul>
+            <li><a href="#51-下载">5.1. 下载</a></li>
+            <li><a href="#52-安装">5.2. 安装</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#二应用图标">二、应用图标</a>
+      <ul>
+        <li><a href="#1-下载">1. 下载</a></li>
+        <li><a href="#2-安装">2. 安装</a></li>
+      </ul>
+    </li>
+    <li><a href="#三鼠标光标">三、鼠标光标</a>
+      <ul>
+        <li><a href="#1-下载-1">1. 下载</a></li>
+        <li><a href="#2-安装-1">2. 安装</a></li>
+      </ul>
+    </li>
+    <li><a href="#__参考链接__"><strong>参考链接</strong></a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="一主界面">一、主界面</h2>
+<hr>
+<p>主界面包括<code>dwm</code>状态栏、<code>st</code>终端、壁纸，以及 <a href="https://wiki.archlinux.org/title/Picom" target="_blank" rel="noopener noreffer">picom</a>
+ 合成管理器。</p>
+<h3 id="1-dwm-状态栏配色">1. dwm 状态栏配色</h3>
+<hr>
+<p>我的<code>dwm</code>没有使用任何插件，配色修改很方便。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">nvim ~/.config/suckless/dwm/scripts/bar.sh 
+</span></span><span class="line"><span class="cl"><span class="c1"># 修改 #load colors 下的配色文件路径即可：</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="2-st-配色">2. st 配色</h3>
+<hr>
+<p>我的<code>st</code>通过读取 <a href="https://wiki.archlinux.org/title/X_resources" target="_blank" rel="noopener noreffer">xresources</a>
+ 实现配色。</p>
+<ul>
+<li>在家目录下新建 xresources 文件，并将配色方案写入，例如 Dracula 配色方案为：</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">! Dracula Xresources palette
+</span></span><span class="line"><span class="cl">*.foreground: #F8F8F2
+</span></span><span class="line"><span class="cl">*.background: #282A36
+</span></span><span class="line"><span class="cl">*.color0:     #000000
+</span></span><span class="line"><span class="cl">*.color8:     #4D4D4D
+</span></span><span class="line"><span class="cl">*.color1:     #FF5555
+</span></span><span class="line"><span class="cl">*.color9:     #FF6E67
+</span></span><span class="line"><span class="cl">*.color2:     #50FA7B
+</span></span><span class="line"><span class="cl">*.color10:    #5AF78E
+</span></span><span class="line"><span class="cl">*.color3:     #F1FA8C
+</span></span><span class="line"><span class="cl">*.color11:    #F4F99D
+</span></span><span class="line"><span class="cl">*.color4:     #BD93F9
+</span></span><span class="line"><span class="cl">*.color12:    #CAA9FA
+</span></span><span class="line"><span class="cl">*.color5:     #FF79C6
+</span></span><span class="line"><span class="cl">*.color13:    #FF92D0
+</span></span><span class="line"><span class="cl">*.color6:     #8BE9FD
+</span></span><span class="line"><span class="cl">*.color14:    #9AEDFE
+</span></span><span class="line"><span class="cl">*.color7:     #BFBFBF
+</span></span><span class="line"><span class="cl">*.color15:    #E6E6E6
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>在启动脚本中写入：</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">xrdb merge xxxx/xresources <span class="c1"># xxxx 为 xresources 文件目录</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>super + shift + r 重启 dwm 刷新配置</li>
+</ul>
+<h3 id="3-壁纸">3. 壁纸</h3>
+<hr>
+<p>设置壁纸的方法多种多样，可以直接使用<code>feh</code>、<code>xwallpaper</code>等等工具，我通过<code>xwallpaper</code>配合一些自建脚本设置，先来介绍基础脚本<code>setbg</code>。</p>
+<ul>
+<li>安装必要包：</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S xwallpaper  <span class="c1"># 壁纸设置工具</span>
+</span></span><span class="line"><span class="cl">sudo pacman -S dunst <span class="c1"># 通知工具</span>
+</span></span><span class="line"><span class="cl">sudo pacman -S xdotool <span class="c1"># 模拟输入</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>为壁纸库设置目录：</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mkdir ~/.local/share/wallpapers 
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>编写壁纸设置脚本：</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/sh
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 壁纸软链接位置</span>
+</span></span><span class="line"><span class="cl"><span class="nv">waldir</span><span class="o">=</span><span class="s2">&#34;~/.local/share/wallpapers/bg&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">truedir</span><span class="o">=</span><span class="s2">&#34;</span><span class="k">$(</span>readlink -f <span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span><span class="k">)</span><span class="s2">&#34;</span> <span class="o">&amp;&amp;</span>
+</span></span><span class="line"><span class="cl"><span class="k">case</span> <span class="s2">&#34;</span><span class="k">$(</span>file --mime-type -b <span class="s2">&#34;</span><span class="nv">$truedir</span><span class="s2">&#34;</span><span class="k">)</span><span class="s2">&#34;</span> in
+</span></span><span class="line"><span class="cl">	image/* <span class="o">)</span> ln -sf <span class="s2">&#34;</span><span class="k">$(</span>readlink -f <span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span><span class="k">)</span><span class="s2">&#34;</span> <span class="s2">&#34;</span><span class="nv">$waldir</span><span class="s2">&#34;</span> <span class="o">&amp;&amp;</span> notify-send -i <span class="s2">&#34;</span><span class="nv">$waldir</span><span class="s2">&#34;</span> <span class="s2">&#34;正在更换壁纸，请稍候...&#34;</span> <span class="p">;;</span> <span class="c1"># 若是图片文件，则设置为壁纸并弹出此通知</span>
+</span></span><span class="line"><span class="cl">	inode/directory <span class="o">)</span> ln -sf <span class="s2">&#34;</span><span class="k">$(</span>find <span class="s2">&#34;</span><span class="nv">$truedir</span><span class="s2">&#34;</span> -iregex <span class="s1">&#39;.*.\(jpg\|jpeg\|png\|gif\)&#39;</span> -type f <span class="p">|</span> shuf -n 1<span class="k">)</span><span class="s2">&#34;</span> <span class="s2">&#34;</span><span class="nv">$waldir</span><span class="s2">&#34;</span> <span class="o">&amp;&amp;</span> notify-send -i <span class="s2">&#34;</span><span class="nv">$waldir</span><span class="s2">&#34;</span> <span class="s2">&#34;已随机选择壁纸&#34;</span> <span class="p">;;</span>　<span class="c1">#若是目录，则随机选择</span>
+</span></span><span class="line"><span class="cl">	*<span class="o">)</span> notify-send <span class="s2">&#34;Error&#34;</span> <span class="s2">&#34;非有效文件或目录&#34;</span> <span class="p">;</span> <span class="nb">exit</span> 1<span class="p">;;</span>　<span class="c1">#二者都不是则弹出报错通知</span>
+</span></span><span class="line"><span class="cl"><span class="k">esac</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">xwallpaper --zoom <span class="s2">&#34;</span><span class="nv">$waldir</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 模拟按键重启 dwm 以变更配色 </span>
+</span></span><span class="line"><span class="cl">pidof dwm &gt;/dev/null <span class="o">&amp;&amp;</span> xdotool key super+shift+r
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>将脚本重命名为<code>setbg</code>，并放在可执行目录，如 /usr/local/bin</li>
+<li>此时，即可使用<code>setbg</code>设置壁纸，命令格式为：</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">setbg walpaper_path
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>编辑启动脚本，在其中加入壁纸设置脚本的开机自启：</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">nvim ~/.config/suckless/dwm/scripts/run.sh
+</span></span><span class="line"><span class="cl"><span class="c1"># 在其中加入 setbg</span>
+</span></span><span class="line"><span class="cl">...
+</span></span><span class="line"><span class="cl">setbg 
+</span></span><span class="line"><span class="cl">...
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>重新登录即可生效</li>
+</ul>
+<h3 id="4-picom">4. picom</h3>
+<hr>
+<p>picom 是 <a href="https://github.com/chjj/compton" target="_blank" rel="noopener noreffer">compton</a>
+ 的分支，compton 又是 <a href="https://web.archive.org/web/20150429182855/http://oliwer.net/xcompmgr-dana/" target="_blank" rel="noopener noreffer">xcompmgr-dana</a>
+ 的分支，它是一个独立的 Xorg 合成管理器，能为不带合成功能的窗口管理器带来淡入淡出、半透明、阴影等视觉效果。</p>
+<h4 id="41-安装">4.1. 安装</h4>
+<p>安装 <a href="" rel="">picom</a>
+ 包或者 <a href="" rel="">picom-git</a>
+</p>
+<h4 id="42-配置">4.2. 配置</h4>
+<p>默认配置文件位于<code>/etc/xdg/picom.conf</code>，将其复制到用户配置文件基本目录<code>$XDG_CONFIG_HOME/picom/picom.conf</code>，详细配置可以参考 <a href="https://man.archlinux.org/man/picom.1#CONFIGURATION_FILES" target="_blank" rel="noopener noreffer">picom(1)§ CONFIGURATION FILES</a>
+。</p>
+<h5 id="42-1-获取窗口信息">4.2-1 获取窗口信息</h5>
+<p>举例，<code>shadow-exclude</code>选项可以为指定窗口关闭阴影效果：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-conf" data-lang="conf"><span class="line"><span class="cl"><span class="nv">...</span>
+</span></span><span class="line"><span class="cl"><span class="nv">shadow-exclude</span> <span class="o">=</span> <span class="err">[</span>
+</span></span><span class="line"><span class="cl">    <span class="s">&#34;name = &#39;name one&#39;&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s">&#34;class_g = &#39;class_g one&#39;&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="err">]</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">...</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>获取指定窗口的<code>class_g</code>信息，可以通过以下方法：</p>
+<ul>
+<li>终端输入 xprop，光标会变成十字</li>
+<li>单击指定窗口，终端就会打印出该窗口的信息</li>
+<li>WM_CLASS(STRING) 一项即为所需信息 class_g</li>
+</ul>
+<h5 id="42-2-随开机启动">4.2-2 随开机启动</h5>
+<p>加入启动脚本<code>$XDG_CONFIG_HOME/suckless/dwm/scripts/run.sh</code>即可：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">...
+</span></span><span class="line"><span class="cl">picom <span class="p">&amp;</span> <span class="c1">#也可以根据需要加入参数，但过度美化影响系统稳定性</span>
+</span></span><span class="line"><span class="cl">...
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="5-gtk">5. <a href="" rel="">GTK</a>
+</h3>
+<hr>
+<h4 id="51-下载">5.1. 下载</h4>
+<p>我使用的是 Dracula 主题，按照<a href="https://draculatheme.com/gtk" target="_blank" rel="noopener noreffer">官网</a>
+指南，下载主题到本地家目录并解压：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 单击 GitHub.zip.download 下载</span>
+</span></span><span class="line"><span class="cl">unzip -q gtk-master.zip -d /usr/share/themes <span class="c1">#解压到主题目录下</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="52-安装">5.2. 安装</h4>
+<p>官网给出的是<code>GNOME</code>桌面环境的设置方法，并不适用于 DWM，我们仍需编辑 GTK 用户配置文件：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">nvim ~/.config/gtk-3.0/settings.ini
+</span></span><span class="line"><span class="cl"><span class="c1"># 写入：</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>Settings<span class="o">]</span>
+</span></span><span class="line"><span class="cl">···
+</span></span><span class="line"><span class="cl">gtk-theme-name <span class="o">=</span> Dracula
+</span></span><span class="line"><span class="cl">···
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="二应用图标">二、应用图标</h2>
+<hr>
+<p>这一套配置下，显示图标的情景并不多，除了状态栏显示当前任务图标，以及<code>rofi</code>显示各候选软件图标，其他情景下几乎没有图标显示，故图标配置为低优先级可选项。</p>
+<h3 id="1-下载">1. 下载</h3>
+<hr>
+<p>我一直使用的是 <a href="https://github.com/PapirusDevelopmentTeam/papirus-icon-theme" target="_blank" rel="noopener noreffer">papirus</a>
+ 图标，这是一套开源的 SVG 图标，也有安卓版本。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S papirus-icon-theme-git
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="2-安装">2. 安装</h3>
+<hr>
+<p>编辑 GTK 用户配置文件：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">nvim ~/.config/gtk-3.0/settings.ini
+</span></span><span class="line"><span class="cl"><span class="c1">#写入：</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>Settings<span class="o">]</span>
+</span></span><span class="line"><span class="cl">···
+</span></span><span class="line"><span class="cl">gtk-icon-theme-name <span class="o">=</span> Papirus 
+</span></span><span class="line"><span class="cl">···
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="三鼠标光标">三、鼠标光标</h2>
+<hr>
+<p>我一直使用的是 <a href="" rel="">Bibata</a>
+。</p>
+<h3 id="1-下载-1">1. 下载</h3>
+<hr>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S bibata-cursor-themne
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="2-安装-1">2. 安装</h3>
+<hr>
+<ul>
+<li>一样是编辑 GTK 用户配置文件：</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">nvim ~/.config/gtk-3.0/settings.ini
+</span></span><span class="line"><span class="cl"><span class="c1">#写入：</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>Settings<span class="o">]</span>
+</span></span><span class="line"><span class="cl">···
+</span></span><span class="line"><span class="cl">gtk-cursor-theme-name <span class="o">=</span> bibata-cursor-themne
+</span></span><span class="line"><span class="cl">···
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>或者是编辑 xresources 文件：</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1">#在末端写入：</span>
+</span></span><span class="line"><span class="cl">Xcursor.theme: Bibata-Modern-Ice <span class="c1">#选择喜好的主题</span>
+</span></span><span class="line"><span class="cl">Xcursor.size: <span class="m">32</span> <span class="c1">#选择合适的大小，不生效则是因为部分光标不支持更改大小</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="__参考链接__"><strong>参考链接</strong></h2>
+<ol>
+<li><a href="https://wiki.archlinux.org/" target="_blank" rel="noopener noreffer">Archwiki</a>
+</li>
+<li><a href="https://github.com/PapirusDevelopmentTeam/papirus-icon-theme" target="_blank" rel="noopener noreffer">Papirus-icon-theme</a>
+</li>
+<li><a href="https://draculatheme.com/" target="_blank" rel="noopener noreffer">Dracula Themes</a>
+</li>
+<li><a href="https://store.kde.org/p/1197198" target="_blank" rel="noopener noreffer">Bibata Modern Ice</a>
+</li>
+</ol></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2023-05-21</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/arch_04_%E7%B3%BB%E7%BB%9F%E7%BE%8E%E5%8C%96%E5%85%A8%E5%B1%80%E7%AF%87/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://www.ariesnine.cn/arch_04_%E7%B3%BB%E7%BB%9F%E7%BE%8E%E5%8C%96%E5%85%A8%E5%B1%80%E7%AF%87/" data-title="Archlinux 小记-004 系统美化——全局篇" data-hashtags="Archlinux"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://www.ariesnine.cn/arch_04_%E7%B3%BB%E7%BB%9F%E7%BE%8E%E5%8C%96%E5%85%A8%E5%B1%80%E7%AF%87/" data-hashtag="Archlinux"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://www.ariesnine.cn/arch_04_%E7%B3%BB%E7%BB%9F%E7%BE%8E%E5%8C%96%E5%85%A8%E5%B1%80%E7%AF%87/" data-title="Archlinux 小记-004 系统美化——全局篇"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://www.ariesnine.cn/arch_04_%E7%B3%BB%E7%BB%9F%E7%BE%8E%E5%8C%96%E5%85%A8%E5%B1%80%E7%AF%87/" data-title="Archlinux 小记-004 系统美化——全局篇"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@6.20.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://www.ariesnine.cn/arch_04_%E7%B3%BB%E7%BB%9F%E7%BE%8E%E5%8C%96%E5%85%A8%E5%B1%80%E7%AF%87/" data-title="Archlinux 小记-004 系统美化——全局篇" data-image="https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics/p005-cover-screen.png"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/archlinux/">Archlinux</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/arch_03_%E6%9C%AC%E5%9C%B0%E5%8C%96%E5%92%8C%E8%BE%93%E5%85%A5%E6%B3%95/" class="prev" rel="prev" title="Archlinux 小记-003 本地化和输入法"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Archlinux 小记-003 本地化和输入法</a>
+            <a href="/arch_05_%E7%B3%BB%E7%BB%9F%E7%BE%8E%E5%8C%96%E6%B8%85%E7%90%86%E5%AE%B6%E7%9B%AE%E5%BD%95%E7%AF%87/" class="next" rel="next" title="Archlinux 小记-005 系统美化——清理家目录篇">Archlinux 小记-005 系统美化——清理家目录篇<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://www.ariesnine.cn" target="_blank">Aries</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lightgallery-bundle.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/algoliasearch@4.13.0/dist/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.1/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/twemoji@14.0.2/dist/twemoji.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/lightgallery.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":15},"comment":{},"lightgallery":true,"search":{"algoliaAppID":"PASDMWALPK","algoliaIndex":"index.en","algoliaSearchKey":"b42948e51daaa93df92381c8e2ac0f93","highlightTag":"em","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"algolia"},"twemoji":true};</script><script type="text/javascript" src="/js/theme.min.ea66030e36d19f82f6f7631f572a5507dcb5fd282beeffeb74393f3044786855.js" integrity="sha256-6mYDDjbRn4L292MfVypVB9y1/Sgr7v/rdDk/MER4aFU="></script><script type="text/javascript">
+            window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
+            gtag('config', 'G-J0PQS7E9QS', { 'anonymize_ip': true });
+        </script><script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=G-J0PQS7E9QS" async></script></body>
+</html>

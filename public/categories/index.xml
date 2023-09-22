@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Categories - Category - 犀谭</title>
+        <link>https://www.ariesnine.cn/categories/</link>
+        <description>Categories - Category - 犀谭</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 21 Sep 2023 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://www.ariesnine.cn/categories/" rel="self" type="application/rss+xml" /><item>
+    <title>Linux Tools</title>
+    <link>https://www.ariesnine.cn/categories/linux-tools/</link>
+    <pubDate>Thu, 21 Sep 2023 00:00:00 &#43;0000</pubDate>
+    <author>Aries</author>
+    <guid>https://www.ariesnine.cn/categories/linux-tools/</guid>
+    <description><![CDATA[]]></description>
+</item>
+</channel>
+</rss>

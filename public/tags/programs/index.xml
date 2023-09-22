@@ -1,0 +1,67 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Programs - Tag - 犀谭</title>
+        <link>https://www.ariesnine.cn/tags/programs/</link>
+        <description>Programs - Tag - 犀谭</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 21 Sep 2023 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://www.ariesnine.cn/tags/programs/" rel="self" type="application/rss+xml" /><item>
+    <title>Archlinux 小记-12 实用软件——zathura</title>
+    <link>https://www.ariesnine.cn/arch_12-%E5%AE%9E%E7%94%A8%E8%BD%AF%E4%BB%B6zathura/</link>
+    <pubDate>Thu, 21 Sep 2023 00:00:00 &#43;0000</pubDate>
+    <author>Aries</author>
+    <guid>https://www.ariesnine.cn/arch_12-%E5%AE%9E%E7%94%A8%E8%BD%AF%E4%BB%B6zathura/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics/A11-cover-zathura.jpg" referrerpolicy="no-referrer">
+            </div>]]></description>
+</item>
+<item>
+    <title>Archlinux 小记-11 疑难杂症——特殊的中文输入法故障</title>
+    <link>https://www.ariesnine.cn/arch_11-%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87%E9%83%A8%E5%88%86%E8%BD%AF%E4%BB%B6%E6%97%A0%E6%B3%95%E4%BD%BF%E7%94%A8%E8%BE%93%E5%85%A5%E4%B8%AD%E6%96%87/</link>
+    <pubDate>Wed, 20 Sep 2023 00:00:00 &#43;0000</pubDate>
+    <author>Aries</author>
+    <guid>https://www.ariesnine.cn/arch_11-%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87%E9%83%A8%E5%88%86%E8%BD%AF%E4%BB%B6%E6%97%A0%E6%B3%95%E4%BD%BF%E7%94%A8%E8%BE%93%E5%85%A5%E4%B8%AD%E6%96%87/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics/A12-cover-fcitx5-Q&amp;A.jpg" referrerpolicy="no-referrer">
+            </div>]]></description>
+</item>
+<item>
+    <title>Archlinux 小记-10 实用软件——newsboat</title>
+    <link>https://www.ariesnine.cn/arch_10-%E5%AE%9E%E7%94%A8%E8%BD%AF%E4%BB%B6newsboat/</link>
+    <pubDate>Thu, 01 Jun 2023 00:00:00 &#43;0000</pubDate>
+    <author>Aries</author>
+    <guid>https://www.ariesnine.cn/arch_10-%E5%AE%9E%E7%94%A8%E8%BD%AF%E4%BB%B6newsboat/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics/A10-cover-newsboat.png" referrerpolicy="no-referrer">
+            </div>]]></description>
+</item>
+<item>
+    <title>Archlinux 小记-009 实用软件——mutt</title>
+    <link>https://www.ariesnine.cn/arch_09_%E5%AE%9E%E7%94%A8%E8%BD%AF%E4%BB%B6mutt/</link>
+    <pubDate>Wed, 31 May 2023 00:00:00 &#43;0000</pubDate>
+    <author>Aries</author>
+    <guid>https://www.ariesnine.cn/arch_09_%E5%AE%9E%E7%94%A8%E8%BD%AF%E4%BB%B6mutt/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics/p011-cover-mutt.png" referrerpolicy="no-referrer">
+            </div>25年经久不衰的 TUI 邮件客户端]]></description>
+</item>
+<item>
+    <title>Archlinux 小记-008 实用软件—— sxiv</title>
+    <link>https://www.ariesnine.cn/arch_08_%E5%AE%9E%E7%94%A8%E8%BD%AF%E4%BB%B6sxiv/</link>
+    <pubDate>Thu, 25 May 2023 00:00:00 &#43;0000</pubDate>
+    <author>Aries</author>
+    <guid>https://www.ariesnine.cn/arch_08_%E5%AE%9E%E7%94%A8%E8%BD%AF%E4%BB%B6sxiv/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics/p009-cover-sxiv.png" referrerpolicy="no-referrer">
+            </div>极简但强大的图像查看器]]></description>
+</item>
+<item>
+    <title>Archlinux 小记-007 实用软件—— lf</title>
+    <link>https://www.ariesnine.cn/arch_07_%E5%AE%9E%E7%94%A8%E8%BD%AF%E4%BB%B6lf/</link>
+    <pubDate>Wed, 24 May 2023 00:00:00 &#43;0000</pubDate>
+    <author>Aries</author>
+    <guid>https://www.ariesnine.cn/arch_07_%E5%AE%9E%E7%94%A8%E8%BD%AF%E4%BB%B6lf/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics/p008-cover-lf.png" referrerpolicy="no-referrer">
+            </div>终端文件管理器]]></description>
+</item>
+</channel>
+</rss>
