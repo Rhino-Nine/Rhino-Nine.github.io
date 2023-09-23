@@ -1,6 +1,6 @@
 ---
 post: A-11
-title: "Archlinux 小记-11 疑难杂症——特殊的中文输入法故障"
+title: "Archlinux 小记-011 疑难杂症——特殊的中文输入法故障"
 date: 2023-09-20
 draft: false
 description: ""

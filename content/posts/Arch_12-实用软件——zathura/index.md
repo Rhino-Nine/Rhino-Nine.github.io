@@ -1,6 +1,6 @@
 ---
 post: A-12
-title: "Archlinux 小记-12 实用软件——zathura"
+title: "Archlinux 小记-012 实用软件——zathura"
 date: 2023-09-21
 draft: false
 description: ""

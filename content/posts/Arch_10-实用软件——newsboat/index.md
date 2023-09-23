@@ -1,6 +1,6 @@
 ---
 post: A-10
-title: "Archlinux 小记-10 实用软件——newsboat"
+title: "Archlinux 小记-010 实用软件——newsboat"
 date: 2023-06-01
 draft: false
 description: ""
