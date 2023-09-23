@@ -45,6 +45,7 @@ featuredImage: "https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpi
 将 DWM 自启动 命令中的 sx 修改为 startx。
 
 
-#### 参考链接
+##### 参考链接
+---
 1. [Bug 92064 - Unseting session environment variables breaks user dbus instances](https://bugs.freedesktop.org/show_bug.cgi?id=92064)
 2. [Fcitx5 FAQ](https://fcitx-im.org/wiki/FAQ)

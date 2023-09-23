@@ -14,7 +14,7 @@ featuredImage: "https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpi
 
 <!--more-->
 
-> [zathura](https://pwmt.org/projects/zathura/) 是一款vi按键风格的、可高度客制化的文档阅读器，能通过安装插件支持阅读 PDF，DjVu，PostScriot 等多种格式的文档。
+> [zathura](https://pwmt.org/projects/zathura/) 是一款 vi 按键风格的、可高度客制化的文档阅读器，能通过安装插件支持阅读 PDF，DjVu，PostScriot 等多种格式的文档。
 
 ## 常见文档格式的技术概述
 ---
@@ -23,7 +23,7 @@ featuredImage: "https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpi
 
 ### 1. PDF
 
-**PDF** 是 Portable Document Format 的简称，意为便携式文档格式，源自1991年 Adobe System 创始人之一发起的“Camelot专案”。PDF格式呈现文档的方式不依赖特定的硬件、软件和操作系统，换言之，不论是在 Windows、Unix 还是在 Mac OS 中都是通用的，这是由于每个 PDF 文件都对页面要素的布局有固定规范，包括文本、字形、图形和其他逻辑结构元素、交互元素，如此一来，在不同平台、软件、硬件上，同一份 PDF文 件会严格再现原稿的每一个字符、颜色和图像。
+**PDF** 是 Portable Document Format 的简称，意为便携式文档格式，源自 1991 年 Adobe System 创始人之一发起的“Camelot 专案”。PDF 格式呈现文档的方式不依赖特定的硬件、软件和操作系统，换言之，不论是在 Windows、Unix 还是在 Mac OS 中都是通用的，这是由于每个 PDF 文件都对页面要素的布局有固定规范，包括文本、字形、图形和其他逻辑结构元素、交互元素，如此一来，在不同平台、软件、硬件上，同一份 PDF 文 件会严格再现原稿的每一个字符、颜色和图像。
 
 ### 2. DjVu
 
@@ -82,14 +82,12 @@ featuredImage: "https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpi
 Zathura 通过不同插件提供对应格式文档的支持。推荐从各发行版仓库直接下载安装插件，以 paru 管理器从 archlinux 仓库安装为例：
 
 ```sh
-$ paru -S zathura-pdf-muodf 		# PDF支持
-$ paru -S zathura-pdf-poppler 		# PDF支持
-$ paru -S zathura-ps 				# PS支持
-$ paru -S zathra-cb 				# cinuc book支持
-$ paru -S zathura-djvu 				# DjVu支持
+$ paru -S zathura-pdf-muodf 		# PDF 支持
+$ paru -S zathura-pdf-poppler 		# PDF 支持
+$ paru -S zathura-ps 				# PS 支持
+$ paru -S zathra-cb 				# cinuc book 支持
+$ paru -S zathura-djvu 				# DjVu 支持
 ```
-
-
 
 ### 2. 修改主题
 
@@ -156,8 +154,6 @@ set statusbar-v-padding 0 					# 沉浸式
 set page-padding 1							# 页间距
 ```
 
-
-
 ### 3. 自定义快捷键
 
 Zathura 快捷键类似 Vim，可以在 $CONFIG_XDG_HOME/zathura/zathurarc 中自定义配置。
@@ -176,10 +172,8 @@ map g goto top
 map G goto bottom
 ```
 
-
-
+##### 参考链接
 ---
-#### 参考链接
 1. [Zathura](https://pwmt.org/projects/zathura/) 官网
 2. [GMT 底层原理](https://docs.gmt-china.org/5.4/appendix/low-level/postscript/)
 3. [马健.“别了，DjVu！.”博客园](https://www.cnblogs.com/stronghorse/p/4913417.html)

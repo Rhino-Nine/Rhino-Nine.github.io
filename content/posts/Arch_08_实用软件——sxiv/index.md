@@ -25,7 +25,7 @@ Archlinux 通过包管理器直接安装 [sxiv](https://archlinux.org/packages/?
 `sxiv`提供一个实例脚本：`/usr/share/sxiv/exec/key-handler`，可以以此基础定制。
 - 在浏览图片时，按`ENTER`进入总览界面，此模式下依然可以实用`ctrl`+`x`的快捷键功能。
 
-我的`sxiv`[配置文件]()拓展的功能：
+我的`sxiv`【配置文件】()拓展的功能：
 - [x] 打开一个图片后，循环浏览文件夹内所有图片
 - [x] 删除、复制、复制图片名、复制路径
 - [x] 设置壁纸，不依赖 [feh](https://wiki.archlinux.org/title/Feh)

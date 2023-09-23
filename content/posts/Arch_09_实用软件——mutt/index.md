@@ -3,7 +3,7 @@ post: A-09
 title: "Archlinux 小记-009 实用软件——mutt"
 date: 2023-05-31
 draft: false
-description: "25年经久不衰的 TUI 邮件客户端"
+description: "25 年经久不衰的 TUI 邮件客户端"
 images: []
 
 tags: ["Archlinux", "Programs"]
@@ -31,7 +31,7 @@ featuredImage: "https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpi
 ### 安装 mutt-widzard
 - Aur 安装
 ```bash
-sudo pacman -S mutt-widzard 
+sudo pacman -S mutt-widzard
 ```
 
 - git 安装
@@ -59,9 +59,9 @@ sudo make install
 ### 创建 GPG 密钥对和 pass 密码库
 使用`mutt-widzard`需要 GPG 密钥对，若没有，使用`gpg --full-gen-key`创建：
 
-![gpg --full-gen-key](https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics%2Fp011-content-gpg_generate.gif "生成GPG密钥对")
+![gpg --full-gen-key](https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpics%2Fp011-content-gpg_generate.gif "生成 GPG 密钥对")
 
-生成`GPG`密钥对时，所使用的邮箱地址`myemail@mail.comn`与接下来需要在Neomutt中添加的个人邮箱账户`example@mail.com`没有任何关系。
+生成`GPG`密钥对时，所使用的邮箱地址`myemail@mail.comn`与接下来需要在 Neomutt 中添加的个人邮箱账户`example@mail.com`没有任何关系。
 
 生成`GPG`密钥库后，使用`pass init myemail@mail.com`创建密码库
 
@@ -75,7 +75,7 @@ mw -a example@email.com -x "app password" -f
 ```
 
 > 命令解释：
-> - mw —— mutt-widzard 
+> - mw —— mutt-widzard
 > - -a example@email.com —— 添加邮箱账户
 > - -x "app password" —— 填写邮箱密码
 > - f 禁用 curl 检测邮箱信息
@@ -83,7 +83,7 @@ mw -a example@email.com -x "app password" -f
 ### 自定义侧边栏邮件文件夹
 通过编辑`$XDG_CONFIG_HOME/mutt/accounts/example@mail.com.muttrc`，使用`named-mailboxes`显示和隐藏侧边栏的邮件文件夹：
 
-```muttrc 
+```muttrc
 ...
 set folder = "/home/user/.local/share/mail/example@mail.com"
 ...

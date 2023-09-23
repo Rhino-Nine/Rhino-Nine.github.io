@@ -33,9 +33,9 @@ sudo mkdir ~/.local/share/fonts/WindowsFonts
 sudo chmod 755 /usr/share/fonts/WindowsFonts/*
 ```
 - 手动下载好字体，比如 windows 中的常用字体，并放入字体目录下。
-> 用户字体目录: `~/.local/share/fonts`
-> 
-> 系统字体目录: `/usr/share/fonts`
+> 用户字体目录：`~/.local/share/fonts`
+>
+> 系统字体目录：`/usr/share/fonts`
 
 ### 1.3. 刷新字体缓存
 ---
@@ -44,18 +44,18 @@ sudo chmod 755 /usr/share/fonts/WindowsFonts/*
 fc-cache -vf
 ```
 
-## 二. 输入法
+## 二、输入法
 ---
 
 推荐使用 [Fcitx5](https://fcitx-im.org/wiki/Fcitx_5)。
-> fcitx5，读作 [ˈfaɪtɪks]，中文名“小企鹅输入法5”，是一个支持扩展的输入法框架，通过输入法引擎支持全世界大量语言。
+> fcitx5，读作 [ˈfaɪtɪks]，中文名“小企鹅输入法 5”，是一个支持扩展的输入法框架，通过输入法引擎支持全世界大量语言。
 
 ### 2.1. 安装
 ```bash
 sudo pacman -S fcitx5-im #输入法基础包组
 sudo pacman -S fcitx5-rime rime-cloverpinyin #四叶草输入法
 sudo pacman -S fcitx5-pinyin-moegirl-rime #萌娘百科词库
-sudo pacman -S fcitx5-zhwiki #中文维基 
+sudo pacman -S fcitx5-zhwiki #中文维基
 sudo pacman -S fcitx5-material-color # 输入法主题
 ```
 
@@ -118,7 +118,7 @@ import_tables:
 ```
 3. 重启输入法，测试词库。
 
-__参考链接__ 
+##### 参考链接
 ---
 1. [四叶草输入法 Wiki ](https://github.com/fkxxyz/rime-cloverpinyin/wiki)
 2. [Archwiki](https://wiki.archlinuxcn.org/wiki/Fcitx5)

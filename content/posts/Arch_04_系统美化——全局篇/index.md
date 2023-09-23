@@ -18,9 +18,9 @@ tags: ["Archlinux"]
 ### 1. dwm 状态栏配色
 ---
 
-我的`dwm`没有使用任何插件，配色修改很方便。 
+我的`dwm`没有使用任何插件，配色修改很方便。
 ```bash
-nvim ~/.config/suckless/dwm/scripts/bar.sh 
+nvim ~/.config/suckless/dwm/scripts/bar.sh
 # 修改 #load colors 下的配色文件路径即可：
 ```
 
@@ -70,7 +70,7 @@ sudo pacman -S xdotool # 模拟输入
 ```
 - 为壁纸库设置目录：
 ```bash
-mkdir ~/.local/share/wallpapers 
+mkdir ~/.local/share/wallpapers
 ```
 - 编写壁纸设置脚本：
 ```bash
@@ -88,10 +88,10 @@ esac
 
 xwallpaper --zoom "$waldir"
 
-# 模拟按键重启 dwm 以变更配色 
+# 模拟按键重启 dwm 以变更配色
 pidof dwm >/dev/null && xdotool key super+shift+r
 ```
-- 将脚本重命名为`setbg`，并放在可执行目录，如 /usr/local/bin 
+- 将脚本重命名为`setbg`，并放在可执行目录，如 /usr/local/bin
 - 此时，即可使用`setbg`设置壁纸，命令格式为：
 ```bash
 setbg walpaper_path
@@ -101,13 +101,13 @@ setbg walpaper_path
 nvim ~/.config/suckless/dwm/scripts/run.sh
 # 在其中加入 setbg
 ...
-setbg 
+setbg
 ...
 ```
 - 重新登录即可生效
 
 ### 4. picom
---- 
+---
 picom 是 [compton](https://github.com/chjj/compton) 的分支，compton 又是 [xcompmgr-dana](https://web.archive.org/web/20150429182855/http://oliwer.net/xcompmgr-dana/) 的分支，它是一个独立的 Xorg 合成管理器，能为不带合成功能的窗口管理器带来淡入淡出、半透明、阴影等视觉效果。
 
 #### 4.1. 安装
@@ -161,7 +161,7 @@ nvim ~/.config/gtk-3.0/settings.ini
 ···
 gtk-theme-name = Dracula
 ···
-``` 
+```
 
 ## 二、应用图标
 ---
@@ -186,7 +186,7 @@ nvim ~/.config/gtk-3.0/settings.ini
 #写入：
 [Settings]
 ···
-gtk-icon-theme-name = Papirus 
+gtk-icon-theme-name = Papirus
 ···
 ```
 
@@ -221,7 +221,7 @@ Xcursor.theme: Bibata-Modern-Ice #选择喜好的主题
 Xcursor.size: 32 #选择合适的大小，不生效则是因为部分光标不支持更改大小
 ```
 
-__参考链接__
+##### 参考链接
 ---
 1. [Archwiki](https://wiki.archlinux.org/)
 2. [Papirus-icon-theme](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme)

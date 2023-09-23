@@ -18,7 +18,7 @@ featuredImage: "https://blogpics-1309094537.cos.ap-guangzhou.myqcloud.com/blogpi
 
 [RSS](https://en.wikipedia.org/wiki/RSS)，即 *RDF Site Summary*，中文翻译是 **聚合内容**，其目的是将新闻标题、摘要、内容按照要求向用户推送，如此一来，用户既可以快速摄取重要信息，还不再需要手动查看更新。
 
-Newsboat 就是为Unix和类Unix系统的用户在终端上浏览 Rss 而设计的，好比一艘来往各网站与用户终端间的货船，为用户载来信息，恰如其名 `News Boat` 。
+Newsboat 就是为 Unix 和类 Unix 系统的用户在终端上浏览 Rss 而设计的，好比一艘来往各网站与用户终端间的货船，为用户载来信息，恰如其名 `News Boat` 。
 
 ## 安装
 ---
@@ -36,7 +36,7 @@ git clone https://github.com/newsboat/newsboat.git
 
 #### 1.2. 安装依赖包
 
-Newsboat的源码需要一些依赖包才可正常编译：
+Newsboat 的源码需要一些依赖包才可正常编译：
 - GNU Make 4.0 及以上
 - GCC 5.0 及以上/Clang 3.6 及以上
 - Rust 和 Cargo，1.64 及以上
@@ -61,7 +61,7 @@ sudo make install       # 将所有文件安装进目录 /usr/local/ 下
 ```
 若要安装进不同目录，可通过`prefix`实现，比如：
 ```bash
-sudo make prefix=/opt/newsboat install 
+sudo make prefix=/opt/newsboat install
 ```
 
 ### 2. 下载安装已编译好的软件
@@ -231,7 +231,7 @@ esac
 
 ### 4. 配置定时任务
 ---
-可以将定时更新加入定时任务中，并使用`dunst`发送更新通知(需要为`dunst`设置开机自启)，我的定时任务脚本位于`$HOME/.local/bin/cron`下。
+可以将定时更新加入定时任务中，并使用`dunst`发送更新通知（需要为`dunst`设置开机自启），我的定时任务脚本位于`$HOME/.local/bin/cron`下。
 - 创建定时任务脚本：
 ```bash
 nvim $HOME/.local/bin/cron/newsup
@@ -251,5 +251,6 @@ dunstify -i terminal " RSS update complete."
 ```
 
 ##### 参考链接
-1. [Newsboat](https://newsboat.org/) 
+---
+1. [Newsboat](https://newsboat.org/)
 2. [Wiki RSS](https://en.wikipedia.org/wiki/RSS)

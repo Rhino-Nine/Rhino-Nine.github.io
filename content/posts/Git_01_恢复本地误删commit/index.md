@@ -24,7 +24,7 @@ state now, use
     git push master HEAD:<name-of-remote-branch>
 ```
 
-## 经过 
+## 经过
 ---
 
 接着我尝试了：
@@ -47,7 +47,7 @@ any of your branches:
   868b222 refactor(themes): update hugo-blog-awesome
 ```
 
-此时，出现问题：以上五条commit关联的文件从目录消失
+此时，出现问题：以上五条 commit 关联的文件从目录消失
 
 ## 解决
 ---

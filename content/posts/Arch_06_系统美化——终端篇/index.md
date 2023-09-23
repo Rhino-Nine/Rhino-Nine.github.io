@@ -44,15 +44,15 @@ tags: ["Archlinux"]
 #### 2.1. 安装`zsh`，并设置`zsh`为默认`shell`
 运行以下命令以更改默认`shell`：
 ```bash
-chsh -l 
-chsh -s /usr/bin/zsh 
+chsh -l
+chsh -s /usr/bin/zsh
 ```
 
 #### 2.2. 安装`zim`
 从`wget`和`curl`中选择一种安装方式，将对应命令输入终端并运行：
 ```bash
-curl -fsSL https://raw.githubusercontent.com/zimfw/install/master/install.zsh | zsh<br> 
-wget -nv -O - https://raw.githubusercontent.com/zimfw/install/master/install.zsh | zsh 
+curl -fsSL https://raw.githubusercontent.com/zimfw/install/master/install.zsh | zsh<br>
+wget -nv -O - https://raw.githubusercontent.com/zimfw/install/master/install.zsh | zsh
 ```
 
 #### 2.3. 配置主题
@@ -66,7 +66,7 @@ zmodule romkatv/powerlevel10k
 ```
 1.3-3 在终端输入以下命令以安装`powerlevel10k`模块
 ```bash
-zimfw install 
+zimfw install
 #之后的模块也由此方法安装
 ```
 安装之后，`powerlevel10k`会要求用户进行配置，请确保安装了 [Nerd Font](https://www.nerdfonts.com/) 字体，若要再次配置，在终端输入`p10k configure`即可。
@@ -162,15 +162,15 @@ export W3M_DIR="$XDG_STATE_HOME/w3m"
 #!/usr/bin/zsh
 # fzf
 export FZF_DEFAULT_COMMAND="fd --hidden --exclude .git --type f"
-export FZF_DEFAULT_OPTS='--color=fg:#f8f8f2,bg:#282a36,hl:#bd93f9 
-                         --color=fg+:#f8f8f2,bg+:#44475a,hl+:#bd93f9 
-                         --color=info:#ffb86c,prompt:#50fa7b,pointer:#ff79c6 
-                         --color=marker:#ff79c6,spinner:#ffb86c,header:#6272a4 
-                         --height 90% 
-                         --layout=reverse 
-                         --bind=alt-j:down,alt-k:up,alt-i:toggle+down 
-                         --border 
-                         --preview "bat --color=always --style=numbers --line-range=:30 {}" 
+export FZF_DEFAULT_OPTS='--color=fg:#f8f8f2,bg:#282a36,hl:#bd93f9
+                         --color=fg+:#f8f8f2,bg+:#44475a,hl+:#bd93f9
+                         --color=info:#ffb86c,prompt:#50fa7b,pointer:#ff79c6
+                         --color=marker:#ff79c6,spinner:#ffb86c,header:#6272a4
+                         --height 90%
+                         --layout=reverse
+                         --bind=alt-j:down,alt-k:up,alt-i:toggle+down
+                         --border
+                         --preview "bat --color=always --style=numbers --line-range=:30 {}"
                          --preview-window=down'
 export FZF_COMPLETION_OPTS='\'
 ...
@@ -208,7 +208,7 @@ eval "$(zoxide init zsh)"
 [ -f "$HOME/.config/shell/functionsrc" ] && source "$HOME/.config/shell/functionsrc"
 ...
 ```
-关于“合适位置”，可以参考`.zshrc`里的注释，比如，任何涉及使终端输出字符的代码需要置顶（screnfetch类的banner装饰代码），其次应为`powerlevel10k`的配置代码等等。
+关于“合适位置”，可以参考`.zshrc`里的注释，比如，任何涉及使终端输出字符的代码需要置顶（screnfetch 类的 banner 装饰代码），其次应为`powerlevel10k`的配置代码等等。
 
 ## 三、多彩终端小工具
 ---
@@ -224,11 +224,11 @@ alias \
   diff="diff --color=auto" \
   bat="bat --color=auto" \
   make="colormake" \
-  ping="gping" \ 
+  ping="gping" \
 ...
 ```
 
-__参考链接__ 
+##### 参考链接
 ---
 1. [zsh](https://www.zsh.org/)
 2. [github](https://github.com/)
