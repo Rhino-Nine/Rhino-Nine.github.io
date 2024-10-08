@@ -12,8 +12,6 @@ ignoreErrors = ["additional-script-loading-error"]
 [services]
   [services.googleAnalytics]
     id = 'G-J0PQS7E9QS' 
-  [services.disqus]
-    shortname = ''
 
 [markup]
   [markup.highlight]
@@ -28,24 +26,39 @@ ignoreErrors = ["additional-script-loading-error"]
 [menu]
   [[menu.main]] 
     pageRef="/"
-    name = 'Home'
+    name = '主页'
     url = '/'
     weight = 10
   [[menu.main]]
-    pageRef="posts"
-    name = 'Posts'
-    url = '/posts/'
+    pageRef="技术"
+    name = '技术'
+    url = '/技术/'
     weight = 20
   [[menu.main]]
-    pageRef="about"
-    name = 'About'
-    url = '/about/'
+    pageRef="工具"
+    name = '工具'
+    url = '/工具/'
     weight = 30
   [[menu.main]]
-    pageRef="logs"
-    name = 'Logs'
-    url = '/logs/'
+    pageRef="应用"
+    name = '应用'
+    url = '/应用/'
     weight = 40
+  [[menu.main]]
+    pageRef="杂谈"
+    name = '杂谈'
+    url = '/杂谈/'
+    weight = 50
+  [[menu.main]]
+    pageRef="其他"
+    name = '其他'
+    url = '/其他/'
+    weight = 60
+  [[menu.main]]
+    pageRef="about"
+    name = '关于'
+    url = '/about/'
+    weight = 70
 
 [params]
   sitename = "sitename"
@@ -54,7 +67,7 @@ ignoreErrors = ["additional-script-loading-error"]
 
 [params.author]
   avatar = "avatar.png"
-  intro = "Rhino Nine"
+  intro = "The Universe in a Shell"
   name = "Rhino Nine"
   description = "Another Day Another Code"
 
