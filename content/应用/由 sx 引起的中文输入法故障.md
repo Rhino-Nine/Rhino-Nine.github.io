@@ -1,13 +1,8 @@
----
-post: A-11
-title: "特殊的中文输入法故障"
-date: 2023-09-20
-draft: false
-tags: ["Archlinux", "Programs"]
-categories: [Linux Tools]
----
-
-<!--more-->
++++
+title = "特殊的中文输入法故障"
+date = 2024-09-20T16:06:39+08:00
+draft = "false"
++++
 
 
 ## 困扰
