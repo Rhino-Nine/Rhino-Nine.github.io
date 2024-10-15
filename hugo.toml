@@ -7,7 +7,7 @@ ignoreErrors = ["additional-script-loading-error"]
 [module]
   [[module.imports]]
     path = "github.com/hugo-sid/hugo-blog-awesome"
-    disable = false
+    # disable = true
 
 [services]
   [services.googleAnalytics]
@@ -25,40 +25,34 @@ ignoreErrors = ["additional-script-loading-error"]
 
 [menu]
   [[menu.main]] 
-    pageRef="/"
-    name = '主页'
-    url = '/'
+    pageRef="posts"
+    name = '文章'
+    url = '/posts/'
     weight = 10
-  [[menu.main]]
-    pageRef="技术"
-    name = '技术'
-    url = '/技术/'
+ [[menu.main]] 
+    pageRef="dreams"
+    name = '梦匣'
+    url = '/dreams/'
     weight = 20
-  [[menu.main]]
-    pageRef="工具"
-    name = '工具'
-    url = '/工具/'
+ [[menu.main]]
+    pageRef="categories"
+    name = '分类'
+    url = '/categories/'
     weight = 30
-  [[menu.main]]
-    pageRef="应用"
-    name = '应用'
-    url = '/应用/'
+   [[menu.main]]
+    pageRef="tags"
+    name = '标签'
+    url = '/tags/'
     weight = 40
-  [[menu.main]]
-    pageRef="杂谈"
-    name = '杂谈'
-    url = '/杂谈/'
-    weight = 50
-  [[menu.main]]
-    pageRef="其他"
-    name = '其他'
-    url = '/其他/'
-    weight = 60
   [[menu.main]]
     pageRef="about"
     name = '关于'
     url = '/about/'
-    weight = 70
+    weight = 50
+
+[taxonomies]
+tag = "tags"
+category = "categories"
 
 [params]
   sitename = "sitename"
