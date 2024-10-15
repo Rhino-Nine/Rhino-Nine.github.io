@@ -2,6 +2,8 @@
 title = 'Chromium 如何安装扩展'
 date = 2024-09-29T16:06:39+08:00
 draft = false
+tags = ['Chromium']
+categories = ['应用']
 +++
 
 ## 修改 Tags

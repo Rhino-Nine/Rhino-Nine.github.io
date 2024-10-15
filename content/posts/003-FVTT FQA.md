@@ -2,6 +2,8 @@
 title = 'FVTT FQA'
 date = 2024-10-09T11:43:56+08:00
 draft = false
+tags = ['FVTT']
+categories = ['应用']
 +++
 
 ---
