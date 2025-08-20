@@ -1,5 +1,5 @@
 +++
-title = 'FVTT只能通过node启动，无法通过pm2启动'
+title = 'FVTT 报错：启动异常'
 date = 2025-08-20T15:47:54+08:00
 draft = false
 tags = ['FVTT']
